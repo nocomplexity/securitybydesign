@@ -55,7 +55,7 @@ When embracing the Security by design approach you must embrace minimal the foll
 ## Learn more
 
 ```{tip} Learn more about security principles
-Do not reinvent the wheel by defining your own security principles. Make use of already good definited and battle tested security principles.
+Do not reinvent the wheel by defining your own security principles. Make use of already good defined and battle tested security principles.
 In the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/architecture/securityprinciples.html) you can find a set of solid security principles.
 ```
 

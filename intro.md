@@ -64,7 +64,10 @@ Link
 :header:  bg-success
 Security Architecture
 ^^^
-Link to ar
+A solid security architecture is gives a core foundation to design and implement a solution that reduces cyber security risks.
+
+Simplify the creation of a [Security Architecture](securityarchitecture)
+
 ---
 Security Principles
 ^^^
@@ -86,7 +89,9 @@ Link
 :header:  bg-success
 Security Management
 ^^^
-Link to secmngt
+Good security management processes are vital to define, implement and execute.
+
+Learn more about [Security Management](securitymanagement)
 ---
 Security Training
 ^^^

@@ -8,6 +8,7 @@ parts:
   - caption: Core Topics
     chapters:
     - file: empty
+    - file: securityarchitecture
     - file: securityprinciples
   - caption: About
     chapters:
