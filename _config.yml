@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Security By Design
-author: Maikel Mardjan
+author: ROI Security Community 
 logo: images/nocxbanner.png
 
 # Force re-execution of notebooks on each build.

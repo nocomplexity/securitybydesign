@@ -7,7 +7,7 @@ root: intro
 parts:
   - caption: Core Topics
     chapters:
-    - file: empty
+    - file: prevention
     - file: securityarchitecture
     - file: securityprinciples
   - caption: About

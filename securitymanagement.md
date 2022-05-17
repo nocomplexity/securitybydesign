@@ -2,7 +2,13 @@
 
 Security is just not an IT technology challenge. Security is in the end a business issue that must be addressed managed and controlled. So people, processes, and technology(FOSS Tools).
 
+
+:::{admonition} Definition of Security Management
+:class: tip, dropdown
 Security management are the business processes that deal with monitoring and controlling your risks.
+:::
+
+
 
 Components that are defined within the security management system are:
 

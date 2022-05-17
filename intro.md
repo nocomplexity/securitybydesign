@@ -29,7 +29,9 @@ Learn more about a specif Security By Design topic by selecting a element from a
 :header: bg-success
 Prevention
 ^^^
-Link to Prevention
+Prevention of cyber security incidents is always better 
+
+Learn about about [Security Prevention](prevention)
 ---
 Security Monitoring
 ^^^
