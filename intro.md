@@ -1,5 +1,7 @@
 # Welcome the Security By Design
 
+## Introduction 
+
 Security by design is a proven method to develop products that are less vulnerable for cyber security threats.
 
 Cyber security should be the highest priority when developing a new product. 
@@ -21,42 +23,53 @@ Security by Design is an approach to software and hardware development that seek
 
 ## Security By Design Elements
 
+
 Learn more about a specif Security By Design topic by selecting a element from a panel below:
 
 ````{panels}
 :column: col-4
 :card: border-2
 :header: bg-success
-Prevention
+**Prevention**
 ^^^
 Prevention of cyber security incidents is always better 
 
 Learn about about [Security Prevention](prevention)
 ---
-Security Monitoring
+**Security Monitoring**
 ^^^
-[Link to Security monitoring](monitoring)
+Security Monitoring is a must have for Security by Design. Without monitoring and logging your are blind without knowing.
+
+
+Learn directly the essentials of [Security monitoring](securitymonitoring). 
 ---
-Security Policies
+**Security Policies**
 ^^^
-[link to Policy Management](Policy Management)
+Having good Security policies is cheap and very effective!
+
+[Learn all about Security Policies](securitypolicies)
 ````
 
 ````{panels}
 :column: col-4
 :card: border-2
 :header:  bg-success
-Protection
+**Protection**
 ^^^
-Link to Protection
+Simple security protection is the best. 
+
+[Learn how to simplify Security Protection](protection)
 ---
-Risks Assessments
+**Risks Assessments**
 ^^^
-link
+Security by Design starts with identifying your cyber risks.
+
+[Learn more on Risks Assessments](riskassessment)
 ---
-Security Policies
+**SDLC**
 ^^^
-Link
+[The Security by Design SDLC](sdlc) is a core element for all developments and life cycle management activities.
+
 ````
 
 
@@ -64,23 +77,25 @@ Link
 :column: col-4
 :card: border-2
 :header:  bg-success
-Security Architecture
+**Security Architecture**
 ^^^
 A solid security architecture is gives a core foundation to design and implement a solution that reduces cyber security risks.
 
 Simplify the creation of a [Security Architecture](securityarchitecture)
 
 ---
-Security Principles
+**Security Principles**
 ^^^
 Using proven security principles is a must. 
 
 
 Learn all about [Security Principles](securityprinciples)
 ---
-Secure Development Life Cycle (SDLC)
+**Security Training**
 ^^^
-Link
+Security trainings are vital for contious improvement.
+
+[Learn about security trainings and check our open catalogue](training)
 ````
 
 
@@ -89,17 +104,20 @@ Link
 :column: col-4
 :card: border-2
 :header:  bg-success
-Security Management
+**Security Management**
 ^^^
 Good security management processes are vital to define, implement and execute.
 
 Learn more about [Security Management](securitymanagement)
 ---
-Security Training
+**Security Culture**
 ^^^
-link to trainings
+A good cyber security culture is a core element for Security by Design to succeed. 
+
+[Learn how to create a healty security culture](securityculture)
 ---
-Security Culture
+**FOSS Security**
 ^^^
-Link
+Using open security building blocks has many advantages.
+[Learn why FOSS software is a must have for security protection](opensecurity)
 ````

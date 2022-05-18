@@ -8,9 +8,20 @@ parts:
   - caption: Core Topics
     chapters:
     - file: prevention
+    - file: securitymonitoring
+    - file: securitypolicies
+    - file: protection
+    - file: riskassessment
+    - file: securitymanagement
     - file: securityarchitecture
     - file: securityprinciples
+    - file: sdlc
+    - file: securityculture
+    - file: opensecurity
+    - file: training
   - caption: About
     chapters:
     - file: open
+    - file: license
+    
     
