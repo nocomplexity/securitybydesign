@@ -4,6 +4,13 @@
 
 Security by design is a proven method to develop products that are less vulnerable for cyber security threats.
 
+:::{admonition} Definition of Security by Design
+:class: tip, dropdown
+Security by Design is an approach to software and hardware development that seeks to make systems less vulnerable to cyber attacks. Security by Design is the process that integrates security in the system development lifecycle process (SDLC).
+:::
+
+
+
 Cyber security should be the highest priority when developing a new product. 
 * Threats continue to rise.
 * Customers demand risk free products and are more aware of digital threats.
@@ -13,13 +20,14 @@ Security by design is not a product. Nor a simple straight through process. Secu
 
 Cyber security is a key quality aspect that can not be integrated later within your product. You can not create a better security foundation when your product is finished. Security is a core product property that is almost impossible to add later. 
 
+:::{admonition} The term Security by Design can be understood in different ways. 
+:class: tip, dropdown
+ In a more narrow sense Security by Design means considering security as early as the design phase of the software development process. In a broader sense Security by Design can be understood as a core framework to make sure cyber security is on top of mind in every step of your development process. So within the broad development process when developing a new product.
+:::
+
+
 Security should be seen as a foundation that is developed in parallel with your new product. A good security foundation can not be designed in isolation from product development.
 
-
-:::{admonition} Definition of Security by Design
-:class: tip, dropdown
-Security by Design is an approach to software and hardware development that seeks to make systems less vulnerable to cyber attacks. Security by Design is the process that integrates security in the system development lifecycle process (SDLC).
-:::
 
 ## Security By Design Elements
 
