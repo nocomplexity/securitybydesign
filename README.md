@@ -10,7 +10,7 @@ The best way to help is share this Open PlayBook! So share the link to with your
 
 This is a living document and will continue to be updated with more helpful information and examples as they become available.
 
-The latest version of this Security by Design  playbook is always on:
+The latest version of is always published on [Security by Design](https://nocomplexity.com/documents/securitybydesign/intro.html):
 
     https://nocomplexity.com/documents/securitybydesign/intro.html
 
