@@ -1,4 +1,4 @@
-# Welcome the Security By Design
+# Welcome to Security By Design
 
 ## Introduction 
 
