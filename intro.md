@@ -68,11 +68,11 @@ Simple security protection is the best.
 
 [Learn how to simplify Security Protection](protection)
 ---
-**Risks Assessments**
+**Risk Assessments**
 ^^^
 Security by Design starts with identifying your cyber risks.
 
-[Learn more on Risks Assessments](riskassessment)
+[Learn more on Risk Assessments](riskassessment)
 ---
 **SDLC**
 ^^^
