@@ -34,98 +34,145 @@ Security should be seen as a foundation that is developed in parallel with your 
 
 Learn more about a specif Security By Design topic by selecting a element from a panel below:
 
-````{panels}
-:column: col-4
-:card: border-2
-:header: bg-success
+
+::::{grid} 3
+:class-container: text-center
+:gutter: 3
+
+:::{grid-item-card}
+:link: prevention
+:link-type: doc
+:class-header: bg-success
 **Prevention**
 ^^^
 Prevention of cyber security incidents is always better 
 
 Learn about about [Security Prevention](prevention)
----
+:::
+
+:::{grid-item-card}
+:link: securitymonitoring
+:link-type: doc
+:class-header: bg-success
+
 **Security Monitoring**
 ^^^
 Security Monitoring is a must have for Security by Design. Without monitoring and logging your are blind without knowing.
 
 
 Learn directly the essentials of [Security monitoring](securitymonitoring). 
----
+:::
+
+:::{grid-item-card}
+:link: securitypolicies
+:link-type: doc
+:class-header: bg-success
+
 **Security Policies**
 ^^^
 Having good Security policies is cheap and very effective!
 
 [Learn all about Security Policies](securitypolicies)
-````
+:::
 
-````{panels}
-:column: col-4
-:card: border-2
-:header:  bg-success
+
+:::{grid-item-card}
+:link: protection
+:link-type: doc
+:class-header: bg-success
 **Protection**
 ^^^
 Simple security protection is the best. 
 
 [Learn how to simplify Security Protection](protection)
----
+:::
+
+:::{grid-item-card}
+:link: riskassessment
+:link-type: doc
+:class-header: bg-success
+
 **Risk Assessments**
 ^^^
 Security by Design starts with identifying your cyber risks.
 
 [Learn more on Risk Assessments](riskassessment)
----
+:::
+
+:::{grid-item-card}
+:link: sdlc
+:link-type: doc
+:class-header: bg-success
+
 **SDLC**
 ^^^
 [The Security by Design SDLC](sdlc) is a core element for all developments and life cycle management activities.
+:::
 
-````
+:::{grid-item-card}
+:link: securityarchitecture
+:link-type: doc
+:class-header: bg-success
 
-
-````{panels}
-:column: col-4
-:card: border-2
-:header:  bg-success
 **Security Architecture**
 ^^^
 A solid security architecture is gives a core foundation to design and implement a solution that reduces cyber security risks.
 
 Simplify the creation of a [Security Architecture](securityarchitecture)
+:::
 
----
+:::{grid-item-card}
+:link: securityprinciples
+:link-type: doc
+:class-header: bg-success
 **Security Principles**
 ^^^
 Using proven security principles is a must. 
 
 
 Learn all about [Security Principles](securityprinciples)
----
+:::
+
+:::{grid-item-card}
+:link: training
+:link-type: doc
+:class-header: bg-success
 **Security Training**
 ^^^
 Security trainings are vital for contious improvement.
 
 [Learn about security trainings and check our open catalogue](training)
-````
+:::
 
 
-
-````{panels}
-:column: col-4
-:card: border-2
-:header:  bg-success
+:::{grid-item-card}
+:link: securitymanagement
+:link-type: doc
+:class-header: bg-success
 **Security Management**
 ^^^
 Good security management processes are vital to define, implement and execute.
 
 Learn more about [Security Management](securitymanagement)
----
+:::
+
+:::{grid-item-card}
+:link: securityculture
+:link-type: doc
+:class-header: bg-success
 **Security Culture**
 ^^^
 A good cyber security culture is a core element for Security by Design to succeed. 
 
 [Learn how to create a healty security culture](securityculture)
----
+:::
+
+:::{grid-item-card}
+:link: opensecurity
+:link-type: doc
+:class-header: bg-success
 **FOSS Security**
 ^^^
 Using open security building blocks has many advantages.
 [Learn why FOSS software is a must have for security protection](opensecurity)
-````
+:::
