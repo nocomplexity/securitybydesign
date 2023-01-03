@@ -10,12 +10,12 @@ The best way to help is share this Open PlayBook! So share the link to with your
 
 This is a living document and will continue to be updated with more helpful information and examples as they become available.
 
-The latest version of is always published on [Security by Design](https://nocomplexity.com/documents/securitybydesign/intro.html):
+The latest version of this book is always published on the URL:
 
-    https://nocomplexity.com/documents/securitybydesign/intro.html
+[Security by Design](https://nocomplexity.com/documents/securitybydesign/intro.html):
+
 
 This book is created with [Jupyterbook](https://jupyterbook.org/).
-
 
 Create a pull request if you see errors, or have suggestions and improvements, 
 
