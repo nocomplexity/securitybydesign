@@ -7,9 +7,9 @@ When development happens in the open, you can directly verify if a vendor is act
 So beside code, open development means that an open process is followed. A process where you can see and check whether mandatory baselines and principles are used.
 
 Tip: Why reinvent the wheel or very expensive solutions that fail?
-Using FOSS software always has extra advantages over commercial software. Besiders less dependent on one vendor or supporting company you can more easily adjust the software to your specific needs.
+Using FOSS software always has extra advantages over commercial software. Besides being less dependent on one vendor or supporting company you can more easily adjust the software to your specific needs.
 
-To increase and improve security and protect our privacy open source solutions are more and more seen as a very good solution. Within more and more companies worldwide we notice a trends towards adopting open source solutions for security and privacy protection. Governments worldwide cannot depend and trust on closed source software for their security infrastructure anymore. Gartner predicts that by 2016 99% of Global 2000 enterprises will use open source in mission-critical software. So open source solutions for controlling security and privacy are slowly but steady becoming the new de facto standard. 
+To increase and improve security and protect our privacy open source solutions are more and more seen as a very good solution. Within more and more companies worldwide we notice a trend towards adopting open source solutions for security and privacy protection. Governments worldwide cannot depend and trust on closed source software for their security infrastructure anymore. Gartner predicts that by 2016 99% of Global 2000 enterprises will use open source in mission-critical software. So open source solutions for controlling security and privacy are slowly but steady becoming the new de facto standard. 
 
 As many security experts already known: Transparency and openness increase
 security protection levels. However there is still a lot of resistance against using open source for business use, especially when it comes down to security and privacy functionality.

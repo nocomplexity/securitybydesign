@@ -9,7 +9,7 @@ Cyber security Culture refers to the knowledge, beliefs, perceptions, attitudes,
 
 Without a good cyber security culture within your project or organization when you start with Security by Design is useless and a waste of time and money.
 
-Organizational culture refers to the beliefs, perceptions, values, and attitudes that are shared. You must care about culture because it greatly influences employee behaviour and has an immense impact on the successful application of Security by Design.
+Organisational culture refers to the beliefs, perceptions, values, and attitudes that are shared. You must care about culture because it greatly influences employee behaviour and has an immense impact on the successful application of Security by Design.
 
 Culture also happens whether you like it or not. Every organization has many cultures in it that reflect the diversity of its people, departments and skills. This means that you already have a cybersecurity culture, even if you’re not actively building it. 
 
@@ -26,5 +26,5 @@ The benefits of healthy  security culture include:
 * 7x24 awareness on continuous changing and evolution of cyber threats and vulnerabilities in your perfect Security by Design developed product.
 
 
-A good security culture within your project or organization takes time and a lot of effort to evolve.  Don't assume that because the Board has endorsed a security posture that it will automatically be implemented on all organizational levels. That’s why continuous training and awareness is a key element for Security by Design.
+A good security culture within your project or organization takes time and a lot of effort to evolve.  Don't assume that because the Board has endorsed a security posture that it will automatically be implemented on all organisational levels. That’s why continuous training and awareness is a key element for Security by Design.
 

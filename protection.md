@@ -17,7 +17,7 @@ Besides all measurements to digital protect information on your system, do not f
 Physical security protection can be e.g.:
 * Physical entry controls;
 * Monitoring and surveillance (e.g., CCTV, GPS tracking, sensitivity sensors).
-* Protection of data centers and data rooms;
+* Protection of data centres and data rooms;
 * Environmental protection; (e.g. high fence)
 * Protection of information assets during transport and secure disposal.
 

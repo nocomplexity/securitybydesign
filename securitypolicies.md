@@ -23,7 +23,7 @@ Security policies are a soft form of protection. Having security policies is no 
 
 Creating your own security policies from scratch should always be avoided. Use and reuse good existing security policies. This:
 * Saves time.
-* Improves quality. Reusing means use and improve where needed.
+* Improves quality. Reuse means using existing policies and improving them or adjusting these where needed.
 
 ```{tip} Tip
 Use and Reuse already good security policies. 

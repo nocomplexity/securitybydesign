@@ -5,7 +5,7 @@ Information security must be built into every phase of the SDLC.  Failure to ide
 
 :::{admonition} Definition of Security by Design SDLC
 :class: tip, dropdown
-The Security by Design SDLC means integrating security and alle security related activities into an existing development process.
+The Security by Design SDLC means integrating security and all security related activities into an existing development process.
 :::
 
 The Secure Software Development Lifecycle (SSDLC) refers to a process that streamlines development from inception to release. This applies to hardware, software and other product development projects.
@@ -48,7 +48,7 @@ At a minimum, an SDLC must contain the following security activities:
 
 
 
-From a security point of view integrating security test and validating results with expectations is core element within the SLDC as needed for applying Security by Design.
+From a security point of view integrating security test and validating results with expectations is a core element within the SLDC as needed for applying Security by Design.
 
 
 ```{tip} Learn more

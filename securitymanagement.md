@@ -1,6 +1,6 @@
 # Security Management
 
-Security is just not an IT technology challenge. Security is in the end a business issue that must be addressed managed and controlled. So people, processes, and technology(FOSS Tools).
+Security is just not an IT technology challenge. Security is in the end a business issue that must be addressed, managed and controlled. So people, processes, and technology(FOSS Tools).
 
 
 :::{admonition} Definition of Security Management

@@ -10,7 +10,7 @@ Security prevention means thinking about security threats and implementing good 
 
 
 Doing cyber security prevention good means doing some simple steps:
-Perform a risk assessment [LINK].
+Perform a risk assessment. In essence:
 
 * Create a threat model 
 
@@ -29,7 +29,7 @@ Some simple prevention measurements are:
 * Use strong authentication and good authorization schemas for access.
 * Keep your software and systems up to date.
 * Educate Your Employees
-* Follow cyber security news to stay alert. A nice cyber news blog is [link ]
+* Follow cyber security news to stay alert. A nice cyber news blog is e.g. the [Open Security News Overview](https://nocomplexity.com/open-security-news/)
 * Use only solutions that you understand.
 * Use only cyber security solutions that you can manage
 
