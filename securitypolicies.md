@@ -6,7 +6,7 @@ Security policy defines what you want to protect.
 :::
 
 
-Good policies often identify:
+Good policies identify:
  * Procedures
  * guidelines and
  * safeguards for configuring and managing security in the organization’s environment.
@@ -30,9 +30,8 @@ Use and Reuse already good security policies.
 ```
 
 
-:::{admonition} Learn more and directly use good Security Policies
+:::{admonition} Learn more and see examples of good Security Policies
 :class: tip, dropdown
 See the section Security policies in the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/protection/security-policies.html).
 
-With real good valuable examples ready for reuse!
 :::

@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: ""
-author: '<a href="https://nocomplexity.com/">Maikel Mardjan (nocomplexity.com)</a> & Asim Jahan'
+author: 'Maikel Mardjan (nocomplexity.com) & Asim Jahan'
 logo: images/securitybydesign.png
 
 
@@ -40,3 +40,5 @@ html:
 sphinx:
   config:
       html_show_copyright: false
+
+  
