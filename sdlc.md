@@ -23,8 +23,13 @@ The secure software development life cycle is a step-by-step process to develop 
 * Optimising the design, deployment, and maintenance.
 
 
-
 ## Minimum SDLC activities
+
+
+An overview of the SDLC is given in the figure below.
+
+
+![SLDC view](images/supplychain.png)
 
 
 At a minimum, an SDLC must contain the following security activities:

@@ -19,7 +19,7 @@ Security policies provide many benefits to organizations:
 * Heightened security awareness increases the likelihood of compliance with the security policies.
 
 
-Security policies are a soft form of protection. Having security policies is no tangible protection. But since human factors and awareness is very important in managing security risks, not having security policies is no option.
+Security policies are a soft form of protection. Having security policies gives no real tangible protection. But since human factors and awareness are very important in managing security risks, not having security policies is no option.
 
 Creating your own security policies from scratch should always be avoided. Use and reuse good existing security policies. This:
 * Saves time.

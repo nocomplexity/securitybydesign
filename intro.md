@@ -16,7 +16,7 @@ Cyber security should be the highest priority when developing a new product.
 * Customers demand risk free products and are more aware of digital threats.
 * You are liable when severe security problems arise in your products.
 
-Security by design is not a product. Nor a simple straight through process. Security by design can be viewed as a core philosophy to do the right things from a cyber security perspective in every action performed when developing and producing a new product. 
+Security by design is not a product. Nor a simple straight through process. Security by design can be viewed as a core _**philosophy**_ to do the right things from a cyber security perspective in every action performed when developing and producing a new product. 
 
 Cyber security is a key quality aspect that can not be integrated later within your product. You can not create a better security foundation when your product is finished. Security is a core product property that is almost impossible to add later. 
 
@@ -31,7 +31,7 @@ Security should be seen as a foundation that is developed in parallel with your 
 
 ## Security By Design Elements
 
-
+Security By Design consists of various aspects.
 Learn more about a specif Security By Design topic by selecting a element from a panel below:
 
 

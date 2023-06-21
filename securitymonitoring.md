@@ -36,5 +36,5 @@ You can not escape from security monitoring. You need it for:
 Good monitoring solutions will discontent your network or stop your system from working if anomalies are seen. Of course you must configure the behaviour of such solutions.
 
 
-Security Monitoring is mostly about expensive tools. Complete solutions combine intrusion detection (IDS), intrusion prevention (IPS) and network security monitoring (NSM). But the human effort required to keep solutions up and running is crucial for a successful Security by Design strategy.
+Security Monitoring is mostly about expensive and complex tools. Complete solutions combine intrusion detection (IDS), intrusion prevention (IPS) and network security monitoring (NSM). But the human effort required to keep solutions up and running is crucial for a successful Security by Design strategy. The key is to start simple by monitoring your key essentials system logs. 
 

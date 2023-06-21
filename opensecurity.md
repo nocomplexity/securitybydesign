@@ -37,7 +37,7 @@ Tip: Check the report [The State of Enterprise Open Source](https://www.redhat.c
 
 ```
 
-```{warning} Warning
+```{warning} Warning: 
 A good security product should never ever introduce extra vulnerabilities. However many low quality security products increase your cyber risk profile instead of lowering.
 ```
 

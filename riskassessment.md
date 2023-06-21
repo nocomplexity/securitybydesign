@@ -44,7 +44,7 @@ Physical assets, such as hardware, including those in the data centre, network, 
 +++
 * Government laws and regulations pertaining to minimum security control requirements
 +++
-*Documented or informal policies, procedures and guidelines
+* Documented or informal policies, procedures and guidelines
 
 
 

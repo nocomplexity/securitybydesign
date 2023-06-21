@@ -9,12 +9,14 @@ Security prevention means thinking about security threats and implementing good 
 :::
 
 
-Doing cyber security prevention good means doing some simple steps:
-Perform a risk assessment. In essence:
+Starting with prevention for cyber security risks means starting with one simple step:
+* Perform a risk assessment. 
 
-* Create a threat model 
+This means you start with the following activities:
 
-* Analyse your risk profile
+* Create a threat model. 
+
+* Analyse your risk profile.
 
 * Take measurements to prevent security incidents from happening. Often simple solutions are the best. 
 

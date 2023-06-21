@@ -9,7 +9,7 @@ Principles are statements of direction that govern selections and implementation
 
 ## Security by Design principles
 
-When embracing the Security by design approach you must embrace at least the following principles. If you think a principle is not applicable for your situation: Think again. Or better write down your motivation and ask for an expert review on your motivation.
+When embracing the Security by design approach you must embrace at least the following principles:
 
 * Minimise attack surface area
 
@@ -51,6 +51,9 @@ When embracing the Security by design approach you must embrace at least the fol
 
 * Separation of privilege
 +++
+
+ If you think a principle is not applicable for your situation: Think again. Or better write down your motivation and ask for an expert review on your motivation.
+
 
 ## Learn more
 

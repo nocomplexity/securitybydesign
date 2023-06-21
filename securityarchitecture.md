@@ -2,7 +2,7 @@
 
 To create a sustainable solution to reduce cyber security threats is to create a solution architecture. Within this architecture you design a solution that meets your functional requirements. But this architecture is also to match design the protection measurements needed based on your risk analysis.
 
-The perfect solution to reduce security to zero does not exist. A solution architecture helps in the process of optimising and controlling your risks.
+The perfect solution to reduce security risks to zero does not exist. A security architecture assists in the process of optimising and managing your risks.
 
 A good way to really speed up creating your solution architecture is of course to use [this reference architecture](https://nocomplexity.com/documents/securityarchitecture/introduction.html) as the basis. 
 
@@ -26,7 +26,7 @@ Creating security a security or privacy solution architecture consists of the fo
 
 *   Gather security and privacy principles and requirements;
 
-*    Determine important constraints that apply to your architecture or design. There are always constraints, e.g. time, budget, subject matter experts available etc.
+*    Determine important constraints that apply to your architecture or design. There are always constraints, e.g. time, budget, maintenance costs, subject matter experts available etc.
 
 *    Derive the architecture building blocks from your architecture or design. Architecture building blocks help you to scope your solution. Using architecture building blocks gives a clear view on (new) integration aspects and where completely new solutions fit in the total IT landscape.
 
