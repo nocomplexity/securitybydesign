@@ -49,4 +49,5 @@ sphinx:
       epub_tocdup: true
       epub_use_index: true
       epub_tocscope: includehidden
+      epub_title: 'Security By Design'
 

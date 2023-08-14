@@ -22,7 +22,7 @@ When discussing the use of open source products for security and privacy service
 FOSS quality is a very popular field for PhD students and analyst companies. However we think that technical experience of practical business use along with deep technical knowledge is required in order to give good advice for a company.
 
 ```{tip} Smart and fast quality check for FOSS security software
-A good way to judge the quality of FOSS software building blocks regarding security is to use the [OpenSSF Best Practices Badge criteria checklist] (https://nocomplexity.com/documents/securityarchitecture/prevention/foss-securitycriteria.html )
+A good way to judge the quality of FOSS software building blocks regarding security is to use the [OpenSSF Best Practices Badge criteria checklist](https://nocomplexity.com/documents/securityarchitecture/prevention/foss-securitycriteria.html ).
 
 ```
 
