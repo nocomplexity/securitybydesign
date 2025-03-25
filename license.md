@@ -2,7 +2,7 @@
 
 This publication is:
 
-(c) 2021-2023 BM-Support.org - Maikel & Asim and all contributors
+(c) 2021-2025 BM-Support.org - Maikel & Asim and all contributors
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Third-party product names may be the trademarks of their respective owners.
 
@@ -16,7 +16,7 @@ In addition to the online HTML version of this "Security By Design Playbook," we
 
 The ePUB version provides a flexible and adaptable reading experience. It automatically adjusts the text to fit various screen sizes, enabling you to read the playbook comfortably on e-readers, tablets, smartphones, and other compatible devices. With ePUB, you can customize the font size, font style, and layout to suit your personal preferences.
 
-To access the PDF and ePUB versions, simply visit [our website](https://nocomplexity.com/simplify-security/). 
+To access the PDF and ePUB versions, simply visit [our website](https://simplifysecurity.nocomplexity.com/). 
 
 We believe that by offering these additional formats, we can ensure that the playbook is readily accessible and beneficial to a wider audience. 
 

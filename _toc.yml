@@ -5,7 +5,7 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Core Topics
+  - caption: Aspects
     chapters:
     - file: prevention
     - file: securitymonitoring
@@ -21,8 +21,13 @@ parts:
     - file: training
   - caption: About
     chapters:
+    - file: help
+    - file: contribute
+    - file: attribution
+    - file: sponsors
     - file: open
     - file: connect
     - file: license
+    - file: about
     
     
