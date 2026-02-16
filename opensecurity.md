@@ -29,7 +29,6 @@ A good way to judge the quality of FOSS software building blocks regarding secur
 Some core benefits for using FOSS software for security are:
 * Higher quality software 
 *	Ability to safely leverage open source tech
-*	Designed to work in cloud, cloud-native tech 
 *	Better security 
 
 ```{tip} Tip to convince your peers
