@@ -1,0 +1,21 @@
+/* Minor css adjustments for the book-theme - Jupyter Book 2 - Not perfect as adjusting style is still in development for JupterBook2! */
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: #ff0000;
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: #ff0000;
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: black;
+}
+
+a.button, button.button, cite.button a, span.button {
+  white-space: nowrap;
+  --tw-bg-opacity: 1;
+  background-color: #ff0000;
+}
