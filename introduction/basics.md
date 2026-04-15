@@ -34,179 +34,94 @@ Cyber security is a key quality aspect that can not be integrated later within y
 Security should be seen as a foundation that is developed in parallel with your new product. A good security foundation can not be designed in isolation from product development.
 
 
-## Security By Design Elements
 
-Security By Design consists of various aspects.
-Learn more about a specif Security By Design topic by selecting a element from a panel below:
-
-
-::::{grid} 3
-:class-container: text-center
-:gutter: 3
-
-:::{grid-item-card}
-:link: prevention
-:link-type: doc
-{octicon}`light-bulb;1em;caption-text` **Prevention**
-^^^
-Prevention of cyber security incidents is always better 
-
-Learn about about [Security Prevention](prevention)
-+++
-[Learn more »](prevention)
-
-:::
-
-:::{grid-item-card}
-:link: securitymonitoring
-:link-type: doc
-{octicon}`bell;1em;caption-text` **Security Monitoring**
-^^^
-Security Monitoring is a must have for Security by Design. Without monitoring and logging your are blind without knowing.
-
-
-Learn directly the essentials of [Security monitoring](securitymonitoring). 
-+++
-[Learn more »](securitymonitoring)
-:::
-
-:::{grid-item-card}
-:link: securitypolicies
-:link-type: doc
-{octicon}`book;1em;caption-text` **Security Policies**
-^^^
-Having good Security policies is cheap and very effective!
-
-[Learn all about Security Policies](securitypolicies)
-+++
-[Learn more »](securitypolicies)
-:::
-
-
-:::{grid-item-card}
-:link: protection
-:link-type: doc
-{octicon}`codescan-checkmark;1em;caption-text` **Protection**
-^^^
-Simple security protection is the best. 
-
-[Learn how to simplify Security Protection](protection)
-+++
-[Learn more »](protection)
-:::
-
-:::{grid-item-card}
-:link: riskassessment
-:link-type: doc
-{octicon}`cross-reference;1em;caption-text` **Risk Assessments**
-^^^
-Security by Design starts with identifying your cyber risks.
-
-[Learn more on Risk Assessments](riskassessment)
-+++
-[Learn more »](riskassessment)
-:::
-
-:::{grid-item-card}
-:link: sdlc
-:link-type: doc
-{octicon}`eye;1em;caption-text` **SDLC**
-^^^
-[The Security by Design SDLC](sdlc) is a core element for all developments and life cycle management activities.
-+++
-[Learn more »](sdlc)
-:::
-
-:::{grid-item-card}
-:link: securityarchitecture
-:link-type: doc
-{octicon}`thumbsup;1em;caption-text` **Security Architecture**
-^^^
-A solid security architecture gives a core foundation to design and implement a solution that reduces cyber security risks.
-
-Simplify the creation of a [Security Architecture](securityarchitecture)
-+++
-[Learn more »](securityarchitecture)
-:::
-
-:::{grid-item-card}
-:link: securityprinciples
-:link-type: doc
-{octicon}`tools;1em;caption-text` **Security Principles**
-^^^
-Using proven security principles is a must. 
-
-
-Learn all about [Security Principles](securityprinciples)
-+++
-[Learn more »](securityprinciples)
-:::
-
-:::{grid-item-card}
-:link: training
-:link-type: doc
-{octicon}`pencil;1em;caption-text` **Security Training**
-^^^
-Security trainings is vital for continuous improvement.
-
-[Learn about security trainings and check our open catalogue](training)
-+++
-[Learn more »](training)
-:::
-
-
-:::{grid-item-card}
-:link: securitymanagement
-:link-type: doc
-{octicon}`organization;1em;caption-text` **Security Management**
-^^^
-Good security management processes are vital to define, implement and execute.
-
-Learn more about [Security Management](securitymanagement)
-+++
-[Learn more »](securitymanagement)
-:::
-
-:::{grid-item-card}
-:link: securityculture
-:link-type: doc
-{octicon}`people;1em;caption-text` **Security Culture**
-^^^
-A good cyber security culture is a core element for Security by Design to succeed. 
-
-[Learn how to create a healthy security culture](securityculture)
-+++
-[Learn more »](securityculture)
-:::
-
-:::{grid-item-card}
-:link: opensecurity
-:link-type: doc
-{octicon}`heart;1em;caption-text` **FOSS Security**
-^^^
-Using open security building blocks has many advantages.
-[Learn why FOSS software is a must have for security protection](opensecurity)
-+++
-[Learn more »](opensecurity)
-:::
-
-
-Security by design is a proven method to develop products that are less vulnerable for cyber security threats. 
-Definition of Security by Design
-Security by Design is an approach to software and hardware development that seeks to make systems less vulnerable to cyber attacks. Security by Design is the process that integrates security in the system development lifecycle process (SDLC).
-Cyber security should be the highest priority when developing a new product.
-Threats continue to rise.
-
-
-Consumers should have risk free products and are nowadays far more aware of digital threats.
-
-
-You are liable when severe security problems arise in your products.
-
-Security by design is not a product. Nor a simple straight through process. Security by design can be viewed as a core philosophy to do the right things from a cyber security perspective in every action performed when developing and producing a new product.
+## Why
 
 Cyber security is a key quality aspect that can not be integrated later within your product. You can not create a better security foundation when your product is finished. Security is a core product property that is almost impossible to add later.
-When developing application with the use of the Python programming language, practising security by design is vital.
 
-## Definitions
+
+Practising Security by Design is essential to create systems and business processes that are resilient against cyber security threats.
+
+![Definitions and terms](/images/definitions.png)
+
+The diagram highlights a simple yet critical relationship. Security by Design operates at the strategic level, shaping how organisations approach risk, architecture, and decision-making across business processes and IT systems. It ensures that security is embedded from the outset—secure by design and secure by default—rather than introduced later as an afterthought.
+
+Secure programming complements this by translating these principles into practice at the development level. It focuses on how software is designed and written, ensuring that applications are robust and resistant to common vulnerabilities and attack vectors.
+
+Together, these disciplines reinforce one another. Security by Design provides the direction; secure programming delivers it in real systems. The outcome is a coherent approach in which business processes, SDLC practices, and IT systems are consistently aligned and inherently secure.
+
+**The relationship in practice**
+
+1. **Security by Design** – Strategic and architectural level
+Security by Design defines the organisation’s overarching approach to risk, architecture, and procurement. It embeds security considerations into business processes and IT landscapes from the earliest stages. By adopting the principles of “secure by design” and “secure by default”, organisations move away from reactive, bolt-on security measures, which are often costly and less effective.
+
+2. **Secure Programming** – Tactical implementation
+Secure programming brings these principles to life within the Software Development Life Cycle (SDLC). It ensures that applications are developed with security in mind, reducing exposure to common vulnerabilities such as those outlined in the OWASP Top 10, and making systems more resistant to exploitation.
+
+Importantly, even organisations that do not develop software in-house must understand secure programming. Security requirements still need to be clearly defined and enforced in contracts, such as service level agreements, with third-party suppliers responsible for building or managing software.
+
+Security by Design and Secure Programming—whether internal or outsourced—must be closely aligned. A [systems-based approach](https://www.bm-support.org/problem-solving-methods/) ensures that the entire organisation remains secure by design and secure by default.
+
+
+
+Security by design is a **proven method** to develop products that are less vulnerable for cyber security threats. 
+
+Consumers should have risk free products and are nowadays far more aware of digital threats. You are liable when severe security problems arise in your products.
+
+## Why
+
+Cyber security is a fundamental quality attribute that cannot be effectively added at a later stage. Once a product has been built, it is extremely difficult—and often prohibitively expensive—to establish a strong security foundation. Security must therefore be treated as a core property from the very beginning.
+
+Practising Security by Design is essential to create systems and business processes that are resilient against cyber security threats.
+
+
+![Definitions and terms](/images/definitions.png)
+
+The diagram highlights a simple yet critical relationship. Security by Design operates at the strategic level, shaping how organisations approach risk, architecture, and decision-making across business processes and IT systems. It ensures that security is embedded from the outset—secure by design and secure by default—rather than introduced later as an afterthought.
+
+Secure programming complements this by translating these principles into practice at the development level. It focuses on how software is designed and written, ensuring that applications are robust and resistant to common vulnerabilities and attack vectors.
+
+Together, these disciplines reinforce one another. Security by Design provides the direction; secure programming delivers it in real systems. The outcome is a coherent approach in which business processes, SDLC practices, and IT systems are consistently aligned and inherently secure.
+
+**The relationship in practice**
+
+1. **Security by Design** – Strategic and architectural level
+Security by Design defines the organisation’s overarching approach to risk, architecture, and procurement. It embeds security considerations into business processes and IT landscapes from the earliest stages. By adopting the principles of “secure by design” and “secure by default”, organisations move away from reactive, bolt-on security measures, which are often costly and less effective.
+
+2. **Secure Programming** – Tactical implementation
+Secure programming brings these principles to life within the Software Development Life Cycle (SDLC). It ensures that applications are developed with security in mind, reducing exposure to common vulnerabilities such as those outlined in the OWASP Top 10, and making systems more resistant to exploitation.
+
+Importantly, even organisations that do not develop software in-house must understand secure programming. Security requirements still need to be clearly defined and enforced in contracts, such as service level agreements, with third-party suppliers responsible for building or managing software.
+
+Security by Design and Secure Programming—whether internal or outsourced—must be closely aligned. A [systems-based approach](https://www.bm-support.org/problem-solving-methods/) ensures that the entire organisation remains secure by design and secure by default.
+
+
+
+Security by Design is a proven approach for developing products that are significantly less vulnerable to cyber security threats. Today’s consumers are more aware of digital risks and expect products to be secure by default. Organisations may also face legal and financial liability if serious security issues arise.
+
+Security by design is not a product. Nor a simple straight through process. Security by design is a systems approach to do the right things from a cybersecurity perspective in every action performed when developing and producing a new product. So it is holistic, integral and embraces key principles of sytems thinking methods.
+
+
+
+
+
+
+
+
+## Security By Design Elements
+
+Security By Design consists of various aspects:
+- **Prevention**
+- **Security Monitoring**
+- **Security Policies**
+- **Protection**
+- **Risk Assessments**
+- **SDLC**
+- **Security Architecture**
+- **Security Principles**
+- **Security Training**
+- **Security Management**
+-  **Security Culture**
+-  **FOSS Security**
+
 

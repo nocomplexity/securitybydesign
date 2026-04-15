@@ -2,7 +2,7 @@
 
 This publication is:
 
-(c) 2021-2025 BM-Support.org - Maikel & Asim and all contributors
+(c) 2021-2026 BM-Support.org - Maikel & Asim and all contributors
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Third-party product names may be the trademarks of their respective owners.
 

@@ -1,16 +1,15 @@
-# Welcome to Security By Design
+# Welcome to Mastering Security By Design
 
-:::{admonition} Welcome to **Mastering Security By Design**
+:::{admonition} Welcome! 
 :class: tip
 
-
-In this course, you will gain a deep understanding of what Security By Design is and how to apply this in practice.
+This book will give you a deep understanding of what Security By Design is and how to apply this in practice.
 :::
 
-Mastering Security by Design provides the deep-dive expertise required to architect secure modern systems and applications, regardless of scale. As a developer, you may find yourself pushed out of your comfort zone, as Security by Design extends far beyond mere programming. Similarly, managers, architects, and business owners will discover that the subtle technical details discussed here can make or break a business if Security by Design is not embedded across the entire organisation.
+**Mastering Security by Design** provides the deep-dive expertise required to architect secure modern systems and applications, regardless of scale. As a developer, you may find yourself pushed out of your comfort zone, as Security by Design extends far beyond mere programming. Similarly, managers, architects, and business owners will discover that the subtle technical details discussed here can make or break a business if Security by Design is not embedded across the entire organisation.
 
 
-## Goal of this course
+## Goal of this book
 
 :::{attention}
 The aim of this course is to teach you the principles of **Security By Design**. You do not need to have a background in programming to take this course.
@@ -22,14 +21,30 @@ The aim of this course is to teach you the principles of **Security By Design**.
 ## Target Audience
 
 
-This book is designed for managers, directors, architects, developers and security enthusiasts. It focuses on using designing reliable and secure systems. 
+This book is designed for managers, directors, architects, developers, and security enthusiasts. It focuses on using designing reliable and secure systems. 
 
 
 It is also suitable for DevOps professionals, architects, security professionals, AppSec engineers, software engineers, web application developers, and others interested in learning creating secure systems and applications.
 
 
+## In person courses
 
-## Overview
+:::{tip} 
+While this book provides a solid foundation, the most effective way to accelerate your *Security by Design* journey is through an in-person workshop.
+
+Attending a face-to-face workshop is ideal for individuals and organisations who are truly **serious** about embedding Security by Design into their day-to-day workflows.
+
+For organisations, each workshop can be tailored to your specific context and cyber security challenges, ensuring maximum relevance and impact.
+
+All workshops are highly interactive, with a strong emphasis on hands-on exercises aligned to your SDLC—so you can immediately apply what you learn in practice.
+:::
+
+If you are based in the Netherlands or Belgium, training is delivered directly by the authors of this book.
+
+
+{button}`Find out more about these workshops  <https://organisatieontwerp.nl/security-by-design/>`
+
+[Find out more about upcoming course dates or in-house training opportunities.](https://organisatieontwerp.nl/security-by-design/)
 
 
 
@@ -51,4 +66,12 @@ If you cannot contribute, please continue learning — you are very welcome here
  
 :::{include} donate.md
 
+:::
+
+
+## Book Overview
+
+:::{toc}
+:context: project
+:depth: 1
 :::

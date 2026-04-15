@@ -4,4 +4,8 @@ project:
     - file: intro.md
     - file: introduction/basics.md #dropdown menu
     - file: prevention/prevention_intro.md #dropdown menu        
-  
+    - file: help.md
+      children:
+        - file: contribute.md
+        - file: aboutnocx.md
+        - file: license.md

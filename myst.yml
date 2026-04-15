@@ -2,8 +2,8 @@
 version: 1
 project:
   id: 1120294c-3aea-4399-b1be-cdb7d50000a2
-  title: Security By Design
-  description: Security by design is a proven method to develop products that are less vulnerable for cyber security threats.
+  title: Mastering Security By Design
+  description: Security by Design is a proven method to develop products that are less vulnerable for cyber security threats.
   # keywords: []
   # authors: []
   github: https://github.com/nocomplexity/securitybydesign
