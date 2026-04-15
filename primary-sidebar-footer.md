@@ -1,0 +1,1 @@
+[![nocxlogo](/images/ca_logo_small.png)](https://nocomplexity.com/codeaudit/)

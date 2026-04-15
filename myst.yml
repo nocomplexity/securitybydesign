@@ -9,10 +9,17 @@ project:
   github: https://github.com/nocomplexity/securitybydesign
   license:
     content: CC-BY-SA-4.0  
+
+extends:
+  - toc.yml
+
 site:
+  parts:
+    primary_sidebar_footer: primary-sidebar-footer.md
   template: book-theme
   options:
     logo: images/nocxbanner.png
     style: _static/nocxstyle2026.css
-  #   favicon: favicon.ico
+    favicon: images/pysecfavicon.ico
+  
   
