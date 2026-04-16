@@ -1,10 +1,5 @@
 # Security Policies
 
-:::{admonition} Definition of Security Policies
-:class: tip, dropdown
-Security policy defines what you want to protect.
-:::
-
 
 Good policies identify:
  * Procedures
@@ -28,6 +23,20 @@ Creating your own security policies from scratch should always be avoided. Use a
 ```{tip} Tip
 Use and Reuse already good security policies. 
 ```
+
+## Security policies vs Security principles
+
+The difference comes down to **level of abstraction and purpose**: principles guide thinking, while policies enforce action.
+
+**Security principles** are high-level, foundational ideas that shape how security should be approached. They are broad, enduring, and not tied to specific technologies or rules. For example, principles like *least privilege*, *defence in depth*, or *fail securely* describe **what good security looks like** and provide direction during design and decision-making.
+
+**Security policies**, on the other hand, are formal, organisation-specific rules that translate those principles into concrete requirements. They define **what must be done** in practice. For instance, a policy might require multi-factor authentication for all remote access, mandate encryption standards, or specify how data must be handled and classified.
+
+In short: principles are **guiding philosophies**, while policies are **enforceable rules**. A strong Security by Design approach connects the two—principles inform the creation of policies, and policies ensure principles are consistently applied in real-world operations.
+
+
+
+## More information
 
 
 :::{admonition} Learn more and see examples of good Security Policies

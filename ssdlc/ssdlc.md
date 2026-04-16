@@ -1,4 +1,4 @@
-# Secure Development Life Cycle (SDLC) 
+# Secure Software Development Life Cycle (SDLC) 
 
 Information security must be built into every phase of the SDLC.  Failure to identify security risks and implement proper controls will result in inadequate security, potentially putting entities at risk.
 
@@ -29,7 +29,7 @@ The secure software development life cycle is a step-by-step process to develop 
 An overview of the SDLC is given in the figure below.
 
 
-![SLDC view](images/supplychain.png)
+![SLDC view](../images/supplychain.png)
 
 
 At a minimum, an SDLC must contain the following security activities:

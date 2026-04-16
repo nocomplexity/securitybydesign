@@ -33,7 +33,7 @@ Creating security a security or privacy solution architecture consists of the fo
 *    Select (or create, buy) the new Solution Building Blocks. Prerequisite is of course that the functionality and technical constraints must be clear. Often prerequisites are derived from the previous design step.
 
 
-![Security Architecture](images/abb-sbb.png)
+![Security Architecture](../images/abb-sbb.png)
 
 
 ## Learn more

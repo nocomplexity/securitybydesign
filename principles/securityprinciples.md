@@ -1,13 +1,4 @@
-# Security Principles
-
-Good cyber security principles are crucial for creating a solid new product.
-
-:::{admonition} Definition of security principle
-:class: tip, dropdown
-Principles are statements of direction that govern selections and implementations. That is, principles provide a foundation for decision making.
-:::
-
-## Security by Design principles
+# Security by Design principles
 
 When embracing the Security by design approach you must embrace at least the following principles:
 

@@ -1,15 +1,6 @@
 # Security Monitoring
 
 
-Security Monitoring usually means collecting too much logging information in the hope that it brings value when a security incident hits you. 
-
-
-:::{admonition} Definition of Security Monitoring
-:class: tip, dropdown
-Security monitoring is the process of collecting and analysing indicators of potential security threats and then triaging these threats with the right action.
-:::
-
-
 Keeping up to date with security vulnerabilities involves time consuming tasks. Like:
 
 * Collecting and analysing data to identify changes 

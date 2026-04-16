@@ -4,6 +4,41 @@ project:
     - file: intro.md
     - file: introduction/basics.md #dropdown menu
     - file: prevention/prevention_intro.md #dropdown menu        
+      children:
+        - file: prevention/examples.md
+    
+    - file: monitoring/monitoring_intro.md #dropdown menu        
+      children:
+        - file: monitoring/securitymonitoring.md
+    
+    - file: policies/policies_intro.md #dropdown menu        
+      children:
+        - file: policies/securitypolicies.md
+        - file: policies/protection.md
+        - file: policies/softwareupdate.md
+
+    - file: riskassesment/ra_intro.md #dropdown menu      
+      children:
+        - file: riskassesment/riskassesment.md
+
+    - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
+      children:
+        - file: securitymanagement/securitymanagement.md
+
+    - file: principles/principles_intro.md #dropdown menu      
+      children:
+        - file: principles/securityprinciples.md
+
+
+    - file: securityarchitecture/architecture_intro.md #dropdown menu      
+      children:
+        - file: securityarchitecture/securityarchitecture.md
+
+    - file: ssdlc/ssdlc_intro.md #dropdown menu      
+      children:
+        - file: ssdlc/ssdlc.md
+
+
     - file: help.md
       children:
         - file: contribute.md
