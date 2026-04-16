@@ -24,6 +24,7 @@ project:
     - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
       children:
         - file: securitymanagement/securitymanagement.md
+        - file: securitymanagement/keymanagement.md
 
     - file: principles/principles_intro.md #dropdown menu      
       children:
