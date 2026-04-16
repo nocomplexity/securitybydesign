@@ -40,3 +40,14 @@ Tip: Check the report [The State of Enterprise Open Source](https://www.redhat.c
 A good security product should never ever introduce extra vulnerabilities. However many low quality security products increase your cyber risk profile instead of lowering.
 ```
 
+
+From a Security by Design perspective, FOSS aligns naturally with several foundational tenets:
+- **Verifiability** – You can audit the exact software running in production.
+- **Independence** – Freedom from single-vendor lock-in reduces strategic risk.
+- **Rapid community response** – Mature FOSS projects often receive security patches more quickly than proprietary equivalents once issues are disclosed.
+- **Customisability** – Security controls can be tailored precisely to the threat model without waiting for a vendor roadmap.
+
+However, openness alone does not guarantee security. **Quality matters above all.** A poorly maintained or overly complex open-source component can introduce more risk than a well-engineered closed-source alternative. The principle of “prefer open” must therefore be tempered by two practical considerations:
+
+1. **Proven quality and active maintenance** – Choose projects with established track records, regular releases, strong governance (e.g., Apache, CNCF, or Linux Foundation projects), comprehensive test coverage, and responsive security disclosure processes.
+2. **Simplicity and manageability** – The most secure solution is often the simplest one that meets requirements. An overly complex FOSS stack that cannot be fully understood, monitored, or updated by the operational team undermines the very goals of Security by Design. Where two options offer comparable security, the one that is easier to manage, patch, and reason about should be selected—even if it means rejecting a more feature-rich open-source alternative.

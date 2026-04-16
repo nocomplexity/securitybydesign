@@ -28,28 +28,20 @@ Some people and companies still disregard the value of investing in cybersecurit
 
 ## Security by design training
 
-````{panels}
-[Simplify Security, architecture review and training](https://nocomplexity.com/simplify-security/)
-
-{badge}`ROI certified and approved,badge-primary`
-````
-
-+++
-
-````{panels}
+:::{tip}
 If you are living in the Netherlands we offer a [Security by Design workshop](https://www.organisatieontwerp.nl/security-by-design/). Within this workshop we explain the basics behind the Security by Design philosophy in a rather limited time frame. 
 
-{badge}`ROI certified and approved,badge-primary`
-````
+[Simplify Security, architecture review and training](https://nocomplexity.com/simplify-security/)
+:::
 
-## Free Security training or education material
+
+
+## Free Security trainings
 
 The best courses to learn how to simplify cyber security are open. So open access. Open access (OA) refers to freely available, digital, online information.
 
-```{tip} Great **Must CHECK** open training courses!
+:::{tip} Great **Must CHECK** open training courses!
 
-
-[Our growing collection of open access security trainings](https://nocomplexity.com/documents/securityarchitecture/learning/securitycourses.html)
-
-```
+[Our growing collection of open access security trainings](https://nocomplexity.com/documents/securityarchitecture/learning/cybercourses.html)
+:::
 

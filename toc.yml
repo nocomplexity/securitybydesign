@@ -38,9 +38,21 @@ project:
       children:
         - file: ssdlc/ssdlc.md
 
+    - file: culture/culture_intro.md #dropdown menu      
+      children:
+        - file: culture/minimalsteps.md
+
+    - file: foss/foss_intro.md #dropdown menu      
+      children:
+        - file: foss/opensecurity.md
+
+    - file: training/training_intro.md #dropdown menu      
+      children:
+        - file: training/training.md
 
     - file: help.md
       children:
         - file: contribute.md
-        - file: aboutnocx.md
         - file: license.md
+        - file: aboutnocx.md
+        

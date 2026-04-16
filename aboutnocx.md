@@ -18,7 +18,7 @@ Currently, I lead initiatives at [NO|Complexity.com](https://nocomplexity.com/),
 
 :::{card}
 :link: https://nocomplexity.com/codeaudit
-:header: **Python Code Audit**        
+:header: 😀 **Python Code Audit**        
 
 Modern Python source code security analyser. A local-first, FOSS tool that makes security checks simple for everyone.
 :::
@@ -26,14 +26,14 @@ Modern Python source code security analyser. A local-first, FOSS tool that makes
 
 :::{card}
 :link: https://nocomplexity.com/documents/securityarchitecture/introduction.html
-:header: **Open Security Reference Architecture**        
+:header: 🤩 **Open Security Reference Architecture**        
 Cyber security can still be simple and effective.
 Use this Playbook to create better and faster security solutions for your security use case.
 :::
 
 :::{card}
 :link: https://nocomplexity.com/documents/securitybydesign/intro.html
-:header: **Security By Design**        
+:header: 😋 **Security By Design**        
 
 Security by design is a proven method to develop products that are less vulnerable for cyber security threats.
 Master the topic quickly with this eBook.
@@ -48,7 +48,7 @@ Given the vast array of FOSS cybersecurity products available, this publication 
 
 :::{card}
 :link: https://nocomplexity.com/documents/reports/SimplifySecurity.pdf
-:header: **Simplify Cyber Manifest**        
+:header: 😻 **Simplify Cyber Manifest**        
 
 A manifesto to revolutionize cybersecurity through simplification.
 :::

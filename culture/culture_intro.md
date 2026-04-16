@@ -1,4 +1,8 @@
-# Security Culture
+---
+title: Security Culture 
+short_title: Security Culture
+---
+
 
 :::{admonition} Definition of Security Culture
 :class: tip, dropdown
@@ -28,3 +32,8 @@ The benefits of healthy  security culture include:
 
 A good security culture within your project or organization takes time and a lot of effort to evolve.  Don't assume that because the Board has endorsed a security posture that it will automatically be implemented on all organisational levels. That’s why continuous training and awareness is a key element for Security by Design.
 
+
+
+:::{toc}
+:context: children
+:::
