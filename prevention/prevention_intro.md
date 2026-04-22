@@ -40,6 +40,13 @@ Some simple prevention measurements are:
 Do not trust commercial solutions that claim to protect you against all cyber risks. The holy grail does not exist. This is way we created this Security by Design playbook. To help you free of cost
 ```
 
+:::{tip} Use Checklists
+
+Cyber security checklists are essential for minimizing risks. Using a well-designed, straightforward, and effective checklist can help you prevent costly and avoidable security mistakes.
+
+In many mature professions, checklists are a mandatory tool to minimize the likelihood of disaster. For example, the aviation, medical surgery, and engineering fields—including the automotive and rail industries—all rely on checklists to prevent catastrophic failures.
+:::
+
 ```{tip} Read more:
 Check some simple solutions from the [Security Reference architecture](https://nocomplexity.com/documents/securityarchitecture/introduction.html).
 ```

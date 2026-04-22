@@ -15,24 +15,6 @@ Security architecture has many definitions. In essence a good architecture is a 
 :::
 
 
-
-## How to create a security Architecture
-
-A good way to really speed up creating your solution architecture is to use a reference architecture as the basis.
-
-Creating security a security or privacy solution architecture consists of the following high level steps:
-
-*    Dive in the business strategy and organization;
-
-*   Gather security and privacy principles and requirements;
-
-*    Determine important constraints that apply to your architecture or design. There are always constraints, e.g. time, budget, maintenance costs, subject matter experts available etc.
-
-*    Derive the architecture building blocks from your architecture or design. Architecture building blocks help you to scope your solution. Using architecture building blocks gives a clear view on (new) integration aspects and where completely new solutions fit in the total IT landscape.
-
-*    Select (or create, buy) the new Solution Building Blocks. Prerequisite is of course that the functionality and technical constraints must be clear. Often prerequisites are derived from the previous design step.
-
-
 ![Security Architecture](../images/abb-sbb.png)
 
 

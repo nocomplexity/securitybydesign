@@ -3,9 +3,17 @@ project:
   toc:
     - file: intro.md
     - file: introduction/basics.md #dropdown menu
+    
     - file: prevention/prevention_intro.md #dropdown menu        
       children:
+        - file: prevention/shiftleft.md
+        - file: prevention/ransomware.md
+        - file: prevention/zerodays.md
         - file: prevention/examples.md
+    
+    - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
+      children:
+        - file: threatmodeling/stride_example.md
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
       children:
@@ -24,6 +32,7 @@ project:
     - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
       children:
         - file: securitymanagement/securitymanagement.md
+        - file: securitymanagement/riskmitigation.md
         - file: securitymanagement/keymanagement.md
 
     - file: principles/principles_intro.md #dropdown menu      
@@ -34,6 +43,10 @@ project:
     - file: securityarchitecture/architecture_intro.md #dropdown menu      
       children:
         - file: securityarchitecture/securityarchitecture.md
+        - file: securityarchitecture/create.md
+        - file: securityarchitecture/logging.md
+        - file: securityarchitecture/example1.md
+        - file: securityarchitecture/exampleRBAC.md
 
     - file: ssdlc/ssdlc_intro.md #dropdown menu      
       children:
@@ -42,10 +55,13 @@ project:
     - file: culture/culture_intro.md #dropdown menu      
       children:
         - file: culture/minimalsteps.md
+        - file: culture/awareness.md
+        - file: culture/effectiveawareness.md
 
     - file: foss/foss_intro.md #dropdown menu      
       children:
         - file: foss/opensecurity.md
+        - file: foss/softwarepackage.md
 
     - file: training/training_intro.md #dropdown menu      
       children:
@@ -55,5 +71,6 @@ project:
       children:
         - file: contribute.md
         - file: license.md
+        - file: notice.md
         - file: aboutnocx.md
         
