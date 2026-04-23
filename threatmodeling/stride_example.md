@@ -19,17 +19,10 @@
 
 ## Table of Contents
 
-1. [Service Description](#1-service-description)
-2. [Data Dictionary](#2-data-dictionary)
-3. [Threat Actors](#3-threat-actors)
-4. [STRIDE Analysis](#4-stride-analysis)
-5. [Risk Matrix](#5-risk-matrix)
-6. [Threat Scenarios](#6-threat-scenarios)
-7. [Recommendations Summary](#7-recommendations-summary)
-8. [Gap Analysis](#8-gap-analysis)
-9. [Review History](#9-review-history)
+:::{toc}
+:context: page
+:::
 
----
 
 ## 1. Service Description
 

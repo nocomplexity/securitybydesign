@@ -17,7 +17,7 @@ I believe knowledge should be free and available for everyone on planet earth.
 :::{admonition} Donate
 :class: tip
 
-If you think this PlayBook is worth a few Euros, you can [buy ](https://nocomplexity.gumroad.com/) and receive the PDF version. This will help me to keep this guide maintained. If you are not able to make a small donation, it's fine. Just enjoy this PlayBook and [Share](share-subsection) the word about it.
+If you think this PlayBook is worth a few Euros, you can [buy ](https://nocomplexity.gumroad.com/) and receive the PDF version. This will help me to keep this guide maintained. If you are not able to make a small donation, it's fine. Just enjoy this PlayBook and [Share](#share-subsection) the word about it.
 :::
 
 :::{admonition} Sponsor
@@ -48,7 +48,3 @@ Or use copy-paste:
 https://simplifysecurity.nocomplexity.com/
 ```
 :::
-
-
-This  Guide is last updated on:
-{sub-ref}`today`.
