@@ -10,7 +10,7 @@ To avoid misunderstanding: simplifying your security landscape is not a simple t
 
 ![Risks Cost Value](../images/risk_costs_value.png)
 
-It is essential to recognise that risk can never be reduced to zero. A perfect, risk-free security solution does not exist. There will always be residual risks that cannot be fully mitigated—neither through technology nor through procedures. At the same time, budgets are finite. Security is not a visible feature, but a costly quality attribute that is often only noticed when it fails.
+It is essential to recognise that cyber risks can never be reduced to zero. A perfect, risk-free security solution does not exist. There will always be residual risks that cannot be fully mitigated—neither through technology nor through procedures. At the same time, budgets are finite. Security is not a visible feature, but a costly quality attribute that is often only noticed when it fails.
 
 Increasing budgets or investing in more advanced cyber security technologies does not eliminate all risks. Instead, there is an optimal balance between cost and benefit.
 

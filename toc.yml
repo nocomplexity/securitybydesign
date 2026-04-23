@@ -9,6 +9,8 @@ project:
         - file: prevention/shiftleft.md
         - file: prevention/ransomware.md
         - file: prevention/zerodays.md
+        - file: prevention/mvsp.md
+        - file: prevention/pbom.md
         - file: prevention/examples.md
     
     - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
@@ -70,6 +72,7 @@ project:
     - file: help.md
       children:
         - file: contribute.md
+        - file: sponsors.md
         - file: license.md
         - file: notice.md
         - file: aboutnocx.md

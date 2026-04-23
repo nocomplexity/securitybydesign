@@ -5,7 +5,7 @@ This Playbook is created to simplify cyber security by outlining the core aspect
 
 Helping is possible in multiple ways:
 * [Support this work](sponsors)
-* [Share this Publication](attribution) or
+* [Share this Publication](#share-subsection) or
 * [Contribute](contribute)
 
 
