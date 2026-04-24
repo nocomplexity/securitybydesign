@@ -29,6 +29,7 @@ project:
 
     - file: riskassesment/ra_intro.md #dropdown menu      
       children:
+        - file: riskassesment/riskidentification.md
         - file: riskassesment/riskassesment.md
 
     - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
