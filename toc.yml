@@ -3,6 +3,8 @@ project:
   toc:
     - file: intro.md
     - file: introduction/basics.md #dropdown menu
+      children:
+        - file: introduction/tacitknowledge.md 
     
     - file: prevention/prevention_intro.md #dropdown menu        
       children:
@@ -54,6 +56,8 @@ project:
     - file: ssdlc/ssdlc_intro.md #dropdown menu      
       children:
         - file: ssdlc/ssdlc.md
+        - file: ssdlc/ssdlc_outline.md
+        - file: ssdlc/sdltips.md
 
     - file: culture/culture_intro.md #dropdown menu      
       children:
