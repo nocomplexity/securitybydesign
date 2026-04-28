@@ -75,3 +75,11 @@ If you cannot contribute, please continue learning — you are very welcome here
 :context: project
 :depth: 1
 :::
+
+## What This Book Is Not
+
+This course book, *Mastering Security by Design*, is intended to guide you through the essential concepts required to apply *Security by Design* effectively.
+
+It is not an introduction to basic cyber security. If you are unfamiliar with fundamental cyber security concepts, you should first consult an introductory resource. Likewise, if you are seeking in-depth, specialised knowledge in areas such as cryptography, networking, or application security, please refer to the appendix for a selection of recommended open resources.
+
+This book focuses exclusively on the critical principles and practices you need to understand and apply in order to master Security by Design.

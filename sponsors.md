@@ -22,13 +22,9 @@ Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsori
 ## Premium Sponsors
 
 ::::{grid} 2
-:class-container: text-center
-:gutter: 3
-
 
 :::{grid-item-card} 
 :link: https://nocomplexity.com/
-:link-type: url
 ![NO|COMPLEXITY](images/nocxbanner.png)
 
 **Complexity is easy, but simplicity is truly valuable**
@@ -36,7 +32,6 @@ Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsori
 
 :::{grid-item-card} 
 :link: https://www.bm-support.org/
-:link-type: url
 ![ROI Logo](images/ROI_logo.png)
 <br>
 
@@ -46,7 +41,6 @@ Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsori
 
 :::{grid-item-card} 
 :link: https://organisatieontwerp.nl/
-:link-type: url
 ![OO Logo](images/OO.png)
 
 **Diagnosis, Design and Change**

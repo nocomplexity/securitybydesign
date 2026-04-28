@@ -49,6 +49,7 @@ project:
       children:
         - file: securityarchitecture/securityarchitecture.md
         - file: securityarchitecture/create.md
+        - file: securityarchitecture/zerotrust.md
         - file: securityarchitecture/logging.md
         - file: securityarchitecture/example1.md
         - file: securityarchitecture/exampleRBAC.md
