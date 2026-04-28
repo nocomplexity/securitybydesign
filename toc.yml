@@ -62,6 +62,7 @@ project:
 
     - file: culture/culture_intro.md #dropdown menu      
       children:
+        - file: culture/howto.md
         - file: culture/minimalsteps.md
         - file: culture/awareness.md
         - file: culture/effectiveawareness.md

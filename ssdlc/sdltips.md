@@ -1,5 +1,4 @@
 ---
-
 title: SSDL Practices
 short_title: SSDL Practices
 ---------------------------
