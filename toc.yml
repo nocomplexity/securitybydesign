@@ -2,8 +2,10 @@ version: 1
 project:
   toc:
     - file: intro.md
-    - file: introduction/basics.md #dropdown menu
+    - file: introduction/introduction_intro.md #dropdown menu
       children:
+        - file: introduction/basics.md 
+        - file: introduction/topics.md 
         - file: introduction/tacitknowledge.md 
     
     - file: prevention/prevention_intro.md #dropdown menu        

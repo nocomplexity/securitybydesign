@@ -1,6 +1,6 @@
 ---
 title: What is Security By Design
-short_title: Introduction
+short_title: What is Security By Design
 ---
 
 

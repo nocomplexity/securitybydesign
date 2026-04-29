@@ -69,12 +69,35 @@ If you cannot contribute, please continue learning — you are very welcome here
 :::
 
 
-## Book Overview
+
+## Learning Objectives
+
+By the end of this course, you should be able to:
+
+1. **Articulate Security By Design** – Define the core philosophy of proactive, embedded security and explain how it differs from reactive, bolt-on approaches.
+
+2. **Apply secure design principles** – Implement foundational principles such as least privilege, defence in depth, and fail secure to real-world architectures.
+
+3. **Conduct threat modeling and risk assessment** – Identify attack paths, prioritise threats, and make informed risk-based trade-offs early in the design phase.
+
+4. **Integrate security into the SSDLC** – Embed threat modeling, secure coding standards, and continuous testing throughout requirements, design, development, and deployment.
+
+5. **Manage supply chain and open source security** – Evaluate third-party packages for trustworthiness, monitor for vulnerabilities, and establish rapid alerting and update processes.
+
+6. **Design a security architecture** – Create layered, verifiable system architectures that enforce security policies and isolate trust boundaries by design.
+
+7. **Foster security culture and monitoring** – Build organisational behaviours that reward secure practice, alongside observable systems that detect anomalies and validate controls continuously.
+
+
+
+## Topics Overview
 
 :::{toc}
 :context: project
 :depth: 1
 :::
+
+In the section [Introduction](introduction/topics.md) more information is given on why these topics are crucial for Mastering Security By Design.
 
 ## What This Book Is Not
 
@@ -83,3 +106,13 @@ This course book, *Mastering Security by Design*, is intended to guide you throu
 It is not an introduction to basic cyber security. If you are unfamiliar with fundamental cyber security concepts, you should first consult an introductory resource. Likewise, if you are seeking in-depth, specialised knowledge in areas such as cryptography, networking, or application security, please refer to the appendix for a selection of recommended open resources.
 
 This book focuses exclusively on the critical principles and practices you need to understand and apply in order to master Security by Design.
+
+
+## Copyright and License
+
+
+(c) 2021-2026 BM-Support.org - [Maikel](https://nocomplexity.com/simplify-security/) & Asim and all contributors
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Third-party product names may be the trademarks of their respective owners.
+
+See http://creativecommons.org/licenses/by-sa/4.0/ for the full license text.
