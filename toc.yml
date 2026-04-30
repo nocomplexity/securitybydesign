@@ -73,6 +73,7 @@ project:
       children:
         - file: foss/opensecurity.md
         - file: foss/softwarepackage.md
+        - file: foss/checklist_evalfoss.md
 
     - file: training/training_intro.md #dropdown menu      
       children:

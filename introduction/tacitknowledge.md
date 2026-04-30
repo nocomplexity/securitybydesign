@@ -1,6 +1,6 @@
 ---
 title: Explicit Knowledge and Tacit Knowledge  
-short_title: Tacit Knowledge  
+short_title: Know-How and Know-What
 ---
 
 ## The Importance of Tacit Knowledge in Security by Design

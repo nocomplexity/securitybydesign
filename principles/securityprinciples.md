@@ -2,6 +2,11 @@
 title: Crucial and Vital Security by Design Principles
 short_title: Security by Design Principles
 ---
+
+:::{important} 
+Security by Design principles do not guarantee security. They are a mandatory aid to thinking, not a replacement for it.
+:::
+
 When embracing the Security by design approach you must embrace at least the following principles:
 
 :::{note} Minimise attack surface area
@@ -95,6 +100,11 @@ Systems must be able to receive and apply security patches safely and reliably.
 
 
 ## Learn more
+
+
+
+These Security by Design principles represent distilled wisdom and long-standing experience from the field. You must always apply them when shaping an architecture or making design decisions.
+
 
 ```{tip} Learn more about security principles
 Do not reinvent the wheel by defining your own security principles. Make use of already good defined and battle tested security principles.
