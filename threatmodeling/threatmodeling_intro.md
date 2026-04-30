@@ -3,6 +3,8 @@ title: Threat Modeling
 short_title: Threat Modeling
 ---
 
+Threat Modeling is about identifying security risks early by thinking like an attacker. 
+
 Threat modelling is a proactive and holistic approach to identifying, analysing, and addressing potential threats and risks within a system or application. It focuses on understanding how an attacker might exploit weaknesses and on implementing measures to mitigate those risks at an early stage. By doing so, it supports informed decision-making around application security.
 
 Beyond producing a model diagram, the threat modelling process also delivers a prioritised set of security improvements. These enhancements can be applied across multiple stages of development, including conception, requirements gathering, design, and implementation.

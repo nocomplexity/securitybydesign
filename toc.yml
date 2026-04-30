@@ -19,6 +19,8 @@ project:
     
     - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
       children:
+        - file: threatmodeling/what_is_threatmodeling.md
+        - file: threatmodeling/stride_model.md
         - file: threatmodeling/stride_example.md
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
