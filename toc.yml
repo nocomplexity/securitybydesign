@@ -7,7 +7,35 @@ project:
         - file: introduction/basics.md 
         - file: introduction/topics.md 
         - file: introduction/tacitknowledge.md 
-    
+
+    - file: principles/principles_intro.md #dropdown menu      
+      children:
+        - file: principles/whyprinciples.md
+        - file: principles/securityprinciples.md
+
+    - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
+      children:
+        - file: threatmodeling/what_is_threatmodeling.md
+        - file: threatmodeling/stride_model.md
+        - file: threatmodeling/stride_example.md
+
+    - file: securityarchitecture/architecture_intro.md #dropdown menu      
+      children:
+        - file: securityarchitecture/securityarchitecture.md
+        - file: securityarchitecture/abbs.md
+        - file: securityarchitecture/create.md
+        - file: securityarchitecture/zerotrust.md
+        - file: securityarchitecture/logging.md
+        - file: securityarchitecture/example1.md
+        - file: securityarchitecture/exampleRBAC.md
+
+    - file: ssdlc/ssdlc_intro.md #dropdown menu      
+      children:
+        - file: ssdlc/ssdlc.md
+        - file: ssdlc/ssdlc_outline.md
+        - file: ssdlc/sdltips.md
+
+
     - file: prevention/prevention_intro.md #dropdown menu        
       children:
         - file: prevention/shiftleft.md
@@ -16,13 +44,7 @@ project:
         - file: prevention/mvsp.md
         - file: prevention/pbom.md
         - file: prevention/examples.md
-    
-    - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
-      children:
-        - file: threatmodeling/what_is_threatmodeling.md
-        - file: threatmodeling/stride_model.md
-        - file: threatmodeling/stride_example.md
-       
+   
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
       children:
@@ -46,26 +68,6 @@ project:
         - file: securitymanagement/riskmitigation.md
         - file: securitymanagement/keymanagement.md
 
-    - file: principles/principles_intro.md #dropdown menu      
-      children:
-        - file: principles/securityprinciples.md
-
-
-    - file: securityarchitecture/architecture_intro.md #dropdown menu      
-      children:
-        - file: securityarchitecture/securityarchitecture.md
-        - file: securityarchitecture/abbs.md
-        - file: securityarchitecture/create.md
-        - file: securityarchitecture/zerotrust.md
-        - file: securityarchitecture/logging.md
-        - file: securityarchitecture/example1.md
-        - file: securityarchitecture/exampleRBAC.md
-
-    - file: ssdlc/ssdlc_intro.md #dropdown menu      
-      children:
-        - file: ssdlc/ssdlc.md
-        - file: ssdlc/ssdlc_outline.md
-        - file: ssdlc/sdltips.md
 
     - file: culture/culture_intro.md #dropdown menu      
       children:
@@ -73,6 +75,8 @@ project:
         - file: culture/minimalsteps.md
         - file: culture/awareness.md
         - file: culture/effectiveawareness.md
+        - url: https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/
+          title: Example - Secure by Design Activities
 
     - file: foss/foss_intro.md #dropdown menu      
       children:

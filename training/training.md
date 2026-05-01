@@ -1,4 +1,9 @@
-# Security Training
+---
+title: Open Security Trainings and Courses (Free)
+short_title: Security Courses
+---
+
+Security Training
 
 Good security training helps you to better understand Security by Design. Security by Design can be seen as the core foundation that helps you to better understand all different specialist topics that are required.
 
