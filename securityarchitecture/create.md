@@ -1,43 +1,61 @@
-# Create a security architecture
+---
+title: Steps to Create a Security Architecture
+short_title: Creating a Security Architecture
+---
 
-## Problem
+## Why create a security architecture?
 
-To prevent security disasters from the start developing a security architecture from the start is a must do. However creating a security architecture is not simple by default.
+To prevent security disasters, you must develop a security architecture from the very start. However, creating one is not simple by default.
 
-## Solution 
+That said, creating a security architecture for a specific product does **not** have to be complex. Too often, security architectures drift from their essential goal: thinking in advance about measures to mitigate common security vulnerabilities. The result is long documents that are seldom read and useless for engineers.
 
-Creating a security architecture for a specific product does not have to be complex. Too often security architectures have drifted from the essential goal. That is to think in advantage about measurements that should be taken to mitigate common security vulnerabilities.  Too often this results in long documents that are seldom read and have become useless for engineers.
-
-:::{tip}
-A security architecture helps in the continuous process of optimizing and controlling your security risks.
+:::tip
+A security architecture supports the continuous process of optimising and controlling your security risks.
 :::
 
-Creating security a security or privacy solution architecture consists minimal of the following steps:
+![Security architecture steps](../images/securitybydesign.png)
 
-* Gather security and privacy principles and requirements;  
-* Use a good reference architecture or architectures. So use external and internal reference architectures if available. This to make sure the security architecture that must be created has a very clear focus.  
-* Use a risk based approach. A discussion with responsible management on risks and possible costs for risk mitigation it is useless to proceed. To use a risk based approach creating a thread model is vital.  
-* Work principle based.   
-* Determine important constraints that apply to your architecture or design. There are always constraints, e.g. time, budget, maintenance costs, subject matter experts available etc.  
-* Derive the architecture building blocks from your architecture or design. Architecture building blocks help you to scope your solution. Using architecture building blocks gives a clear view on (new) integration aspects and where completely new solutions fit in the total IT landscape.  
-* Select (or create, or buy) the new Solution Building Blocks. Prerequisite is of course that the functionality and technical constraints must be clear. Often prerequisites are derived from the previous design step. Speedup selection and evaluation of FOSS Security solutions by making use of [this free guide](https://nocomplexity.com/documents/securitysolutions/intro.html).
+---
 
-Creating a good security architecture, including a threat model and gathering and discussion requirements and constraints is an iterative process. So avoid creating a blueprint architecture in splendid isolation without discussion with all stakeholders. This has never worked.
+## Steps for creating a security architecture using Security by Design practices
 
+Creating a security or privacy solution architecture consists of at least the following steps:
 
+### 1. Define scope, goals and risk assessment
 
-Creating security a security or privacy solution architecture consists of the following high level steps:
+- Dive into the business strategy and organisation. Perform a simple risk assessment.
+- Establish the business context, assets, and high-level risk appetite.
+- Gather security principles and requirements relevant to your context.
+- Identify important constraints (e.g., time, budget, available subject matter experts).
+- Use a good reference architecture (external or internal) to maintain clear focus.
+- **Use a risk-based approach.** Without a discussion with responsible management on risks and possible mitigation costs, it is useless to proceed. Creating a threat model is vital.
+- Work principle‑based.
+- Determine constraints that apply to your architecture or design (e.g., time, budget, maintenance costs, expert availability).
 
-* Dive in the business strategy and organization. Perform a simple risk assessment.
+### 2. Determine (and actively elicit) requirements
 
-*   Gather security principles and requirements that are relevant for your context.
+- Create a threat model (e.g., STRIDE, LINDDUN).
+- Apply a security model (e.g., Zero Trust, least privilege).
+- Use design principles (e.g., defence in depth, fail secure).
 
-*   Determine important constraints that apply to your security architecture. There are always constraints, e.g. time, budget, subject matter experts available etc.
+### 3. Define the required Architecture Building Blocks (ABBs)
 
-*    Derive the architecture building blocks from your architecture or design. Architecture building blocks help you to scope your solution. Using architecture building blocks gives a clear view on (new) integration aspects and where completely new solutions fit in the total IT landscape.
+- Specify what the system must do in technology-agnostic terms.
+- **Document your design decisions and rationale** – this is critical for auditability and reuse.
+- Derive ABBs from your architecture or design. ABBs help you scope your solution, clarify (new) integration aspects, and show where new solutions fit into the total IT landscape.
 
-*  Define or reuse the Solution Building Blocks needed to create the design. Prerequisite is that the functionality as specified in the Architecture Building Blocks must be clear.
+### 4. Identify the Solution Building Blocks (SBBs) that realise your ABBs
 
-*  Review and improve your solution. Use internal stakeholders, but also get review input from one or more external independent reviewers. An external reviewer has **no** internal interests but is solely focussed on improving your security architecture. If you need help to find an [external reviewer, just ask advice!](https://nocomplexity.com/securityreview/).
+- Map each ABB to concrete technologies, patterns, or products appropriate for your context.
+- Select (or create, or buy) the new SBBs. Prerequisites (functionality and technical constraints) must be clear and are often derived from the previous design step.
+- Speed up selection and evaluation of FOSS security solutions using [this free guide](https://nocomplexity.com/documents/securitysolutions/intro.html).
 
-![security architecture steps](../images/securitybydesign.png)
+### 5. Review and assess
+
+- Review and improve your solution. Use internal and external stakeholders, but also seek input from one or more **external independent reviewers**. An external reviewer has **no** internal interests and is solely focused on improving your security architecture.
+- If you need help finding an external reviewer, [just ask for advice](https://nocomplexity.com/securityreview/).
+
+:::note
+Creating a good security architecture – including a threat model, requirements gathering, and constraint discussions – is an **iterative process**. Avoid creating a blueprint architecture in splendid isolation without discussion with all stakeholders. That has never worked.
+:::
+

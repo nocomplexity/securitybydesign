@@ -74,6 +74,14 @@ Consumers should have risk free products and are nowadays far more aware of digi
 
 Security by design is not a product. Nor a simple straight through process. Security by design is a systems approach to do the right things from a cybersecurity perspective in every action performed when developing and producing a new product. So it is holistic, integral and embraces key principles of sytems thinking methods.
 
+## What to protect?
+
+The essence of information security is simple: protect information. That is it. So whenever possible, do not make it more complicated than needed.
+
+
+![What is security](../images/what_is_security.png)
+
+Security by Design helps you protect your valuable assets – from initial design through to ongoing monitoring. It is based on a holistic approach with its roots in systems science.
 
 
 ## The perfect and single solution
@@ -90,6 +98,23 @@ Do not fall into the tool trap: there is no such thing as a Security by Design p
 
 You need secure products, not yet another security product. Security by Design is a methodology—a way of thinking, supported by practical and proven principles—that makes any organisation more robust against cyber threats.
 :::
+
+
+
+## Awareness! → Principles → Reuse proven solutions
+
+![piramid](../images/piramid.png)
+
+
+
+- **Awareness** – The foundation. Without knowing security risks exist, nothing else matters.
+
+- **Architecture & Design Principles** – The rules that guide decisions (e.g., least privilege, defence in depth).
+
+- **Reuse proven solutions** – The action. Don't invent your own crypto or auth – use battle‑tested standards (TLS, OAuth2, etc.).
+
+**The chain breaks if any link is missing.** No awareness → no principles applied. No principles → no meaningful reuse. No reuse → avoidable vulnerabilities.
+
 
 
 

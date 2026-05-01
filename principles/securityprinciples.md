@@ -54,6 +54,25 @@ Every access request must be checked against authorisation rules, without relyin
 :::{note} Economy of mechanism (Keep it simple!)
 :class: dropdown
 Keep security-critical designs as simple and small as possible.
+
+This principle is also known as: 
+
+**Simplicity is better than complexity.**
+
+Security mechanisms should be as simple and small as possible. Complex systems have more vulnerabilities, are harder to verify, and increase the attack surface.
+
+
+A complicated solution often fails because:
+
+- It's harder to review. No one can fully understand all the interactions.
+
+- It's harder to configure correctly. Admins will make mistakes.
+
+- It's harder to maintain. Fixing one bug often creates two more.
+
+- It often relies on "security by obscurity." The complexity feels secure because it's hard to understand, but that's an illusion.
+
+
 :::
 
 
@@ -90,13 +109,7 @@ Systems must be able to receive and apply security patches safely and reliably.
 :::
 
 
-:::{note} Design for secure updates
-:class: dropdown
-Systems must be able to receive and apply security patches safely and reliably.
-:::
-
-
- If you think a principle is not applicable for your situation: Think again. Or better write down your motivation and ask for an expert review on your motivation.
+If you think a principle is not applicable for your situation: Think again. Or better write down your motivation and ask for an expert review on your motivation.
 
 
 ## Learn more

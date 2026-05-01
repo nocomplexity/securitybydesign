@@ -22,6 +22,7 @@ project:
         - file: threatmodeling/what_is_threatmodeling.md
         - file: threatmodeling/stride_model.md
         - file: threatmodeling/stride_example.md
+       
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
       children:
@@ -41,6 +42,7 @@ project:
     - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
       children:
         - file: securitymanagement/securitymanagement.md
+        - file: securitymanagement/securityframework.md
         - file: securitymanagement/riskmitigation.md
         - file: securitymanagement/keymanagement.md
 
@@ -52,6 +54,7 @@ project:
     - file: securityarchitecture/architecture_intro.md #dropdown menu      
       children:
         - file: securityarchitecture/securityarchitecture.md
+        - file: securityarchitecture/abbs.md
         - file: securityarchitecture/create.md
         - file: securityarchitecture/zerotrust.md
         - file: securityarchitecture/logging.md
