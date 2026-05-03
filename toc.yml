@@ -35,9 +35,15 @@ project:
         - file: ssdlc/ssdlc_outline.md
         - file: ssdlc/sdltips.md
 
+    - file: foss/foss_intro.md #dropdown menu      
+      children:
+        - file: foss/opensecurity.md
+        - file: foss/softwarepackage.md
+        - file: foss/checklist_evalfoss.md
 
     - file: prevention/prevention_intro.md #dropdown menu        
       children:
+        - file: prevention/why_prevention.md
         - file: prevention/shiftleft.md
         - file: prevention/ransomware.md
         - file: prevention/zerodays.md
@@ -48,10 +54,12 @@ project:
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
       children:
+        - file: monitoring/whatis_secmonitoring.md
         - file: monitoring/securitymonitoring.md
     
     - file: policies/policies_intro.md #dropdown menu        
       children:
+        - file: policies/what_are_secpolicies.md
         - file: policies/securitypolicies.md
         - file: policies/protection.md
         - file: policies/softwareupdate.md
@@ -78,11 +86,7 @@ project:
         - url: https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/
           title: Example - Secure by Design Activities
 
-    - file: foss/foss_intro.md #dropdown menu      
-      children:
-        - file: foss/opensecurity.md
-        - file: foss/softwarepackage.md
-        - file: foss/checklist_evalfoss.md
+    
 
     - file: training/training_intro.md #dropdown menu      
       children:
