@@ -24,7 +24,7 @@ Security by Design is a **structured framework**, not a single activity or a str
 > A framework is **not a checklist**. It is a system of dependencies.  
 > Each topic below is useless in isolation. Master them together to drive the engine of true Security by Design.
 
-![Security by Design Framework](../images/sbd_framework.png)
+![Security by Design Framework](https://nocomplexity.github.io/securitybydesign/build/sbd_framework-3cd99d67f922c9a202842530536f7610.png)
 
 ---
 
