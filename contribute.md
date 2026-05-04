@@ -1,4 +1,8 @@
-# Contribute
+---
+title: Contribute
+short_title: Contribute
+---
+
 
 Great that you’re here and want to contribute! 
 
@@ -14,7 +18,6 @@ All contributions are welcome!
 The **simplest** way to make a comment for a specific page is to use the Github icon in the top right.
 
 ![editsuggestion](images/edit_suggestion.png)
-
 
 
 

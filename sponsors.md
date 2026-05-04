@@ -19,6 +19,11 @@ We’ve got an audience of thousands of adopters that read and use our online Pl
 
 Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsoring/) to discuss various options.
 
+:::{include} donate.md
+
+:::
+
+
 ## Premium Sponsors
 
 ::::{grid} 2
