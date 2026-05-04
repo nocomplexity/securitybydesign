@@ -12,6 +12,7 @@ project:
       children:
         - file: principles/whyprinciples.md
         - file: principles/securityprinciples.md
+        - file: principles/exampleSASTtools.md
 
     - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
       children:

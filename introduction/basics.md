@@ -41,7 +41,11 @@ Security should be seen as a foundation that is developed in parallel with your 
 
 ## Why
 
-Cyber security is a key quality aspect that can not be integrated later within your product. You can not create a better security foundation when your product is finished. Security is a core product property that is almost impossible to add later.
+:::{important}
+Cyber security is a key quality aspect that **can not be integrated later** within your product.
+:::
+
+You can not create a better security foundation when your product is finished. Security is a core product property that is almost impossible to add later.
 
 
 Practising Security by Design is essential to create systems and business processes that are resilient against cyber security threats.

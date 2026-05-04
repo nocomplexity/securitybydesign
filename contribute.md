@@ -9,11 +9,21 @@ You don't have to be a security expert to contribute, every contribution is welc
 
 :::{tip} This playbook is open source. 
 All contributions are welcome!
+:::
 
 The **simplest** way to make a comment for a specific page is to use the Github icon in the top right.
 
 ![editsuggestion](images/edit_suggestion.png)
 
+
+
+
+## Pay what you can 
+
+**Cybersecurity education shouldn't be a luxury.**
+
+*If you can, your support makes a meaningful difference.*
+ 
+:::{include} donate.md
+
 :::
-
-

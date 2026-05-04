@@ -8,5 +8,5 @@ Our Mission: To [simplify cybersecurity](https://simplifysecurity.nocomplexity.c
 
 If you find this material valuable, please consider supporting our mission.
 
-{button}`Donation <https://donate.stripe.com/28E8wP01a9846OD9KQgbm01>`
+{button}`Donation <https://buy.stripe.com/9B67sL29ickg1ujbSYgbm03>`
 :::
