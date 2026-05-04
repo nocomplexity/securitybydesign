@@ -3,14 +3,29 @@ title: Security Management
 short_title: Security Management
 ---
 
-Security Management is a critical enabler of Security by Design, ensuring that security is not only considered during initial design but is consistently governed, maintained, and improved throughout the system lifecycle. It provides the organisational structure, processes, and accountability required to turn security intentions into sustained practice.
+## Introduction
 
-From a **business perspective**, Security Management ensures that security aligns with organisational objectives, regulatory requirements, and risk appetite. It supports informed decision-making, protects organisational reputation, and reduces the financial and operational impact of security incidents. Without effective management, even well-designed systems can fail due to poor governance or lack of oversight.
+Security by Design cannot succeed without effective **Security Management** – the structured discipline of directing, governing, and sustaining security efforts over time. While risk assessment tells you what to prioritise, security management provides the machinery to actually deliver and maintain those protections. This section moves from theory into the practical governance of secure systems.
 
-From an **architectural perspective**, it ensures that security controls are coherently integrated across systems and environments. Security Management provides the frameworks and standards that guide architects in making consistent, scalable, and interoperable design decisions. This helps avoid fragmented or contradictory controls that weaken the overall security posture.
+We begin by examining the multiple **aspects of security management** – including strategic, operational, policy, compliance, and cultural dimensions. You will learn that security management is not merely a technical function but a business enabler that requires clear roles, responsibilities, and accountability structures. Understanding these different aspects helps you avoid the common trap of treating security solely as an IT problem.
 
-From a **technical perspective**, Security Management ensures that controls are properly implemented, monitored, and maintained. It supports activities such as vulnerability management, patching, configuration control, and incident detection and response. This ongoing operational focus is essential, as threats evolve continuously after deployment.
+From there, we introduce the concept of a **security framework**. Frameworks such as ISO/IEC 27001, NIST CSF, and Cyber Essentials provide proven, standardised structures for organising security management activities. You will learn how to select, tailor, and apply a framework appropriate to your organisation's size, sector, and risk appetite, rather than building disjointed security processes from scratch.
 
+With a framework in place, we turn to the active task of **mitigating cyber risks**. This section translates risk assessment outputs into actionable controls, policies, and response plans. You will learn how to select proportionate mitigations, assign ownership, set measurable objectives, and monitor effectiveness over time – closing the loop between identifying risks and actually reducing them.
+
+Finally, we introduce a practical **key management template**. A template provides consistency, repeatability, and auditability to security management activities. You will learn how to structure a template that captures essential management information – including asset inventories, risk registers, control statements, action plans, and review cycles – enabling you to implement and communicate security management across teams with clarity and rigour.
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- Describe the core aspects of security management and explain why security is a management discipline, not solely a technical one
+- Select and justify an appropriate security framework (e.g., ISO 27001, NIST CSF) for a given organisational context
+- Translate risk assessment outputs into a coherent plan for mitigating cyber risks, including control selection and ownership assignment
+- Use a key management template to document, track, and communicate security management activities consistently
+- Explain how security management sustains Security by Design principles throughout the system lifecycle
+
+## Sections
 
 :::{toc}
 :context: children

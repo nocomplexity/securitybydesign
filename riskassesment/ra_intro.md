@@ -3,11 +3,26 @@ title: Risk Assessment
 short_title: Risk Assessment
 ---
 
-Risk assessment is a fundamental component of Security by Design, as it ensures that security decisions are driven by a clear understanding of what needs to be protected and why. A **risk assessment** is the systematic process of identifying, analysing, and evaluating potential threats, vulnerabilities, and their impact on systems, data, and users.
+## Introduction
 
-In a Security by Design approach, risk assessment is vital because it enables organisations to prioritise security measures based on real-world risks rather than assumptions. Not all assets carry the same value, and not all threats are equally likely or damaging. By assessing risk early in the design phase, teams can allocate resources effectively, focus on the most critical areas, and avoid unnecessary or misplaced controls.
+Risk assessment is the engine of Security by Design. Without it, security decisions are based on habit, fear, or guesswork rather than evidence. This section introduces risk assessment as the structured discipline of identifying what could go wrong, how likely it is, and what the consequences would be.
 
-Moreover, risk assessment supports informed decision-making throughout the system lifecycle. It helps identify potential weaknesses before they are built into the system, reduces the likelihood of costly redesigns, and ensures that security controls are proportionate to the level of risk. Without this process, security efforts may be inconsistent, reactive, or insufficient, ultimately undermining the principles of Security by Design.
+We begin by defining exactly what a risk assessment is — distinguishing it from related concepts such as threat modelling or compliance auditing. You will learn the standard terminology (asset, threat, vulnerability, impact, likelihood) and how these elements combine to produce a risk rating. Crucially, we establish why risk assessment must occur early in the design phase, not as a retrospective tick-box exercise.
+
+From there, the section moves into the practical work of **risk identification and analysis**. You will learn systematic techniques for uncovering threats and vulnerabilities across people, process, and technology domains. We then explore how to analyse identified risks by estimating likelihood and impact, using both qualitative scales (e.g., high, medium, low) and simple quantitative methods where appropriate. By the end of this process, you will be able to produce a prioritised list of risks that directly informs design decisions.
+
+## Learning Objectives
+
+By the end of this section, you will be able to:
+
+- Define a risk assessment and explain how it differs from threat modelling and compliance audits
+- Accurately use the core terms: asset, threat, vulnerability, impact, and likelihood
+- Justify why risk assessment must be performed early in the Security by Design lifecycle
+- Apply systematic methods to identify relevant threats and vulnerabilities for a given system
+- Analyse identified risks by estimating likelihood and impact using qualitative scales
+- Produce a prioritised risk list that can directly inform security control selection
+
+## Sections
 
 
 :::{toc}

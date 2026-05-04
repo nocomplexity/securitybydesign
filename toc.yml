@@ -66,8 +66,9 @@ project:
 
     - file: riskassesment/ra_intro.md #dropdown menu      
       children:
+        - file: riskassesment/what_is_riskassesment.md
         - file: riskassesment/riskidentification.md
-        - file: riskassesment/riskassesment.md
+        
 
     - file: securitymanagement/securitymanagement_intro.md #dropdown menu      
       children:
@@ -79,18 +80,13 @@ project:
 
     - file: culture/culture_intro.md #dropdown menu      
       children:
-        - file: culture/howto.md
-        - file: culture/minimalsteps.md
+        - file: culture/what_is_secculture.md
+        - file: culture/howto.md        
         - file: culture/awareness.md
         - file: culture/effectiveawareness.md
-        - url: https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/
-          title: Example - Secure by Design Activities
+            
 
-    
-
-    - file: training/training_intro.md #dropdown menu      
-      children:
-        - file: training/training.md
+    - file: training/training_intro.md 
 
     - file: help.md
       children:

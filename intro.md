@@ -44,7 +44,8 @@ If you are based in the Netherlands or Belgium, training is delivered directly b
 
 {button}`Find out more about these workshops  <https://organisatieontwerp.nl/security-by-design/>`
 
-[Find out more about upcoming course dates or in-house training opportunities.](https://organisatieontwerp.nl/security-by-design/)
++++
+
 
 
 

@@ -45,3 +45,9 @@ Define clear objectives. Some common objectives you can reuse are:
 | Reduce number and severity of security incidents | - Configure systems to make anti-virus software mandatory <br> - Record time spent fixing virus related problems and user downtime <br/> -‘Virus-free’ awards for individual departments (with associated publicity across the organisation) <br> -Implement effective content management systems <br/> - Show cost savings on time spent dealing with incidents |
 | Protect reputation | - Demonstrate threat to reputation and collect data on incidents affecting other organisations in the same sector |
 | Management support for security | - Demonstrate that current vulnerabilities are ‘real’ <br/> -Deliver awareness programme to management first (pilot scheme) <br/> - Use [risk analysis tools](https://nocomplexity.com/documents/securitysolutions/generatedfiles/vulnerabilitymanagement.html#vulnerability-management-solutions)  with management to both gather information and raise awareness <br/> - Identify key management stakeholders for security <br/> - Obtain delegated CEO mandate for all security activities <br/> - Quantify costs of security incidents and assign back to business owners <br/> - Deliver annual risk statements to business management with clear assignment of responsibility and ownership for problems |
+
+:::{tip}
+Another practical example of guidance for teams and security professionals can be found in this [document](https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/).
+
+Published by the UK Government Security Group, it provides role-specific, tailorable activities for embedding Secure by Design. The guidance includes concrete tools such as a RACI matrix for assigning responsibilities, an asset evaluation sheet for threat modelling, a controls taxonomy for selecting mitigations, and a self-assessment tracker for monitoring progress across the service lifecycle.
+:::

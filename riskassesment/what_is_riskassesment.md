@@ -1,4 +1,9 @@
-# Risk Assessment
+---
+title: What is a Risk Assessment
+short_title: What is a Risk Assessment
+---
+
+
 
 :::{admonition} Definition of Risk Assessment (RA)
 :class: tip, dropdown
