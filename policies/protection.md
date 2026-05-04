@@ -2,8 +2,7 @@
 
 
 
-:::{admonition} Definition of Security Protection
-:class: tip, dropdown
+:::{tip} Definition of Security Protection
 Security protection measurements lower the risk of cyber security breaches.
 :::
 

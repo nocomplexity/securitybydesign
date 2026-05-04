@@ -17,7 +17,10 @@ The bottom row shows the **security activities** that should happen alongside ea
 * In **Testing**, perform **security testing** to ensure the system behaves safely under attack.
 * In **Deployment**, complete **security checks and apply secure configurations** before release.
 
+:::{important} 
 The key point is that security is **continuous**, not a separate phase.
+:::
 
-Across all stages, **Zero Trust principles** apply: assume systems may already be compromised, verify every access request, and give only the minimum access required.
+Across all stages, **Zero Trust principles** and all **[Security By Design principles](principles/securityprinciples.md)** MUST apply, so:
+* **Assume systems may already be compromised**, verify every access request, and give only the minimum access required.
 

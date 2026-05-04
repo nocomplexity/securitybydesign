@@ -31,7 +31,6 @@ By the end of this section, you will be able to:
 
 ## Sections
 
-Learn more on FOSS Security to master Security By Design:
 
 :::{toc}
 :context: children

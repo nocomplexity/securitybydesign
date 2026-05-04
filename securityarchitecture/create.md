@@ -9,7 +9,7 @@ To prevent security disasters, you must develop a security architecture from the
 
 That said, creating a security architecture for a specific product does **not** have to be complex. Too often, security architectures drift from their essential goal: thinking in advance about measures to mitigate common security vulnerabilities. The result is long documents that are seldom read and useless for engineers.
 
-:::tip
+:::{attention}
 A security architecture supports the continuous process of optimising and controlling your security risks.
 :::
 
@@ -55,7 +55,9 @@ Creating a security or privacy solution architecture consists of at least the fo
 - Review and improve your solution. Use internal and external stakeholders, but also seek input from one or more **external independent reviewers**. An external reviewer has **no** internal interests and is solely focused on improving your security architecture.
 - If you need help finding an external reviewer, [just ask for advice](https://nocomplexity.com/securityreview/).
 
-:::note
-Creating a good security architecture – including a threat model, requirements gathering, and constraint discussions – is an **iterative process**. Avoid creating a blueprint architecture in splendid isolation without discussion with all stakeholders. That has never worked.
+:::{hint}
+Creating a good security architecture – including a threat model, requirements gathering, and constraint discussions – is an **iterative process**. 
+
+**Avoid** creating a blueprint architecture in splendid isolation without discussion with all stakeholders. That has never worked.
 :::
 

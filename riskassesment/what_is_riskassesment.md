@@ -5,8 +5,7 @@ short_title: What is a Risk Assessment
 
 
 
-:::{admonition} Definition of Risk Assessment (RA)
-:class: tip, dropdown
+:::{tip} Definition of Risk Assessment (RA)
 A cyber security risk assessment is the process of identifying, analysing and evaluating risks.
 :::
 
@@ -19,37 +18,56 @@ Following a risk management approach will help you identify other scenarios that
 Not all information should be treated equally. Some information is more valuable or sensitive, requiring a greater level of protection. 
 
 A typical risk assessment consists of collecting a lot of information. Information that is typically needed for a good risk assessment is: 
-* Security requirements and objectives.
+
+- [ ]  Security requirements and objectives.
 
 +++
 
-* System or network architecture and infrastructure, such as a network diagram showing how assets are configured and interconnected.
+- [ ] System or network architecture and infrastructure, such as a network diagram showing how assets are configured and interconnected.
 
 +++
 
-* Information available to the public or accessible from the organization’s web site
+- [ ] Information available to the public or accessible from the organization’s web site
 Physical assets, such as hardware, including those in the data centre, network, and communication components and peripherals (e.g., desktop, laptop, PDAs)
+
 +++ 
 
-* Operating systems, such as PC and server operating systems, and network management systems
+- [ ] Operating systems, such as PC and server operating systems, and network management systems
 +++
-* Data repositories, such as database management systems and files
+
+- [ ] Data repositories, such as database management systems and files
+
 +++ 
-* A listing of all applications
+
+- [ ] A listing of all applications
+
 +++
-* Network details, such as supported protocols and network services offered
+
+- [ ] Network details, such as supported protocols and network services offered
+
 +++
-* Security systems in use, such as access control mechanisms, change control, antivirus, spam control and network monitoring
+
+- [ ] Security systems in use, such as access control mechanisms, change control, antivirus, spam control and network monitoring
+
 +++
-* Security components deployed, such as firewalls and intrusion detection systems
+
+- [ ] Security components deployed, such as firewalls and intrusion detection systems
+
 +++
-* Processes, such as a business process, computer operation process, network operation process and application operation process
+
+- [ ] Processes, such as a business process, computer operation process, network operation process and application operation process
+
 +++
-* Identification and authentication mechanisms
+
+- [ ] Identification and authentication mechanisms
+
 +++
-* Government laws and regulations pertaining to minimum security control requirements
+
+- [ ] Government laws and regulations pertaining to minimum security control requirements
+
 +++
-* Documented or informal policies, procedures and guidelines
+
+- [ ] Documented or informal policies, procedures and guidelines
 
 
 

@@ -71,8 +71,6 @@ A complicated solution often fails because:
 - It's harder to maintain. Fixing one bug often creates two more.
 
 - It often relies on "security by obscurity." The complexity feels secure because it's hard to understand, but that's an illusion.
-
-
 :::
 
 
@@ -109,7 +107,7 @@ Systems must be able to receive and apply security patches safely and reliably.
 :::
 
 
-If you think a principle is not applicable for your situation: Think again. Or better write down your motivation and ask for an expert review on your motivation.
+If you think a principle is not applicable for your situation: **Think again.** Or better write down your motivation and ask for an expert review on your motivation.
 
 
 ## Learn more
@@ -121,6 +119,7 @@ These Security by Design principles represent distilled wisdom and long-standing
 
 ```{tip} Learn more about security principles
 Do not reinvent the wheel by defining your own security principles. Make use of already good defined and battle tested security principles.
-In the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/architecture/securityprinciples.html) you can find a set of solid security principles.
+
+In the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/architecture/securityprinciples.html) you can more security principles that can be useful to use or exam.
 ```
 

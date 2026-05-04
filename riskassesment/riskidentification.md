@@ -94,9 +94,6 @@ However, the odds of being a Heart and a King are not mutually exclusive, becaus
 
 So, you cannot cleanly add the odds of being a King (1 in 13) with the odds of being a Heart (1 in 4), because there is a single card that could be both. 16 cards would meet the criteria of being a King or a Heart in reality. If you broke this rule and treated them as mutually exclusive, you might count the King of Hearts twice, or not at all. This is a failure of quantitative risk modeling.
 
-{{< alert icon="🚨" >}}
-This axiom creates problems in real world risk measurement. Keep reading!
-{{< /alert >}}
 
 Enforcing this axiom (or ignoring it) creates weaknesses in probabilistic risk assessments. This property is something we work against in making broad risk models. 
 
@@ -223,4 +220,4 @@ However, there are risks that do not have similar opportunities. These risks are
 
 Even well traveled, open source, and heavily tested code can have [risks](https://googleprojectzero.blogspot.com/2021/12/this-shouldnt-have-happened.html), so this is not to say that either side of Knightian interpretation is preferrable. Rather, we should be sensitive to the amount of study that has occurred behind the risks we are making decisions about, and value opportunities to measure risks that are hard to reach.
 
-Decision making should take into account the understanding of risks that lack appropriate study, versus well studied risks. See [Decision Standards](/risk-measurement/docs/enterprise/decision-standards) for thoughts on incorporating this level of rigor into a decision.
+Decision making should take into account the understanding of risks that lack appropriate study, versus well studied risks. 

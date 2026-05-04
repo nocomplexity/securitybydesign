@@ -5,8 +5,7 @@ short_title: What is a Security Culture
 
 ## What is a Security Culture
 
-:::{admonition} Definition of Security Culture
-:class: tip, dropdown
+:::{tip} Definition of Security Culture
 Cyber security culture refers to the knowledge, beliefs, perceptions, attitudes, assumptions, norms and values surrounding cyber security, and how they manifest in behaviour.
 :::
 

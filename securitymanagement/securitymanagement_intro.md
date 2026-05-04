@@ -13,7 +13,7 @@ From there, we introduce the concept of a **security framework**. Frameworks suc
 
 With a framework in place, we turn to the active task of **mitigating cyber risks**. This section translates risk assessment outputs into actionable controls, policies, and response plans. You will learn how to select proportionate mitigations, assign ownership, set measurable objectives, and monitor effectiveness over time – closing the loop between identifying risks and actually reducing them.
 
-Finally, we introduce a practical **key management template**. A template provides consistency, repeatability, and auditability to security management activities. You will learn how to structure a template that captures essential management information – including asset inventories, risk registers, control statements, action plans, and review cycles – enabling you to implement and communicate security management across teams with clarity and rigour.
+Finally, we introduce a practical **key management template**. This because key management is essential for security but seldom done well. This template gives you a consistency, repeatability, and auditability to key  management activities. 
 
 ## Learning Objectives
 

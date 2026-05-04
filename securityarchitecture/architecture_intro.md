@@ -11,7 +11,9 @@ At the **enterprise architecture** level, Security Architecture aligns security 
 
 At the **technical architecture** level, Security Architecture translates these principles into concrete patterns, controls, and mechanisms. This includes decisions around identity and access management, network segmentation, encryption, monitoring, and secure integration between systems. It provides reusable building blocks that enable teams to design and deploy secure solutions efficiently and consistently.
 
-It is important to distinguish Security Architecture from **software design**. While software design focuses on the internal structure and behaviour of individual applications—such as code structure, algorithms, and component interactions—Security Architecture operates at a higher level. It defines how security is applied across systems and environments, guiding multiple applications and technologies to work together securely.
+:::{important} It is important to distinguish **Security Architecture** from **software design**.
+While software design focuses on the internal structure and behaviour of individual applications—such as code structure, algorithms, and component interactions—Security Architecture operates at a higher level. It defines how security is applied across systems and environments, guiding multiple applications and technologies to work together securely.
+:::
 
 In a Security by Design approach, Security Architecture ensures that security is scalable, repeatable, and aligned with both business needs and technical realities. Without it, security decisions risk becoming fragmented, inconsistent, and difficult to maintain over time.
 
@@ -19,7 +21,7 @@ In a Security by Design approach, Security Architecture ensures that security is
 
 By the end of this section, you will be able to:
 
-- Define the role of Security Architecture within both enterprise and technical levels
+- Define the role of a Security Architecture within both enterprise and technical levels
 - Distinguish between Security Architecture and software design
 - Identify common security architecture building blocks and patterns
 - Create a Security Architecture that aligns with business strategy, risk appetite, and regulatory obligations

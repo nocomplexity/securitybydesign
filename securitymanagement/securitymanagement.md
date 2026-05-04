@@ -2,8 +2,7 @@
 
 Security is not merely an IT or technical challenge. Ultimately, it is a business issue that must be properly addressed, managed, and controlled. Effective security depends on the coordinated interaction of **people, processes, and technology** (including the use of Free and Open Source Software (FOSS) tools where appropriate).
 
-:::{admonition} Definition of Security Management
-:class: tip, dropdown
+:::{tip} Definition of Security Management
 **Security management** refers to the set of **business processes** responsible for identifying, monitoring, and controlling risks to an organisation’s information, systems, and assets.
 :::
 

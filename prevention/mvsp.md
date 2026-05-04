@@ -1,9 +1,9 @@
 ---
 title: Checklist:Minimum Viable Secure Product 
-short_title: Checklist:MVSP
+short_title: Checklist MVP
 ---
 
-Building Trust by Design Agile teams often prioritize the Minimum Viable Product (MVP) to gather early feedback. Yet, in an era of sophisticated threats,**a product is only as viable as its security**. Enter the **Minimum Viable Secure Product (MVSP)**.
+Building Trust by Design Agile teams often prioritize the **Minimum Viable Product (MVP)** to gather early feedback. Yet, in an era of sophisticated threats,**a product is only as viable as its security**. Enter the **Minimum Viable Secure Product (MVSP)**.
 
 The MVSP is a minimalist security baseline for B2B software and outsourcing partners. It reinforces the truth that security cannot be "added later"—it must be baked into the product using Security by Design principles.
 

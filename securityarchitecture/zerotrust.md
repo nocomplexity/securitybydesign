@@ -18,8 +18,12 @@ At the same time, it is valuable to evolve existing methods by incorporating new
 **There is and will never be a single solution that will eliminate all risks.**
 :::
 
-In this context, the concepts of *Zero Trust* and *Zero Trust Architecture* are well-founded. Adopting a Zero Trust Architecture aligns naturally with a Security by Design approach and supports the development of resilient, principle-driven security architectures.
 
+In this context, the concepts of *Zero Trust* and *Zero Trust Architecture* are well-founded.
+
+:::{note}
+Adopting a Zero Trust Architecture aligns naturally with a **Security by Design** approach and supports the development of resilient, principle-driven security architectures.
+:::
 
 
 ## What is a Zero Trust Architecture?

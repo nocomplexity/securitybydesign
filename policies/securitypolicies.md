@@ -56,7 +56,6 @@ The difference between policies and principles comes down to **level of abstract
 
 ## Learn More
 
-:::{admonition} Learn more and see examples of good Security Policies
-:class: tip, dropdown
+:::{tip} Learn more and see examples of good Security Policies
 See the section on Security Policies in the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/protection/security-policies.html).
 :::

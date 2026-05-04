@@ -3,8 +3,7 @@
 Prevention of cyber security incidents is always better, simpler and cheaper than recovering from security incidents. Think of the misery of malware or even worse ransomware. 
 
 
-:::{admonition} What is Security Prevention?
-:class: tip, dropdown
+:::{tip} What is Security Prevention?
 Security prevention means thinking about security threats and implementing good security measurements. In this way you prevent cyber security incidents from happening. 
 :::
 

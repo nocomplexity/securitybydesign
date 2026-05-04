@@ -1,10 +1,14 @@
-# Secure Software Development Life Cycle (SDLC) 
+---
+title: What is the Secure Software Development Life Cycle (SDLC)  
+short_title: What is the SSDLC
+---
+
+
 
 Information security must be built into every phase of the SDLC.  Failure to identify security risks and implement proper controls will result in inadequate security, potentially putting entities at risk.
 
 
-:::{admonition} Definition of Security by Design SDLC
-:class: tip, dropdown
+:::{tip} Definition of Security by Design SDLC
 The Security by Design SDLC means integrating security and all security related activities into an existing development process.
 :::
 

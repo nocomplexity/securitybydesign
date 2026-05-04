@@ -1,6 +1,6 @@
 ---
-title: Software Update Policy 
-short_title: Software Update Policy
+title: Checklist for a Software Update Policy 
+short_title: Checklist:Software Update Policy
 ---
 
 It is essential that the processes and mechanisms for updating software are robust, reliable, and secure. If devices are not regularly updated, their security will degrade over time as new vulnerabilities and attack methods emerge.

@@ -8,18 +8,6 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 
 See http://creativecommons.org/licenses/by-sa/4.0/ for the full license text. 
 
-## Always open
-
-The [online HTML version](https://nocomplexity.com/documents/securitybydesign/intro.html) of this publication is always up-to-date.
-
-In addition to the online HTML version of this "Security By Design Playbook," we have also made the playbook available in PDF and ePUB formats for your convenience.  It allows you to access the content offline, print it out for reference, or simply enjoy a consistent reading experience across different devices. 
-
-The ePUB version provides a flexible and adaptable reading experience. It automatically adjusts the text to fit various screen sizes, enabling you to read the playbook comfortably on e-readers, tablets, smartphones, and other compatible devices. With ePUB, you can customize the font size, font style, and layout to suit your personal preferences.
-
-To access the PDF and ePUB versions, simply visit [our website](https://simplifysecurity.nocomplexity.com/). 
-
-We believe that by offering these additional formats, we can ensure that the playbook is readily accessible and beneficial to a wider audience. 
-
 
 
 ## Using and reusing this document
@@ -30,11 +18,37 @@ If you do use or reuse content of this Playbook I would appreciate attribution.
 
 The simplest way to give attribution to this work is by including the following line in your derived publication:
 
-```{admonition} Attribution Suggestion
+```{hint} Attribution Suggestion
 NoComplexity.com, [Security by Design ](https://nocomplexity.com/), licensed CC BY-SA 4.0. 
 
 ```
 
 
+## Openness
+
+This publication is real open content. We believe open access is mandatory for simplifying and improving cyber security.
+
+We believe in openness to [simplify cyber security](https://nocomplexity.com/simplify-security/).
+
+Openness for cyber security means adhering to the following principles:
+
+* Creating better cybersecurity solutions is not an end but a means for making our world better.
+
+* Using an OSI approved license when releasing software.
+
+* Using a Creative Commons License to when creating and sharing documentation.
+
+* You embrace openness as a basic value for knowledge sharing and growth. Think of open science, open data, open access, open research.
+
+* Knowledge and improvements should be beneficial and reachable for everyone.
+
+* Your organization is inclusive.
 
 
+Open access is the unlimited sharing and reuse of publications and data. Open access for cyber security means knowledge should be freely accessible. So without borders. Applying user tracking or other privacy barriers for publications is not open access.
+
+Open access improves:
+
+* Sharing cyber solutions in an easy way.
+
+* Quality of existing solutions. Improving is often better than to reinvent the wheel.

@@ -14,8 +14,7 @@ Without strong security policies, security efforts tend to become reactive, inco
 
 ## Summary Definition
 
-:::{admonition} Definition of Security Policies
-:class: tip, dropdown
+:::{tip} Definition of Security Policies
 A security policy defines **what** you want to protect, **why** it requires protection, and **who** is responsible for that protection.
 :::
 

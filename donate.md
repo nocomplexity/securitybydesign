@@ -1,5 +1,4 @@
-:::{admonition} **Support This Course — Pay What You Can**
-:class: tip
+:::{tip} **Support This Course — Pay What You Can**
 To help more people kickstart their Infosec journey, this course is offered on a voluntary payment basis. While the content is entirely free to access under the CC-BY-SA license, we invite you to contribute what you can.
 
 Why contribute? Your donations directly fund the ongoing maintenance, updates, and development of new high-quality security resources.

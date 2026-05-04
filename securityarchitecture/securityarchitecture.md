@@ -1,4 +1,9 @@
-# Security Architecture
+---
+title: Security Architecture - What and How
+short_title: What or How 
+---
+
+
 
 To create a sustainable solution to reduce cyber security threats is to create a solution architecture. Within this architecture you design a solution that meets your functional requirements. But this architecture is also to match design the protection measurements needed based on your risk analysis.
 
@@ -36,8 +41,7 @@ The aims of a good and simple security architecture are:
 ## Security Architecture Definition and key aspects
 
 
-:::{admonition} Definition of Security Architecture
-:class: tip, dropdown
+:::{tip} Definition of Security Architecture
 Security architecture has many definitions. In essence a good architecture is a set of security principles, methods and models designed to align to your objectives and help keep your organization safe from cyber threats. An architecture is not a technical design with VLANs and security zones. A Security architecture translates the business requirements to executable security requirements. 
 :::
 

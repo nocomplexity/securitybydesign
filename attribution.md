@@ -12,7 +12,7 @@ If you do use or reuse content I would appreciate attribution.
 
 The simplest way to give attribution to this work is by including the following line in your derived publication:
 
-:::{admonition} Attribution Suggestion
+:::{hint} Attribution Suggestion
 NoComplexity.com, **Security By Design Guide** by [Maikel Mardjan](https://simplifysecurity.nocomplexity.com/), Asim Jahan and all contributors, licensed CC BY-SA 4.0. 
 :::
 

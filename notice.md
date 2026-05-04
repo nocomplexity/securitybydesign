@@ -3,47 +3,40 @@ title: Attributions
 short_title: Attributions
 ---
 
-## Used references
+## Used references and attributions
 
-As all referenced materials are published under open licences!
+Because all referenced materials are published under open licences, some text from those sources has been reused in this training manual.
+
+Portions of this course are derived from high-quality open publications. Only sources released under Creative Commons licences (CC BY or CC BY-SA) or recognised OSI-approved software licences have been used.The necessary attributions are provided below.
+
 
 - [SkyLink: Security by Design Reference Implementation](https://github.com/laugiov/security-by-design)
+    - Sections: 
+        - [Example Threat Model with STRIDE](threatmodeling/stride_example.md) 
+        - [Security Architecture Example 1](securityarchitecture/example1.md)
+        - [Example Architecture - RBAC outline](securityarchitecture/exampleRBAC.md)
+        - [logging](securityarchitecture/logging.md)
 
+        ```text
+        MIT License
 
-## Notices and attribution
+        Copyright (c) 2025 Laurent Giovannoni
 
-As all referenced materials are published under open licences, some text of the used references has been reused within this training manual. This section provides the necessary attributions.
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
 
-Portions of this course are derived from high-quality open publications. Only sources released under Creative Commons licences (CC BY or CC BY-SA) or recognised OSI-approved software licences have been used.
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
 
-
-
-- Sections: 
-    - [Example Threat Model with STRIDE](threatmodeling/stride_example.md) 
-    - [Security Architecture Example 1],
-    - [ Example Architecture - RBAC outline]
-    - [logging]
-
-```text
-MIT License
-
-Copyright (c) 2025 Laurent Giovannoni
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        ```

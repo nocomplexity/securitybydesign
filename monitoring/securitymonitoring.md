@@ -19,7 +19,13 @@ Keeping up with security vulnerabilities involves several time‑consuming but e
 
 Closely related to security monitoring are SIEM (Security Information and Event Management) solutions. A SIEM is a security and auditing system that comprises multiple monitoring and analysis components, including log aggregation, correlation, alerting, and reporting.
 
-It is important to recognise that SIEM solutions are often marketed as a holy grail—an artificial intelligence‑driven appliance that, once installed, protects you from every conceivable security threat. **This is never true.** No SIEM can replace sound processes, skilled human judgement, or a well‑designed security architecture.
+It is important to recognise that SIEM solutions are often marketed as a holy grail—an artificial intelligence‑driven appliance that, once installed, protects you from every conceivable security threat. **This is never true.** 
+
+:::{attention}
+No SIEM solution can replace sound processes, skilled human judgement, or a well‑designed security architecture.
+
+*Not even AI powered solutions.*
+:::
 
 All SIEM solutions must be embedded within your existing security management processes. They require trained specialists who are able to maintain, tune, and interpret the solution effectively. Without dedicated ownership, even the most expensive SIEM will produce noise rather than actionable intelligence.
 
