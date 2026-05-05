@@ -50,40 +50,40 @@ Below is an introduction to why each topic is critical to your journey on Master
 - **[What is Security by Design](basics.md)**  
   Before you can practice it, you must define it. This topic establishes the core philosophy: shifting security left, embedding controls from the outset, and treating security as an enabler, not a blocker. Understanding the ‘what’ and ‘why’ sets the foundation for every decision that follows.
 
-- [**Prevention**](prevention/prevention_intro.md)  
+- [**Prevention**](../prevention/prevention_intro.md)  
   Prevention is the ultimate expression of proactive security. While detection and response are necessary safeties, relying on them is a sign of incomplete design. This topic teaches you how to architect systems that resist attacks by default—reducing the attack surface, enforcing least privilege, and eliminating entire classes of vulnerabilities before they can be exploited.
 
-- [**Threat Modeling**](threatmodeling/threatmodeling_intro.md)  
+- [**Threat Modeling**](../threatmodeling/threatmodeling_intro.md)  
   You cannot defend against threats you have not imagined. Threat modeling provides the methodological rigour to identify, categorise, and prioritise potential adversaries and their attack paths—early in the design phase. Mastering this discipline turns security from guesswork into an engineering science.
 
-- [**Security Monitoring**](monitoring/monitoring_intro.md)  
+- [**Security Monitoring**](../monitoring/monitoring_intro.md)  
   Even the best designs face novel attacks and insider threats. Monitoring is not about reacting after a breach; it is about designing observable systems that can signal distress in real time. This topic ensures you build for visibility, allowing you to detect anomalies, validate controls, and learn from near-misses continuously.
 
-- [**Security Policies**](policies/policies_intro.md) 
+- [**Security Policies**](../policies/policies_intro.md) 
   Policy is the compass of secure design. Without clear, enforceable rules—on data classification, access control, encryption, and acceptable risk—engineers make inconsistent decisions. You will learn to craft policies that guide behaviour without stifling innovation, and more importantly, how to design systems that enforce policy technically.
 
-- [**Risk Assessment**](riskassesment/ra_intro.md) 
+- [**Risk Assessment**](../riskassesment/ra_intro.md) 
   Perfect security is a myth. Risk assessment is the practical tool that tells you what to protect, to what degree, and at what cost. Mastering this topic enables you to make informed trade-offs, prioritise controls, and speak the language of business leaders—converting technical threats into business risks.
 
-- [**Security Management**](securitymanagement/securitymanagement_intro.md) 
+- [**Security Management**](../securitymanagement/securitymanagement_intro.md) 
   Design does not happen in a vacuum. Security management provides the governance, resource allocation, and oversight needed to embed security across teams and product lifecycles. You will learn how to run security as a management discipline—not a technical afterthought—ensuring accountability from the boardroom to the build server.
 
-- [**Security Principles**](principles/principles_intro.md) 
+- [**Security Principles**](../principles/principles_intro.md) 
   Principles such as least privilege, defence in depth, fail secure, and economy of mechanism are the timeless laws of secure architecture. This topic grounds you in these enduring rules, giving you a mental checklist to evaluate any design decision. When complexity overwhelms, principles guide you back to safe ground.
 
-- [**Security Architecture**](securityarchitecture/architecture_intro.md)
+- [**Security Architecture**](../securityarchitecture/architecture_intro.md)
   Architecture is where principles meet practice. This topic equips you with patterns, reference models, and architectural reviews to design systems that are secure by composition—not by accident. You will learn to layer controls, isolate trust boundaries, and create designs that scale security as they scale functionality.
 
-- [**Secure Software Development Life Cycle (SSDLC)**](ssdlc/ssdlc_intro.md)
+- [**Secure Software Development Life Cycle (SSDLC)**](../ssdlc/ssdlc_intro.md)
   Security by Design must live in the developer’s daily workflow. The SSDLC integrates threat modeling, static analysis, secure coding standards, and security testing into every phase: requirements, design, development, testing, and deployment. Mastering this ensures security is not a gate but a continuous, automated partner in delivery.
 
-- [**Security Culture**](culture/culture_intro.md) 
+- [**Security Culture**](../culture/culture_intro.md) 
   Processes and tools fail if the humans using them are not aligned. Culture is the soil in which security grows. This topic addresses the human factor: fostering psychological safety to report incidents, rewarding secure behaviour, and moving from blame to learning. Without culture, even the best design rots from within.
 
-- [**Open Source Security**](foss/foss_intro.md) 
+- [**Open Source Security**](../foss/foss_intro.md) 
   Modern systems are assembled, not built from scratch. Open source dependencies introduce hidden risks—from known vulnerabilities to supply chain attacks. Mastering this topic teaches you how to vet, monitor, and maintain open source components as rigorously as your own code, turning the ecosystem from a liability into an asset.
 
-- [**Security Training**](training/training_intro.md)
+- [**Security Training**](../training/training_intro.md)
   Finally, design is only as strong as the team that builds it. Security training ensures that every engineer, architect, and product owner possesses the baseline knowledge to make secure decisions. More importantly, advanced training creates internal champions who can guide others. This topic closes the loop from design to continuous human improvement.
 
 In the following lessons, we will explore each of these topics in depth. Do not view them as isolated chapters; instead, see them as interlocking gears. When turned together, they drive the engine of true Security by Design.

@@ -12,7 +12,7 @@ To prevent zero-day attacks, you should:
 
 * Develop [threat models](../threatmodeling/threatmodeling_intro.md) for all key processes.
 * Implement a process for continuous risk analysis of key processes, utilizing available threat models.
-* Maintain a [security architecture](architecture.md) that's continuously updated and based on solid security principles.
+* Maintain a [security architecture](../securityarchitecture/architecture_intro.md) that's continuously updated and based on solid security principles.
 * Ensure that obvious security principles, such as [Zero Trust](https://nocomplexity.com/documents/securityarchitecture/architecture/NCSC-zerotrustprinciples.html#ncsc-zero-trust-principles), are followed and enforced.
 * Practice and plan for disasters through robust Business Continuity and Disaster Recovery (BCDR) Planning. Have measures in place to ensure critical operations remain functional, helping to prevent bankruptcy.
 

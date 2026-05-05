@@ -43,7 +43,7 @@ A fuzzer SHOULD be incorporated into the testing workflow where appropriate to i
 
 
 A formal architecture or design document MUST exist, outlining key principles and documenting the design decisions that guided the implementation. It is RECOMMENDED that a "Security by Design" approach is followed to ensure security principles are integrated into every stage of the SDLC cycle.
-A common practice is to maintain an [ARCHITECTURE.md](architecture) file within the repository.
+A common practice is to maintain an `ARCHITECTURE.md` file within the repository.
 This document SHOULD be released under a Creative Commons licence (or equivalent) and MUST be available without limitation to allow for public review and improvement.
 
 +++
