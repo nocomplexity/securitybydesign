@@ -110,6 +110,25 @@ Systems must be able to receive and apply security patches safely and reliably.
 If you think a principle is not applicable for your situation: **Think again.** Or better write down your motivation and ask for an expert review on your motivation.
 
 
+## Cheat sheet
+
+
+| Principle | Summary | Key Rule |
+| --- | --- | --- |
+| **Minimise attack surface area** | Remove unnecessary features, endpoints, entry points. | Less code → fewer holes. |
+| **Establish secure defaults** | Default configs must be secure out-of-the-box. | Deny by default. |
+| **Least privilege** | Every component/user gets minimum privileges to function. | Keep once, not twice. |
+| **Separation of duties** | No single actor has excessive authority. | Split critical functions across multiple actors. |
+| **Defence in depth** | Layer independent security controls. | One failure ≠ system compromise. |
+| **Fail securely** | On failure, default to closed (deny) state. | Never fail open. |
+| **Complete mediation** | Every access request must be checked. | No cached decisions. |
+| **Economy of mechanism** | Keep security-critical designs simple and small. | complexity = **NOT** secure. |
+| **Open design** | No security by obscurity. | Assume attackers have your docs/code. |
+| **Zero Trust** | Never implicitly trust internal/external services. | Verify everything. |
+| **Compartmentalisation** | Isolate components. | Breach in one ≠ breach of all. |
+| **Protect data everywhere** | Encrypt data at rest, in transit, and in-use. | Even during processing. |
+| **Design for secure updates** | Systems must safely apply patches. | Update ability is a security feature. |
+
 ## Learn more
 
 
