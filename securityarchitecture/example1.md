@@ -23,9 +23,9 @@ Example: SkyLink Security Architecture
 ---
 
 
-## 1. Overview
+## Overview
 
-### 1.1 Purpose
+### Purpose
 
 This document describes the security architecture of the SkyLink platform using Data Flow Diagrams (DFD) to illustrate:
 
@@ -34,7 +34,7 @@ This document describes the security architecture of the SkyLink platform using 
 - What security controls are applied at each boundary
 - How data is classified and protected
 
-### 1.2 Scope
+### Scope
 
 This architecture covers:
 
@@ -45,7 +45,7 @@ This architecture covers:
 - PostgreSQL Database (persistent storage)
 - External integrations (WeatherAPI, Google People API)
 
-### 1.3 Audience
+### Audience
 
 - Security Engineers (threat modeling, penetration testing)
 - Developers (secure implementation guidance)
@@ -54,9 +54,9 @@ This architecture covers:
 
 ---
 
-## 2. System Context (Level 0)
+## System Context (Level 0)
 
-### 2.1 Context Diagram
+### Context Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -127,7 +127,7 @@ This architecture covers:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 2.2 External Actors
+### External Actors
 
 | Actor | Description | Authentication | Data Exchanged |
 |-------|-------------|----------------|----------------|
@@ -138,9 +138,9 @@ This architecture covers:
 
 ---
 
-## 3. Trust Boundaries
+## Trust Boundaries
 
-### 3.1 Boundary Definitions
+### Boundary Definitions
 
 | ID | Boundary | From | To | Risk Level |
 |----|----------|------|-----|------------|
@@ -149,7 +149,7 @@ This architecture covers:
 | **TB3** | Services → External APIs | Internal | External (Vendors) | **HIGH** |
 | **TB4** | Services → Database | Internal | Data Layer | **HIGH** |
 
-### 3.2 Security Controls per Boundary
+### Security Controls per Boundary
 
 #### TB1: Internet → Gateway (CRITICAL)
 
@@ -264,9 +264,9 @@ This architecture covers:
 
 ---
 
-## 4. Data Flow Diagrams (Level 1)
+## Data Flow Diagrams (Level 1)
 
-### 4.1 Flow 1: Aircraft Authentication
+### Flow 1: Aircraft Authentication
 
 ```
 ┌──────────────┐                              ┌──────────────┐
@@ -316,7 +316,7 @@ This architecture covers:
 - [x] JWT RS256 signing (2048-bit RSA)
 - [x] Short token expiry (15 minutes)
 
-### 4.2 Flow 2: Telemetry Ingestion
+### Flow 2: Telemetry Ingestion
 
 ```
 ┌──────────────┐              ┌──────────────┐              ┌──────────────┐
@@ -391,7 +391,7 @@ This architecture covers:
 | 403 | Forbidden | CN ≠ JWT.sub |
 | 429 | Too Many Requests | Rate limit exceeded |
 
-### 4.3 Flow 3: Weather Query
+### Flow 3: Weather Query
 
 ```
 ┌──────────────┐      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
@@ -445,7 +445,7 @@ This architecture covers:
 - API key never exposed to clients
 - Demo mode prevents external API calls during testing
 
-### 4.4 Flow 4: Contacts OAuth
+### Flow 4: Contacts OAuth
 
 ```
 ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
@@ -495,9 +495,9 @@ This architecture covers:
 
 ---
 
-## 5. Security Controls by Layer
+## Security Controls by Layer
 
-### 5.1 Control Matrix
+### Control Matrix
 
 | Layer | Control | Implementation | File | Status |
 |-------|---------|----------------|------|--------|
@@ -520,7 +520,7 @@ This architecture covers:
 | **Supply Chain** | SBOM | CycloneDX | `.github/workflows/ci.yml` | :white_check_mark: |
 | **Supply Chain** | Secret detection | Gitleaks | `.github/workflows/ci.yml` | :white_check_mark: |
 
-### 5.2 Defense in Depth Visualization
+### Defense in Depth Visualization
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -567,9 +567,9 @@ This architecture covers:
 
 ---
 
-## 6. Data Classification
+## Data Classification
 
-### 6.1 Classification Matrix
+### Classification Matrix
 
 | Data Type | Classification | At Rest | In Transit | In Logs | Retention |
 |-----------|----------------|---------|------------|---------|-----------|
@@ -582,7 +582,7 @@ This architecture covers:
 | mTLS Certificates | Restricted | File (0600) | TLS | **Never** | 1 year |
 | API Keys | **Restricted** | Env var | TLS | **Never** | Until rotated |
 
-### 6.2 Data Handling Rules
+### Data Handling Rules
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -617,9 +617,9 @@ This architecture covers:
 
 ---
 
-## 7. Attack Surface Analysis
+## Attack Surface Analysis
 
-### 7.1 Attack Surface Map
+### Attack Surface Map
 
 | Surface | Exposure | Risk Level | Attack Vectors | Mitigations |
 |---------|----------|------------|----------------|-------------|
@@ -630,7 +630,7 @@ This architecture covers:
 | **CI/CD Pipeline** | GitHub/GitLab | **HIGH** | Secret theft, code injection | Gitleaks, protected branches |
 | **External APIs** | Outbound | **MEDIUM** | Data leakage | HTTPS, minimal data sharing |
 
-### 7.2 Exposed Endpoints
+### Exposed Endpoints
 
 | Endpoint | Authentication | Rate Limited | Input Validation | Risk |
 |----------|----------------|--------------|------------------|------|
@@ -643,9 +643,9 @@ This architecture covers:
 
 ---
 
-## 8. Cryptographic Inventory
+## Cryptographic Inventory
 
-### 8.1 Algorithms and Key Sizes
+### Algorithms and Key Sizes
 
 | Purpose | Algorithm | Key Size | Rotation Period | Storage |
 |---------|-----------|----------|-----------------|---------|
@@ -657,7 +657,7 @@ This architecture covers:
 | mTLS Client | RSA/X.509 | 2048-bit | 1 year | File (certs/clients/) |
 | Image Signing | ECDSA (Sigstore) | P-256 | Keyless (per-build) | GitHub OIDC |
 
-### 8.2 Key Management
+### Key Management
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -689,9 +689,9 @@ This architecture covers:
 
 ---
 
-## 9. Network Security
+## Network Security
 
-### 9.1 Network Topology
+### Network Topology
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -730,7 +730,7 @@ This architecture covers:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 9.2 Network Policies
+### Network Policies
 
 | Service | Allowed Inbound | Allowed Outbound |
 |---------|-----------------|------------------|
@@ -740,7 +740,7 @@ This architecture covers:
 | contacts | gateway | Google APIs (HTTPS), db:5432 |
 | db | contacts | None |
 
-### 9.3 Kubernetes Network Policies
+### Kubernetes Network Policies
 
 For production Kubernetes deployments, network policies enforce zero-trust networking:
 
@@ -770,16 +770,6 @@ spec:
 See [KUBERNETES.md](KUBERNETES.md) for full network policy configuration.
 
 ---
-
-## 10. References
-
-### 10.1 Internal Documents
-
-
-### 10.2 External References
-
-
-## Appendix A: References
 
 ### Security Headers
 
@@ -815,7 +805,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 | `maintenance` | Maintenance | telemetry:read/write, config:read |
 | `admin` | Administrator | All permissions |
 
-See [****] for a complete RBAC documentation.
+
 
 ### Rate Limits
 
