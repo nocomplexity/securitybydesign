@@ -1,4 +1,8 @@
-# Example Threat Model with STRIDE
+---
+title: Example Threat Model with STRIDE
+short_title:  STRIDE Example
+---
+
 
 > **STRIDE-based threat analysis for the SkyLink Connected Aircraft Platform**
 
@@ -17,20 +21,24 @@
 
 ---
 
++++{"no-pdf": true}
+
 ## Table of Contents
 
 :::{toc}
 :context: page
 :::
 
++++
+%PDF convertion issue towards PDF, so leave ToC for this page out of the PDF version.
 
-## 1. Service Description
+## Service Description
 
-### 1.1 Overview
+### Overview
 
 SkyLink is a connected aircraft services platform providing real-time telemetry ingestion, weather data, and contact synchronization for commercial aviation. The platform follows Security by Design principles with multi-layer authentication, defense in depth, and privacy by design.
 
-### 1.2 Functional Decomposition
+### Functional Decomposition
 
 The service provides the following capabilities:
 
@@ -38,7 +46,7 @@ The service provides the following capabilities:
 - **Weather Services**: Geolocation-based weather and air quality data using external APIs
 - **Contact Synchronization**: Google Contacts retrieval via OAuth 2.0 for crew communication
 
-### 1.3 Technical Architecture
+### Technical Architecture
 
 ```
                               Internet
@@ -65,7 +73,7 @@ The service provides the following capabilities:
                                      └─────────────┘
 ```
 
-### 1.4 Component Responsibilities
+### Component Responsibilities
 
 | Component | Responsibility | Security Controls |
 |-----------|---------------|-------------------|
@@ -77,7 +85,7 @@ The service provides the following capabilities:
 
 ---
 
-## 2. Data Dictionary
+## Data Dictionary
 
 List of data stored or in transit within the service.
 
@@ -104,9 +112,9 @@ List of data stored or in transit within the service.
 
 ---
 
-## 3. Threat Actors
+## Threat Actors
 
-### 3.1 External Threat Actors
+### External Threat Actors
 
 | Actor | Motivation | Capability | Target |
 |-------|------------|------------|--------|
@@ -115,7 +123,7 @@ List of data stored or in transit within the service.
 | **Hacktivists** | Ideology, publicity | LOW-MEDIUM | Service availability |
 | **Competitors** | Industrial espionage | MEDIUM | Proprietary data |
 
-### 3.2 Internal Threat Actors
+### Internal Threat Actors
 
 | Actor | Motivation | Capability | Target |
 |-------|------------|------------|--------|
@@ -123,7 +131,7 @@ List of data stored or in transit within the service.
 | **Compromised Account** | Exploited by external | VARIES | Depends on privileges |
 | **Negligent Employee** | None (accidental) | LOW | Misconfigurations |
 
-### 3.3 Supply Chain Threats
+### Supply Chain Threats
 
 | Vector | Risk | Mitigation |
 |--------|------|------------|
@@ -133,9 +141,9 @@ List of data stored or in transit within the service.
 
 ---
 
-## 4. STRIDE Analysis
+## STRIDE Analysis
 
-### 4.1 Spoofing (Identity)
+### Spoofing (Identity)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -145,7 +153,7 @@ List of data stored or in transit within the service.
 | S4 | Stolen aircraft private key | HIGH | Low | HSM storage on aircraft, certificate rotation | :memo: Documented |
 | S5 | JWT token theft | HIGH | Medium | Short expiry (15 min), HTTPS only | :white_check_mark: Implemented |
 
-### 4.2 Tampering (Integrity)
+### Tampering (Integrity)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -156,7 +164,7 @@ List of data stored or in transit within the service.
 | T5 | Log tampering | MEDIUM | Low | Centralized logging (recommended) | :warning: Partial |
 | T6 | Configuration tampering | HIGH | Low | Environment variables, protected branches | :white_check_mark: Implemented |
 
-### 4.3 Repudiation (Non-Repudiation)
+### Repudiation (Non-Repudiation)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -165,7 +173,7 @@ List of data stored or in transit within the service.
 | R3 | Deleted or modified logs | HIGH | Low | Immutable log storage | :x: Not Implemented |
 | R4 | Timestamp manipulation | MEDIUM | Low | Server-side timestamps | :white_check_mark: Implemented |
 
-### 4.4 Information Disclosure (Confidentiality)
+### Information Disclosure (Confidentiality)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -177,7 +185,7 @@ List of data stored or in transit within the service.
 | I6 | Excessive OAuth scope | HIGH | Low | Minimal scope (contacts.readonly) | :white_check_mark: Implemented |
 | I7 | External API data leak (WeatherAPI) | MEDIUM | Low | Geohash/rounding for location | :white_check_mark: Implemented |
 
-### 4.5 Denial of Service (Availability)
+### Denial of Service (Availability)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -188,7 +196,7 @@ List of data stored or in transit within the service.
 | D5 | Database exhaustion | MEDIUM | Low | Connection pooling, limits | :warning: Partial |
 | D6 | CI/CD pipeline failure | HIGH | Medium | Rollback capability | :warning: Partial |
 
-### 4.6 Elevation of Privilege (Authorization)
+### Elevation of Privilege (Authorization)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
@@ -200,9 +208,9 @@ List of data stored or in transit within the service.
 
 ---
 
-## 5. Risk Matrix
+## Risk Matrix
 
-### 5.1 Risk Calculation
+### Risk Calculation
 
 **Risk = Impact × Likelihood**
 
@@ -215,7 +223,7 @@ Unlikely        │ LOW          LOW         MEDIUM      HIGH
 Rare            │ ACCEPT       LOW         LOW         MEDIUM
 ```
 
-### 5.2 Current Risk Profile
+### Current Risk Profile
 
 | Risk Level | Count | Examples |
 |------------|-------|----------|
@@ -227,7 +235,7 @@ Rare            │ ACCEPT       LOW         LOW         MEDIUM
 
 ---
 
-## 6. Threat Scenarios
+## Threat Scenarios
 
 Detailed threat scenarios with business impact analysis.
 
@@ -308,7 +316,7 @@ Detailed threat scenarios with business impact analysis.
 
 ---
 
-## 7. Recommendations Summary
+## Recommendations Summary
 
 ### Implemented Controls
 
@@ -333,9 +341,9 @@ Detailed threat scenarios with business impact analysis.
 
 ---
 
-## 8. Gap Analysis
+## Gap Analysis
 
-### 8.1 Current State vs Target State
+### Current State vs Target State
 
 | Control Area | Current | Target | Gap |
 |--------------|---------|--------|-----|
@@ -347,7 +355,7 @@ Detailed threat scenarios with business impact analysis.
 | **Secrets Management** | Environment variables | KMS/Vault | Integration needed |
 | **Incident Response** | None | Documented playbook | Not documented |
 
-### 8.2 Remediation Roadmap
+### Remediation Roadmap
 
 | Phase | Focus | Timeline |
 |-------|-------|----------|
@@ -358,7 +366,7 @@ Detailed threat scenarios with business impact analysis.
 
 ---
 
-## 9. Review History
+## Review History
 
 | Date | Version | Reviewer | Changes |
 |------|---------|----------|---------|

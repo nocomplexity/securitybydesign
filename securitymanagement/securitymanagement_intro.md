@@ -25,8 +25,26 @@ By the end of this section, you will be able to:
 - Use a key management template to document, track, and communicate security management activities consistently
 - Explain how security management sustains Security by Design principles throughout the system lifecycle
 
+
++++{"no-pdf": true}
+
 ## Sections
+
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+
+:::{raw:typst}
+*Sections*
+
+- Security Management Aspects
+- Security Framework
+- Mitigate Cyber Risks
+- Key Management Template
+
 :::

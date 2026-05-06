@@ -22,9 +22,24 @@ By the end of this section, you will be able to:
 - Analyse identified risks by estimating likelihood and impact using qualitative scales
 - Produce a prioritised risk list that can directly inform security control selection
 
+
++++{"no-pdf": true}
+
 ## Sections
 
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+
+:::{raw:typst}
+*Sections*
+
+- What is a Risk Assessment
+- Risk Identification and Analysis
+
 :::

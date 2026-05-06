@@ -29,11 +29,29 @@ By the end of this section, you will be able to:
 - Design security logging mechanisms that support monitoring, detection, and forensic analysis
 - Develop a practical Security Architecture example, including an RBAC outline
 
-### Sections
 
-In the following section you learn how to create a Security Architecture:
++++{"no-pdf": true}
+
+## Sections
 
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+In the following section you learn how to create a Security Architecture:
+
+- Security Architecture - What and How
+- Common Security Architecture Building Blocks
+- Steps to Create a Security Architecture
+- Zero Trust Architecture and Security By Design
+- Security Logging
+- Security Architecture Example
+- Example Architecture - RBAC outline
 :::

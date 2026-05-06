@@ -5,14 +5,14 @@ project:
   title: Mastering Security By Design
   description: Security by Design is a proven method to develop products that are less vulnerable for cyber security threats.
   # keywords: []
-  # authors: []
+  #authors:    
   github: https://github.com/nocomplexity/securitybydesign
   license:
     content: CC-BY-SA-4.0  
 
 extends:
   - toc.yml
-  #- export.yml
+  - export.yml
 
 site:
   parts:

@@ -19,10 +19,25 @@ By the end of this section, you will be able to:
 
 - Recognise and apply all key Security by Design principles
 
++++{"no-pdf": true}
+
 ## Sections
+
 
 :::{toc}
 :context: children
 :::
+
++++
+
+:::{raw:typst}
+*Sections*
+
+- What is a Security Principle
+- Crucial and Vital Security by Design Principles
+- Example Applying Security Principles for SAST testing
+
+:::
+
 
 

@@ -16,9 +16,25 @@ By the end of this section, you should be able to:
 - **Describe the framework of Security By Design topics** – Identify the key interdependent topics (such as threat modeling, risk assessment, security architecture, and security culture) and explain why no single topic is sufficient on its own.
 - **Distinguish between explicit and tacit knowledge in security** – Recognise the difference between codified rules (explicit) and experience-based judgement (tacit), and explain why both are necessary to master Security By Design.
 
++++{"no-pdf": true}
+
 ## Sections
 
 
 :::{toc}
 :context: children
 :::
+
++++
+
+
+
+:::{raw:typst}
+*Sections*
+
+- What is Security by Design
+- Security By Design Topics
+- Explicit Knowledge and Tacit Knowledge
+:::
+
+

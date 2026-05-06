@@ -23,8 +23,26 @@ By the end of this section, you will be able to:
 
 ---
 
-## Sections 
++++{"no-pdf": true}
+
+## Sections
+
 
 :::{toc}
 :context: children
 :::
+
++++
+
+
+
+:::{raw:typst}
+*Sections*
+
+- What is Threat Modeling
+- STRIDE Threat Model
+- Example Threat Model with STRIDE
+
+:::
+
+

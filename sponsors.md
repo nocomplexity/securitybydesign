@@ -23,6 +23,13 @@ Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsori
 
 :::
 
+:::{raw:typst}
+*All sponsors will be visible in the online published version of the book Mastering Security By Design.*
+
+:::
+
+
++++{"no-pdf": true}
 
 ## Premium Sponsors
 
@@ -58,3 +65,4 @@ Please contact us by [using this page](https://nocomplexity.com/ads-and-sponsori
 
 ::::
 
++++

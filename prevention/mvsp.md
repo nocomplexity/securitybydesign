@@ -9,13 +9,19 @@ The MVSP is a minimalist security baseline for B2B software and outsourcing part
 
 This checklist distills complex security requirements into the absolute essentials, ensuring your product achieves a baseline of trust and resilience without unnecessary bloat.
 
++++{"no-pdf": true}
+
 :::{toc}
 :context: page
 :::
 
-## 1 Business controls
++++
+%PDF convertion issue towards PDF, so leave ToC for this page out of the PDF version.
 
-### 1.1 Vulnerability reports
+
+## Business controls
+
+### Vulnerability reports
 
 
 - [ ] Publish the method and/or point of contact for security reports on your website. Example: Using the https://securitytxt.org/)[security.txt] standard.
@@ -23,31 +29,31 @@ This checklist distills complex security requirements into the absolute essentia
 - [ ] Respond to reports within a reasonable time frame
 
 
-### 1.2 Customer testing
+### Customer testing
 
 - [ ] On request, enable your customers or their delegates to test the security of your application
 - [ ] Test on a non-production environment that closely resembles the production environment in functionality
 - [ ] Ensure non-production environments do not contain production data
 
-### 1.3 Self-assessment
+### Self-assessment
 
 Perform annual (at a minimum) security self-assessments using the latest MVSP release
 
-### 1.4 External testing
+### External testing
 
 Contract a security vendor to perform annual, comprehensive penetration tests on your systems
 
-### 1.5 Training
+### Training
 
 Implement role-specific security training for your personnel that is relevant to their business function
 
-### 1.6 Compliance
+### Compliance
 
 - [ ] Comply with all industry security standards relevant to your business such as PCI DSS, HITRUST, ISO27001, and SSAE 18
 - [ ] Comply with local laws and regulations in jurisdictions applicable to your company and your customers, such as GDPR, Binding - [ ] Corporate Rules, and Standard Contractual Clauses
 - [ ] Ensure data localization requirements are implemented in line with local regulations and contractual obligations
 
-### 1.7 Incident handling
+### Incident handling
 
 - [ ] Notify relevant parties about any security breach that affects personal data without undue delay, no later than 72 hours upon discovery
   
@@ -57,17 +63,17 @@ Include the following information in the notification:
 * Consequences of the breach
 * Measures taken, or needing to be taken, to remediate the issue
 
-### 1.8 Data handling
+### Data handling
 
 Ensure media sanitization processes based on NIST SP 800-88 (or equivalent) are implemented for storage media holding unencrypted production data
 
-## 2 Application design controls
+## Application design controls
 
-### 2.1 Single Sign-On
+### Single Sign-On
 
 Implement single sign-on using modern, maintained, and industry standard protocols
 
-### 2.2 HTTPS-only
+### HTTPS-only
 
 * Redirect traffic from HTTP protocol (port 80) to HTTPS (port 443)
 
@@ -78,7 +84,7 @@ This does not apply to secure protocols designed to run on top of unencrypted co
 
   * Set authentication cookies as Secure
 
-### 2.3 Security Headers
+### Security Headers
 
 Apply appropriate security headers to reduce the application attack surface and limit post exploitation:
 
@@ -87,7 +93,7 @@ Apply appropriate security headers to reduce the application attack surface and 
     or CSP frame-ancestors
 - [ ] Disable caching for APIs and endpoints that return sensitive data
 
-### 2.4 Password policy
+### Password policy
 
 If password authentication is used in addition to single sign-on:
 
@@ -99,18 +105,18 @@ If password authentication is used in addition to single sign-on:
 - [ ] Store passwords in a hashed and salted format using a memory-hard or CPU-hard one-way hash function
 - [ ] Enforce appropriate account lockout and brute-force protection on account access
 
-### 2.5 Security libraries
+### Security libraries
 
 Use modern, maintained, and industry standard frameworks, template languages, or libraries that systemically address implementation weaknesses by escaping the outputs and sanitizing the inputs
 
   Example: ORM for database access, UI framework for rendering DOM
 
-### 2.6 Dependency Patching
+### Dependency Patching
 
 - [ ] Ensure third-party dependencies are maintained and up-to-date, with security relevant updates having a severity score of "medium" or higher applied in line with your application patching schedule
 - [ ] Where dependency patching or upgrades are not possible, equivalent mitigations should be implemented for all components of the application stack
 
-### 2.7 Logging
+### Logging
 
 Keep logs of:
 
@@ -122,21 +128,21 @@ Keep logs of:
 Logs must include user ID, IP address, valid timestamp, type of action performed, and object of this action.
 Logs must be stored for at least 30 days, and should not contain sensitive data or payloads.
 
-### 2.8 Encryption
+### Encryption
 
 Use modern, maintained, and industry standard means of encryption to protect sensitive data in transit between systems, and at rest in online data storages and backups
 
-## 3 Application implementation controls
+## Application implementation controls
 
-### 3.1 List of data
+### List of data
 
 Maintain a list of sensitive data types that the application is expected to process
 
-### 3.2 Data flow diagram
+### Data flow diagram
 
 Maintain an up-to-date diagram indicating how sensitive data reaches your systems and where it ends up being stored
 
-### 3.3 Vulnerability prevention
+### Vulnerability prevention
 
 Train your developers and implement development guidelines to prevent at least the following vulnerabilities:
 
@@ -147,18 +153,18 @@ Train your developers and implement development guidelines to prevent at least t
 - [ ] Cross-site request forgery. Example: Accepting requests with an Origin header from a different domain
 - [ ] Handling untrusted data. Example: Reusing data supplied by users within sensitive application contexts
 
-### 3.4 Time to fix vulnerabilities
+### Time to fix vulnerabilities
 
 Produce and deploy patches to address application vulnerabilities that materially impact security within 90 days of discovery
 
-### 3.5 Build and release process
+### Build and release process
 
 - [ ] Must use a version control system and consistent build process that generates provenance describing how the artifact was built (https://slsa.dev/spec/v1.0/levels#build-l1[SLSA Build Level 1])
 - [ ] Sensitive application credentials and tokens should be stored separately from the application's source code
 
-## 4 Operational controls
+## Operational controls
 
-### 4.1 Physical access
+### Physical access
 
 Validate the physical security of relevant facilities by ensuring the following controls are in place:
 
@@ -167,19 +173,19 @@ Validate the physical security of relevant facilities by ensuring the following 
 - [ ] Entry and exit logs
 - [ ] Appropriate response plan for unauthorized access
 
-### 4.2 Logical access
+### Logical access
 
 - [ ] Limit sensitive data access exclusively to users with a legitimate need. The data owner must authorize such access
 - [ ] Deactivate redundant accounts and expired access grants in a timely manner
 - [ ] Perform regular reviews of access to validate need to know
 - [ ] Ensure remote access to customer data or production systems requires the use of Multi-Factor Authentication
 
-### 4.3 Subprocessors
+### Subprocessors
 
 - [ ] Maintain a list of third-party companies with access to customer data, and make it available to clients and business partners upon request
 - [ ] Assess third-party companies annually against the latest MVSP release
 
-### 4.4 Backup and Disaster recovery
+### Backup and Disaster recovery
 
 - [ ] Securely backup all data to a **different location** than where the application is running
 - [ ] Maintain and test disaster recovery plans in concert with your incident response planning, at least annually or after significant changes

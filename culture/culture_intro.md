@@ -31,9 +31,24 @@ By the end of this section, you will be able to:
 - Evaluate the effectiveness of awareness activities using behavioural metrics rather than completion rates
 - Explain how security culture aligns with and supports broader Security by Design principles across enterprise architecture and management systems
 
++++{"no-pdf": true}
 
 ## Sections
 
+
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- What is a Security Culture
+- How to create A Security By Design Culture
+- Implement Security Awareness
+- Making Security awareness work
+
 :::

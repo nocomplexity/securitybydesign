@@ -9,6 +9,8 @@ With experience across a range of architecture roles—including IT Architect, S
 
 Currently, I lead initiatives at [NO|Complexity.com](https://nocomplexity.com/), an innovative IT company focused on straightforward solutions based in the Netherlands.
 
++++{"no-pdf": true}
+
 ## Other NO|Complexity Publications
 
 ### Cyber Security 
@@ -128,3 +130,7 @@ This is an eBook with proven scientific tools and frameworks to help you effecti
 
 ::::
 % End of Cards grid
+
+
++++ 
+% End of part that will not be shown in PDF - automatic transform will not work - status May 2026 -

@@ -26,6 +26,9 @@ By the end of this section, you will be able to:
 - Develop or evaluate a software update policy that ensures timely patching without disrupting business operations
 - Apply a Security by Design mindset to create policies that are enforceable, auditable, and scalable across teams
 
+
++++{"no-pdf": true}
+
 ## Sections
 
 Learn more about how security policies enable governance and consistency in Security by Design through the following sections:
@@ -33,4 +36,17 @@ Learn more about how security policies enable governance and consistency in Secu
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- What are Security Policies
+- Design Good Security Policies
+- Protection
+- Checklist for a Software Update Policy
+
 :::

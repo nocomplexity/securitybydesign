@@ -26,10 +26,29 @@ By the end of this section, you will be able to:
 - Recognise and mitigate supply chain risks using an open software supply chain attack reference checklist
 - Implement a checklist of prevention measures to embed security controls at design, development, and deployment stages
 
+
++++{"no-pdf": true}
+
 ## Sections
 
 Learn more about why prevention is key when practising Security By Design in the following sections:
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- Why Prevention
+- Shift Left
+- Ransomware
+- Preventing Zero-Day Attacks
+- Checklist:Minimum Viable Secure Product
+- Open Software Supply Chain Attack Reference Checklist
+- Checklist Prevention measurements
+
 :::

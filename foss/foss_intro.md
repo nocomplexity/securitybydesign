@@ -29,9 +29,26 @@ By the end of this section, you will be able to:
 - Apply a disciplined checklist to assess the security, quality, and sustainability of open source components
 - Describe practical strategies for building verifiable trust in software dependencies without assuming that "open" automatically means "secure"
 
+
+
++++{"no-pdf": true}
+
 ## Sections
 
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- FOSS Security
+- How to trust software?
+- Checklist Guide for Evaluating Open Source Software
+- Checklist for Python Security Applications
+
 :::

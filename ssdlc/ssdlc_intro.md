@@ -25,8 +25,24 @@ By the end of this section, you will be able to:
 - Recognise the benefits of a structured, repeatable SSDLC for cross-team alignment and governance
 - Apply core SSDLC practices to build software that is secure by default and resilient over time
 
+
++++{"no-pdf": true}
+
 ## Sections
+
 
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- What is the Secure Software Development Life Cycle (SDLC)
+- SDLC vs SSDLC
+- SSDL Practices
+
 :::

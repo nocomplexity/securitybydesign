@@ -27,11 +27,24 @@ By the end of this section, you will be able to:
 - Distinguish between actionable alerts and noisy, low‑fidelity signals
 - Apply a structured approach to designing, deploying, and operating security monitoring for any system
 
+
++++{"no-pdf": true}
+
 ## Sections
 
 Learn more about security monitoring as a core Security by Design capability in the following sections:
 
-
 :::{toc}
 :context: children
+:::
+
++++
+
+
+:::{raw:typst}
+*Sections*
+
+- What is Security Monitoring
+- How to do Security Monitoring
+
 :::
