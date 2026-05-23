@@ -139,6 +139,6 @@ These Security by Design principles represent distilled wisdom and long-standing
 ```{tip} Learn more about security principles
 Do not reinvent the wheel by defining your own security principles. Make use of already good defined and battle tested security principles.
 
-In the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/architecture/securityprinciples.html) you can more security principles that can be useful to use or exam.
+In the [Open Security Reference Architecture](https://nocomplexity.com/documents/securityarchitecture/architecture/securityprinciples.html) you can find more security principles that can be useful to use or exam.
 ```
 
