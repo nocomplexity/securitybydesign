@@ -1,5 +1,12 @@
 # Welcome to Mastering Security By Design
 
+:::{image} /images/sbd_bookcover.png
+:alt: Book Cover Mastering Security By Design
+:width: 300px
+:height: 400px
+:align: center
+:::
+
 
 :::{tip} Welcome! 
 This book will give you a deep understanding of what Security by Design is and how to apply this in practice.
