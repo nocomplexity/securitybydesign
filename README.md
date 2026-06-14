@@ -95,7 +95,7 @@ To truly master **Security by Design**, you must move beyond the past. This cour
 ---
 
 **Ready to master Security by Design?**  
-👉 [Start Reading the Full Book](https://nocomplexity.com/documents/securitybydesign/intro.html)
+👉 [Start Reading the Full Book](https://nocomplexity.github.io/securitybydesign/)
 
 
 ## License
