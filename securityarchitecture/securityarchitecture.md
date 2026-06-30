@@ -91,10 +91,6 @@ Each **ABB** maps to one or more **SBBs**:  Some example SBBs are:
 The entire flow delivers a **secure-by-design** asset, not just a checklist.
 
 
-Here's an improved version of your UK English text, refined for clarity, professional tone, and pedagogical flow in a "Mastering Security By Design" course.
-
-
-
 ## Key learning points
 
 - **Never start with Solution Building Blocks (SBBs)** – Avoid jumping straight to tools such as “we’ll use AWS KMS” without first establishing the underlying security rationale.
