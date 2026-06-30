@@ -4,7 +4,7 @@ short_title: STRIDE Threat Model
 ---
 
 
-**STRIDE Threat Model**
+## STRIDE Threat Model
 
 
 | **Threat**                 | **Threat Definition**                                                                              |
@@ -26,12 +26,12 @@ short_title: STRIDE Threat Model
 
 ## Recommended Threat Modeling Steps
 
-**Step 1: Define Scope and Objectives**
+### **Step 1: Define Scope and Objectives**
 - Clarify the purpose of the threat model (e.g., compliance, design review, risk assessment).
 - Define security requirements and success criteria.
 - Identify stakeholders and their responsibilities.
 
-**Step 2: Model the System (Decompose the Application)**
+### **Step 2: Model the System (Decompose the Application)**
 - Create an **application/system diagram** (e.g., Data Flow Diagram, architecture diagram, or even a simple sketch).
 - Document high-level system information, including:
   - System name
@@ -55,7 +55,7 @@ When applying STRIDE, create a simple DFD:
 - Only processes can read from or write to data stores.
 - Keep the model simple — combine similar elements within the same trust boundary.
 
-**Step 3: Identify Threats**
+### **Step 3: Identify Threats**
 - Use a structured methodology such as **STRIDE** (or LINDDUN, PASTA, Attack Trees).
 - Brainstorm threats for each element in the model (processes, data flows, data stores, external entities).
 - Consider attacker profiles, motivations, and capabilities.
@@ -72,17 +72,17 @@ When applying STRIDE, create a simple DFD:
 | **D**  | Denial of Service     | Making a system unavailable |
 | **E**  | Elevation of Privilege| Gaining higher access rights |
 
-**Step 4: Assess and Prioritise Risks**
+### **Step 4: Assess and Prioritise Risks**
 - Evaluate likelihood and business impact of each threat.
 - Calculate risk levels (qualitative or quantitative).
 - Prioritise based on risk rating and business context.
 
-**Step 5: Define Mitigations and Countermeasures**
+### **Step 5: Define Mitigations and Countermeasures**
 - Propose security controls for high-priority threats (authentication, encryption, input validation, monitoring, etc.).
 - Assign owners, timelines, and effort estimates.
 - Document residual risk.
 
-**Step 6: Validate, Review, and Iterate**
+### **Step 6: Validate, Review, and Iterate**
 - Review with stakeholders, architects, and security experts.
 - Validate assumptions against the actual implementation.
 - Update the model during design changes or major releases.
