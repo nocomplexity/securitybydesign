@@ -25,43 +25,91 @@ short_title: STRIDE Threat Model
 
 ## Recommended Threat Modeling Steps
 
-### Step 1: Define security requirements
+**Yes, it's mostly correct and significantly improved** — it's now a solid, usable guide. 
 
-1. Define security requirements
-2. Create an application diagram
-3. Identify threats
-4. Mitigate threats
-5. Validate that threats have been mitigated
+However, it's not *quite* perfect yet. There are some **formatting issues**, a few **minor inaccuracies**, and some **flow/organisation** problems that reduce clarity.
 
-### Step 2: Creating a Simple Design Representation
+### Specific Issues & Recommendations:
 
-When applying STRIDE , create a simple representation of your design. Typically, this is done by creating a simple diagram. 
+1. **Formatting & Structure Problems**
+   - The bullet list under **Step 2** breaks (some lines aren't properly bulleted).
+   - The DFD explanation appears suddenly in the middle of Step 2 — it feels dumped in.
+   - The STRIDE table is good but has a small alignment issue in the header/columns.
 
-1. Data processes are represented with circles
-2. Data stores are represented with lines above and below their names (you may also see them as cylinders)
-3. Data flows are represented with directed lines; these include data flows over a network
-4. Interactors 
-5. Trust boundaries are represented with a dashed line; these represent the border between trusted and untrusted portions.
+2. **Minor Technical Inaccuracies**
+   - Data stores in DFDs are typically represented by **two parallel horizontal lines** or a cylinder, not just “lines above and below their names”.
+   - “Interactors” is correct terminology, but commonly called **External Entities**.
+   - The sentence “Everything except the trust boundaries... are considered elements” is awkwardly phrased and not very useful — it can be removed or simplified.
 
+3. **Flow & Conciseness**
+   - Some content (especially the DFD rules) could be better separated as a **tip/subsection** rather than mixed into the main flow.
+   - Minor repetition between general modeling advice and STRIDE-specific guidance.
 
-Everything except the trust boundaries, processes, data stores, data flows, and interactors, are considered elements.
-
-The idea is to have a simple model of the design that shows the essential features. Here are some quick rules of thumb for a good representation:
-
-- Every data store should have at least one input and at least one output ("no data coming out of thin air").
-- Only processes read or write data in data stores ("no psychokinesis").
-- Similar elements in a single trust boundary can be collapsed into one element ("make the model simple").
-
-### Step 3: Identify Threats Using STRIDE
-
-When applying STRIDE examine each of the elements (processes, data stores, data flows, and interactors) to determine the threats to which it is susceptible. For each element, you look for the threats as shown in this table:
+---
 
 
-| Threat | Property Violated | Threat Definition |
-|--------|-------------------|--------------------|
-| S | Spoofing Identity | Authentication | Pretending to be something or someone other than yourself |
-| T | Tampering with Data | Integrity | Modifying something on disk, network, memory, or elsewhere |
-| R | Repudiation | Non-repudiation | Claiming that you didn't do something or were not responsible; can be honest or false |
-| I | Information Disclosure | Confidentiality | Providing information to someone not authorized to access it |
-| D | Denial of Service | Availability | Exhausting resources needed to provide service |
-| E | Elevation of Privilege | Authorization | Allowing someone to do something they are not authorized to do |
+## Recommended Threat Modeling Steps
+
+**Step 1: Define Scope and Objectives**
+- Clarify the purpose of the threat model (e.g., compliance, design review, risk assessment).
+- Define security requirements and success criteria.
+- Identify stakeholders and their responsibilities.
+
+**Step 2: Model the System (Decompose the Application)**
+- Create an **application/system diagram** (e.g., Data Flow Diagram, architecture diagram, or even a simple sketch).
+- Document high-level system information, including:
+  - System name
+  - System description and architecture overview
+  - Types and sensitivity of data handled (e.g., PII, financial, health)
+  - Scope and boundaries
+  - External interactions, third parties, and trust boundaries
+  - Primary workflows and use cases
+- Identify assets (what needs protection) and entry/exit points.
+
+**Tip for Step 2 – Using Data Flow Diagrams (DFD):**
+When applying STRIDE, create a simple DFD:
+- **Processes**: Circles or rounded rectangles
+- **Data stores**: Two parallel horizontal lines or cylinders
+- **Data flows**: Directed arrows (including network flows)
+- **External entities / Interactors**: Rectangles
+- **Trust boundaries**: Dashed lines
+
+**Rules of thumb for a good DFD:**
+- Every data store should have at least one input and one output.
+- Only processes can read from or write to data stores.
+- Keep the model simple — combine similar elements within the same trust boundary.
+
+**Step 3: Identify Threats**
+- Use a structured methodology such as **STRIDE** (or LINDDUN, PASTA, Attack Trees).
+- Brainstorm threats for each element in the model (processes, data flows, data stores, external entities).
+- Consider attacker profiles, motivations, and capabilities.
+- Leverage threat intelligence, OWASP Top 10, CVEs, and past incidents.
+
+**STRIDE Threat Categories:**
+
+| Threat | Property Violated     | Definition |
+|--------|-----------------------|----------|
+| **S**  | Spoofing              | Pretending to be someone/something else |
+| **T**  | Tampering             | Unauthorised modification of data |
+| **R**  | Repudiation           | Denying performing an action |
+| **I**  | Information Disclosure| Exposing information to unauthorised parties |
+| **D**  | Denial of Service     | Making a system unavailable |
+| **E**  | Elevation of Privilege| Gaining higher access rights |
+
+**Step 4: Assess and Prioritise Risks**
+- Evaluate likelihood and business impact of each threat.
+- Calculate risk levels (qualitative or quantitative).
+- Prioritise based on risk rating and business context.
+
+**Step 5: Define Mitigations and Countermeasures**
+- Propose security controls for high-priority threats (authentication, encryption, input validation, monitoring, etc.).
+- Assign owners, timelines, and effort estimates.
+- Document residual risk.
+
+**Step 6: Validate, Review, and Iterate**
+- Review with stakeholders, architects, and security experts.
+- Validate assumptions against the actual implementation.
+- Update the model during design changes or major releases.
+- Maintain findings in a threat model report or register.
+```
+
