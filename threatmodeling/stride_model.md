@@ -23,30 +23,6 @@ short_title: STRIDE Threat Model
 
 :::
 
-## Recommended Threat Modeling Steps
-
-**Yes, it's mostly correct and significantly improved** — it's now a solid, usable guide. 
-
-However, it's not *quite* perfect yet. There are some **formatting issues**, a few **minor inaccuracies**, and some **flow/organisation** problems that reduce clarity.
-
-### Specific Issues & Recommendations:
-
-1. **Formatting & Structure Problems**
-   - The bullet list under **Step 2** breaks (some lines aren't properly bulleted).
-   - The DFD explanation appears suddenly in the middle of Step 2 — it feels dumped in.
-   - The STRIDE table is good but has a small alignment issue in the header/columns.
-
-2. **Minor Technical Inaccuracies**
-   - Data stores in DFDs are typically represented by **two parallel horizontal lines** or a cylinder, not just “lines above and below their names”.
-   - “Interactors” is correct terminology, but commonly called **External Entities**.
-   - The sentence “Everything except the trust boundaries... are considered elements” is awkwardly phrased and not very useful — it can be removed or simplified.
-
-3. **Flow & Conciseness**
-   - Some content (especially the DFD rules) could be better separated as a **tip/subsection** rather than mixed into the main flow.
-   - Minor repetition between general modeling advice and STRIDE-specific guidance.
-
----
-
 
 ## Recommended Threat Modeling Steps
 
