@@ -78,6 +78,13 @@ If you cannot contribute, please continue learning — you are very welcome here
 
 :::
 
+:::{tip} Get the premium PDF edition
+Want a polished, printable version of this guide?
+
+Grab the high-quality PDF — ideal for offline reading, note-taking, and keeping on your desk.
+
+[Buy the PDF →](https://nocomplexity.gumroad.com/l/securitybydesign)
+:::
 
 
 ## Learning Objectives

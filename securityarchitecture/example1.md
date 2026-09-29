@@ -58,74 +58,11 @@ This architecture covers:
 
 ### Context Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           EXTERNAL ACTORS                                │
-│                                                                          │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
-│  │   Aircraft   │  │  WeatherAPI  │  │    Google    │  │    Admin     │ │
-│  │   Systems    │  │   (Vendor)   │  │  People API  │  │  Operators   │ │
-│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘ │
-│         │                 │                 │                 │          │
-└─────────┼─────────────────┼─────────────────┼─────────────────┼──────────┘
-          │                 │                 │                 │
-          │ mTLS + JWT      │ HTTPS           │ OAuth 2.0       │ TBD
-          │ (TLS 1.2+)      │ (API Key)       │ (HTTPS)         │
-          │                 │                 │                 │
-          ▼                 ▼                 ▼                 ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                                                                          │
-│  ══════════════════════ TRUST BOUNDARY 1 ══════════════════════════════ │
-│                                                                          │
-│  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │                      API GATEWAY (:8000)                           │  │
-│  │                                                                    │  │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────────┐  │  │
-│  │  │   mTLS     │ │  JWT RS256 │ │    Rate    │ │    Security    │  │  │
-│  │  │ Validation │ │    Auth    │ │  Limiting  │ │    Headers     │  │  │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────────┘  │  │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────────┐  │  │
-│  │  │  Payload   │ │  Request   │ │ Prometheus │ │   Structured   │  │  │
-│  │  │   Limit    │ │  Routing   │ │  Metrics   │ │    Logging     │  │  │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────────┘  │  │
-│  └───────────────────────────────────────────────────────────────────┘  │
-│                                    │                                     │
-│  ══════════════════════ TRUST BOUNDARY 2 ══════════════════════════════ │
-│                                    │                                     │
-│         ┌──────────────────────────┼──────────────────────────┐         │
-│         │                          │                          │         │
-│         ▼                          ▼                          ▼         │
-│  ┌─────────────┐           ┌─────────────┐           ┌─────────────┐   │
-│  │  TELEMETRY  │           │   WEATHER   │           │  CONTACTS   │   │
-│  │    :8001    │           │    :8002    │           │    :8003    │   │
-│  ├─────────────┤           ├─────────────┤           ├─────────────┤   │
-│  │ • Idempotency│          │ • Demo mode │           │ • OAuth 2.0 │   │
-│  │ • GPS round  │          │ • Fixtures  │           │ • Encryption│   │
-│  │ • Validation │          │ • Cache     │           │ • CRUD ops  │   │
-│  └─────────────┘           └──────┬──────┘           └──────┬──────┘   │
-│                                   │                          │          │
-│  ═══════════════════ TRUST BOUNDARY 3 ═══════════════════════│══════   │
-│                                   │                          │          │
-│                                   ▼                          │          │
-│                          ┌─────────────┐                     │          │
-│                          │ WeatherAPI  │                     │          │
-│                          │  (External) │                     │          │
-│                          └─────────────┘                     │          │
-│                                                              │          │
-│  ═══════════════════ TRUST BOUNDARY 4 ═══════════════════════│══════   │
-│                                                              │          │
-│                                                              ▼          │
-│                                                     ┌─────────────┐    │
-│                                                     │ PostgreSQL  │    │
-│                                                     │    :5432    │    │
-│                                                     ├─────────────┤    │
-│                                                     │ • OAuth tok │    │
-│                                                     │ • Encrypted │    │
-│                                                     └─────────────┘    │
-│                                                                          │
-│                           SKYLINK PLATFORM                               │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+:::{image} ../images/example_contextdiagram.png
+:alt: Example context diagram
+:align: center
+:::
+
 
 ### External Actors
 
@@ -153,114 +90,75 @@ This architecture covers:
 
 #### TB1: Internet → Gateway (CRITICAL)
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    TRUST BOUNDARY 1                          │
-│               Internet → API Gateway                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  THREATS                    CONTROLS                         │
-│  ─────────                  ────────                         │
-│  • Spoofing          ──►   mTLS (X.509 client certs)        │
-│  • Man-in-Middle     ──►   TLS 1.2+ with strong ciphers     │
-│  • Replay attacks    ──►   JWT expiry (15 min)              │
-│  • DDoS/Flooding     ──►   Rate limiting (60 req/min)       │
-│  • Injection         ──►   Pydantic validation (extra=forbid)│
-│  • Info disclosure   ──►   Security headers (OWASP)         │
-│  • Large payloads    ──►   64KB request limit               │
-│                                                              │
-│  AUTHENTICATION FLOW:                                        │
-│  1. TLS handshake (mutual authentication)                   │
-│  2. Client certificate validation (CA-signed)               │
-│  3. CN extraction from certificate                          │
-│  4. JWT token issuance (sub = CN)                          │
-│  5. Cross-validation on subsequent requests (CN == sub)     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+TRUST BOUNDARY: Internet → API Gateway
+
+
+| Threat              | Control                              |
+|:--------------------|:-------------------------------------|
+| Spoofing            | → mTLS (X.509 client certs)          |
+| Man-in-the-Middle   | → TLS 1.2+ with strong ciphers       |
+| Replay attacks      | → JWT expiry (15 min)                |
+| DDoS / Flooding     | → Rate limiting (60 req/min)         |
+| Injection           | → Pydantic validation (`extra=forbid`)|
+| Information disclosure | → Security headers (OWASP)        |
+| Large payloads      | → 64 KB request limit                |
+
+AUTHENTICATION FLOW:                                        
+1. TLS handshake (mutual authentication)                   
+2. Client certificate validation (CA-signed)               
+3. CN extraction from certificate                          
+4. JWT token issuance (sub = CN)                          
+5. Cross-validation on subsequent requests (CN == sub)    
+
 
 #### TB2: Gateway → Services (MEDIUM)
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    TRUST BOUNDARY 2                          │
-│               Gateway → Internal Services                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ASSUMPTION: Gateway has validated all requests              │
-│                                                              │
-│  CONTROLS:                                                   │
-│  • Docker bridge network isolation                          │
-│  • Services not exposed to Internet                         │
-│  • Internal DNS resolution only                             │
-│  • Request forwarding via httpx (async)                     │
-│                                                              │
-│  DATA FLOW:                                                  │
-│  Gateway ──[HTTP/JSON]──► Telemetry/Weather/Contacts        │
-│                                                              │
-│  NOTE: No authentication between internal services          │
-│  (trusted internal network model)                           │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+TRUST BOUNDARY 2 : Gateway → Internal Services                
+
+
+ASSUMPTION:
+- Gateway has validated all requests              
+
+CONTROLS:                                                   
+- Docker bridge network isolation                          
+- Services not exposed to Internet                         
+- Internal DNS resolution only                             
+- Request forwarding via httpx (async)                     
+
+DATA FLOW:                                                  
+- Gateway ──[HTTP/JSON]──► Telemetry/Weather/Contacts        
+
+NOTE:
+- No authentication between internal services(trusted internal network model)                          
+
 
 #### TB3: Services → External APIs (HIGH)
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    TRUST BOUNDARY 3                          │
-│               Internal → External APIs                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  OUTBOUND CONNECTIONS:                                       │
-│                                                              │
-│  Weather Service ──[HTTPS]──► WeatherAPI                    │
-│  • API key in request header                                │
-│  • Geohash/coordinates (no raw GPS)                         │
-│  • Demo mode fallback (fixtures)                            │
-│                                                              │
-│  Contacts Service ──[HTTPS]──► Google People API            │
-│  • OAuth 2.0 bearer token                                   │
-│  • Minimal scope (contacts.readonly)                        │
-│  • Token refresh handling                                   │
-│                                                              │
-│  CONTROLS:                                                   │
-│  • HTTPS enforced (TLS 1.2+)                               │
-│  • API keys not logged                                      │
-│  • Response validation                                       │
-│  • Timeout configuration                                     │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+:::{table}
+:widths: auto
+:align: center
+
+| Section | Connection / Item | Details / Configuration |
+| :--- | :--- | :--- |
+| **Outbound Connections** | Weather Service ──[HTTPS]──► WeatherAPI | • API key in request header<br>• Geohash/coordinates (no raw GPS)<br>• Demo mode fallback (fixtures) |
+| | Contacts Service ──[HTTPS]──► Google People API | • OAuth 2.0 bearer token<br>• Minimal scope (contacts.readonly)<br>• Token refresh handling |
+| **Controls** | Security & Network | • HTTPS enforced (TLS 1.2+)<br>• API keys not logged<br>• Response validation<br>• Timeout configuration |
+:::
+
 
 #### TB4: Services → Database (HIGH)
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    TRUST BOUNDARY 4                          │
-│               Services → PostgreSQL                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  CONNECTION:                                                 │
-│  Contacts Service ──[TCP:5432]──► PostgreSQL                │
-│                                                              │
-│  CONTROLS:                                                   │
-│  • Network isolation (Docker bridge)                        │
-│  • Credential-based authentication                          │
-│  • Connection pooling (SQLAlchemy)                          │
-│  • Parameterized queries (no SQL injection)                 │
-│                                                              │
-│  DATA STORED:                                                │
-│  • OAuth tokens (AES-256-GCM encrypted)                     │
-│  • User identifiers                                          │
-│  • Token expiration metadata                                 │
-│                                                              │
-│  DATA PROTECTION:                                            │
-│  • Encryption at rest (application-level)                   │
-│  • No plaintext secrets in database                         │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+:::{table}
+:widths: auto
+:align: center
+
+| Section | Item | Details / Configuration |
+| :--- | :--- | :--- |
+| **Connection** | Contacts Service ──[TCP:5432]──► PostgreSQL | • Direct TCP connection |
+| **Controls** | Security & Architecture | • Network isolation (Docker bridge)<br>• Credential-based authentication<br>• Connection pooling (SQLAlchemy)<br>• Parameterized queries (no SQL injection) |
+| **Data Stored** | Stored Records | • OAuth tokens (AES-256-GCM encrypted)<br>• User identifiers<br>• Token expiration metadata |
+| **Data Protection** | Privacy & Encryption | • Encryption at rest (application-level)<br>• No plaintext secrets in database |
+:::
 
 ---
 
@@ -268,46 +166,12 @@ This architecture covers:
 
 ### Flow 1: Aircraft Authentication
 
-```
-┌──────────────┐                              ┌──────────────┐
-│   AIRCRAFT   │                              │   GATEWAY    │
-│   SYSTEM     │                              │   :8000      │
-└──────┬───────┘                              └──────┬───────┘
-       │                                             │
-       │ ══[1] TLS ClientHello ════════════════════►│
-       │                                             │
-       │ ◄═══════════════════════ [2] ServerHello ══│
-       │                          + Server Cert     │
-       │                          + CertRequest     │
-       │                                             │
-       │ ══[3] Client Certificate ═════════════════►│
-       │       (X.509, CA-signed)                   │
-       │                                             │──┐
-       │                                             │  │ [4] Validate cert
-       │                                             │  │     - CA signature
-       │                                             │  │     - Not expired
-       │                                             │◄─┘     - Not revoked
-       │                                             │
-       │                                             │──┐
-       │                                             │  │ [5] Extract CN
-       │                                             │◄─┘     (aircraft_id)
-       │                                             │
-       │ ══[6] POST /auth/token ═══════════════════►│
-       │       {"aircraft_id": "AC-12345"}          │
-       │                                             │──┐
-       │                                             │  │ [7] Validate:
-       │                                             │  │     - CN == aircraft_id
-       │                                             │  │     - Generate JWT
-       │                                             │  │       (sub=aircraft_id)
-       │                                             │◄─┘     (exp=15min)
-       │                                             │
-       │ ◄══════════════════════════════ [8] 200 ═══│
-       │       {"access_token": "eyJ...",           │
-       │        "token_type": "Bearer",             │
-       │        "expires_in": 900}                  │
-       │                                             │
-       ▼                                             ▼
-```
+
+:::{image} ../images/example1_dataflow.png
+:alt: Data Flow diagram
+:align: center
+:::
+
 
 **Security Controls Applied**:
 - [x] mTLS handshake (mutual authentication)
@@ -318,67 +182,12 @@ This architecture covers:
 
 ### Flow 2: Telemetry Ingestion
 
-```
-┌──────────────┐              ┌──────────────┐              ┌──────────────┐
-│   AIRCRAFT   │              │   GATEWAY    │              │  TELEMETRY   │
-│   SYSTEM     │              │   :8000      │              │   :8001      │
-└──────┬───────┘              └──────┬───────┘              └──────┬───────┘
-       │                             │                             │
-       │ ═[1] POST /telemetry/ingest═►                            │
-       │     + mTLS (client cert)    │                             │
-       │     + Authorization: Bearer │                             │
-       │     + X-Trace-Id: abc123    │                             │
-       │     {                       │                             │
-       │       "aircraft_id": "...", │                             │
-       │       "event_id": "...",    │                             │
-       │       "ts": "...",          │                             │
-       │       "metrics": {...}      │                             │
-       │     }                       │                             │
-       │                             │──┐                          │
-       │                             │  │ [2] Validate JWT         │
-       │                             │  │     - Signature (RS256)  │
-       │                             │  │     - Expiry             │
-       │                             │  │     - Audience           │
-       │                             │◄─┘                          │
-       │                             │──┐                          │
-       │                             │  │ [3] Cross-validate       │
-       │                             │  │     CN == JWT.sub        │
-       │                             │◄─┘                          │
-       │                             │──┐                          │
-       │                             │  │ [4] Rate limit check     │
-       │                             │  │     (60 req/min/identity)│
-       │                             │◄─┘                          │
-       │                             │                             │
-       │                             │ ════[5] Proxy request══════►│
-       │                             │     (internal network)      │
-       │                             │                             │──┐
-       │                             │                             │  │ [6] Validate payload
-       │                             │                             │  │     - Pydantic model
-       │                             │                             │  │     - extra="forbid"
-       │                             │                             │◄─┘
-       │                             │                             │──┐
-       │                             │                             │  │ [7] Idempotency check
-       │                             │                             │  │     - (aircraft_id, event_id)
-       │                             │                             │  │     - UNIQUE constraint
-       │                             │                             │◄─┘
-       │                             │                             │──┐
-       │                             │                             │  │ [8] PII minimization
-       │                             │                             │  │     - Round GPS (4 dec)
-       │                             │                             │◄─┘
-       │                             │                             │──┐
-       │                             │                             │  │ [9] Store telemetry
-       │                             │                             │◄─┘
-       │                             │                             │
-       │                             │ ◄════════[10] Response══════│
-       │                             │     201 Created / 200 OK /  │
-       │                             │     409 Conflict            │
-       │                             │                             │
-       │ ◄════════════[11] Response══│                             │
-       │     + X-Trace-Id: abc123    │                             │
-       │     + Security headers      │                             │
-       │                             │                             │
-       ▼                             ▼                             ▼
-```
+
+:::{image} ../images/example1_dataflow2.png
+:alt: Data Flow2 diagram
+:align: center
+:::
+
 
 **HTTP Response Codes**:
 | Code | Meaning | Scenario |
@@ -393,52 +202,11 @@ This architecture covers:
 
 ### Flow 3: Weather Query
 
-```
-┌──────────────┐      ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
-│   AIRCRAFT   │      │   GATEWAY    │      │   WEATHER    │      │  WeatherAPI  │
-│   SYSTEM     │      │   :8000      │      │   :8002      │      │  (External)  │
-└──────┬───────┘      └──────┬───────┘      └──────┬───────┘      └──────┬───────┘
-       │                     │                     │                     │
-       │ ═[1] GET /weather══►│                     │                     │
-       │     ?lat=48.85      │                     │                     │
-       │     &lon=2.35       │                     │                     │
-       │     + Bearer JWT    │                     │                     │
-       │                     │──┐                  │                     │
-       │                     │  │ [2] Validate JWT │                     │
-       │                     │◄─┘                  │                     │
-       │                     │──┐                  │                     │
-       │                     │  │ [3] Rate limit   │                     │
-       │                     │◄─┘                  │                     │
-       │                     │                     │                     │
-       │                     │ ══[4] Proxy════════►│                     │
-       │                     │                     │                     │
-       │                     │                     │──┐                  │
-       │                     │                     │  │ [5] Check mode   │
-       │                     │                     │  │     (demo/live)  │
-       │                     │                     │◄─┘                  │
-       │                     │                     │                     │
-       │                     │                     │    ┌─── IF LIVE ───┐│
-       │                     │                     │ ══►│[6] Build req  ││
-       │                     │                     │    │  + API key    ││
-       │                     │                     │    │  + coords     │├──►
-       │                     │                     │    └───────────────┘│
-       │                     │                     │                     │
-       │                     │                     │ ◄═══[7] Response════│
-       │                     │                     │     (weather data)  │
-       │                     │                     │                     │
-       │                     │                     │    ┌─ IF DEMO ─────┐│
-       │                     │                     │    │ Return Paris  ││
-       │                     │                     │    │ fixtures      ││
-       │                     │                     │    └───────────────┘│
-       │                     │                     │                     │
-       │                     │ ◄══[8] Response═════│                     │
-       │                     │                     │                     │
-       │ ◄══[9] Weather data═│                     │                     │
-       │     {"location":... │                     │                     │
-       │      "current":...} │                     │                     │
-       │                     │                     │                     │
-       ▼                     ▼                     ▼                     ▼
-```
+
+:::{image} ../images/example1_dataflow3.png
+:alt: Data Flow3 diagram
+:align: center
+:::
 
 **Data Protection**:
 - GPS coordinates passed as query parameters (not logged)
@@ -447,45 +215,12 @@ This architecture covers:
 
 ### Flow 4: Contacts OAuth
 
-```
-┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
-│     USER     │   │   GATEWAY    │   │   CONTACTS   │   │    GOOGLE    │
-│   BROWSER    │   │   :8000      │   │   :8003      │   │  People API  │
-└──────┬───────┘   └──────┬───────┘   └──────┬───────┘   └──────┬───────┘
-       │                  │                  │                  │
-       │ ═[1] GET /oauth/init═►              │                  │
-       │                  │ ══[2] Proxy═════►│                  │
-       │                  │                  │──┐               │
-       │                  │                  │  │ [3] Build auth URL
-       │                  │                  │  │  + client_id
-       │                  │                  │  │  + redirect_uri
-       │                  │                  │  │  + scope (minimal)
-       │                  │                  │◄─┘               │
-       │                  │ ◄═[4] Redirect══│                  │
-       │ ◄═[5] 302 Redirect═│                  │                  │
-       │                  │                  │                  │
-       │ ════════════════════[6] User consent════════════════════►
-       │                  │                  │                  │
-       │ ◄═══════════════════[7] Callback + code═════════════════│
-       │                  │                  │                  │
-       │ ═[8] GET /oauth/callback?code=...═►│                  │
-       │                  │ ══[9] Proxy═════►│                  │
-       │                  │                  │ ═[10] POST token═►│
-       │                  │                  │     (code exchange)│
-       │                  │                  │ ◄═[11] Tokens═════│
-       │                  │                  │     (access+refresh)
-       │                  │                  │──┐               │
-       │                  │                  │  │ [12] Encrypt tokens
-       │                  │                  │  │      AES-256-GCM
-       │                  │                  │◄─┘               │
-       │                  │                  │──┐               │
-       │                  │                  │  │ [13] Store in DB
-       │                  │                  │◄─┘               │
-       │                  │ ◄═[14] Success══│                  │
-       │ ◄═[15] Success═══│                  │                  │
-       │                  │                  │                  │
-       ▼                  ▼                  ▼                  ▼
-```
+
+:::{image} ../images/example1_oathflow.png
+:alt: Data Flow OATH
+:align: center
+:::
+
 
 **OAuth Security**:
 - Minimal scope: `contacts.readonly`
@@ -499,71 +234,36 @@ This architecture covers:
 
 ### Control Matrix
 
-| Layer | Control | Implementation | File | Status |
-|-------|---------|----------------|------|--------|
-| **Transport** | TLS 1.2+ | mTLS with strong ciphers | `skylink/mtls.py` | :white_check_mark: |
-| **Transport** | Certificate validation | X.509, CA-signed | `scripts/generate_*.sh` | :white_check_mark: |
-| **Network** | Service isolation | Docker bridge network | `docker-compose.yml` | :white_check_mark: |
-| **Application** | Authentication | JWT RS256 | `skylink/auth.py` | :white_check_mark: |
-| **Application** | Authorization | RBAC (5 roles, 7 permissions) | `skylink/rbac.py` | :white_check_mark: |
-| **Application** | Cross-validation | CN == JWT sub | `skylink/mtls.py` | :white_check_mark: |
-| **Application** | Rate limiting | 60 req/min per identity | `skylink/rate_limit.py` | :white_check_mark: |
-| **Application** | Input validation | Pydantic extra=forbid | `skylink/models/` | :white_check_mark: |
-| **Application** | Idempotency | Unique constraint | `telemetry/` | :white_check_mark: |
-| **Application** | Security headers | OWASP set | `skylink/middlewares.py` | :white_check_mark: |
-| **Data** | PII minimization | GPS rounding (4 dec) | `skylink/models/` | :white_check_mark: |
-| **Data** | Token encryption | AES-256-GCM | `contacts/encryption.py` | :white_check_mark: |
-| **Data** | No PII in logs | Structured logging | `skylink/middlewares.py` | :white_check_mark: |
-| **Container** | Non-root user | UID 1000 | `Dockerfile.*` | :white_check_mark: |
-| **Supply Chain** | Dependency scanning | pip-audit, Trivy | `.github/workflows/ci.yml` | :white_check_mark: |
-| **Supply Chain** | Image signing | Cosign (keyless) | `.github/workflows/ci.yml` | :white_check_mark: |
-| **Supply Chain** | SBOM | CycloneDX | `.github/workflows/ci.yml` | :white_check_mark: |
-| **Supply Chain** | Secret detection | Gitleaks | `.github/workflows/ci.yml` | :white_check_mark: |
+| Layer | Control | Implementation |
+|-------|---------|----------------|
+| **Transport** | TLS 1.2+ | mTLS with strong ciphers |
+| **Transport** | Certificate validation | X.509, CA-signed |
+| **Network** | Service isolation | Docker bridge network |
+| **Application** | Authentication | JWT RS256 |
+| **Application** | Authorization | RBAC (5 roles, 7 permissions) |
+| **Application** | Cross-validation | CN == JWT sub |
+| **Application** | Rate limiting | 60 req/min per identity |
+| **Application** | Input validation | Pydantic extra=forbid |
+| **Application** | Idempotency | Unique constraint |
+| **Application** | Security headers | OWASP set |
+| **Data** | PII minimization | GPS rounding (4 dec) |
+| **Data** | Token encryption | AES-256-GCM |
+| **Data** | No PII in logs | Structured logging |
+| **Container** | Non-root user | UID 1000 |
+| **Supply Chain** | Dependency scanning | pip-audit, Trivy |
+| **Supply Chain** | Image signing | Cosign (keyless) |
+| **Supply Chain** | SBOM | CycloneDX |
+| **Supply Chain** | Secret detection | Gitleaks |
+
 
 ### Defense in Depth Visualization
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                                                                          │
-│   Layer 1: NETWORK                                                       │
-│   ├── Docker bridge isolation                                           │
-│   ├── Internal services not exposed                                     │
-│   └── Single entry point (Gateway:8000)                                 │
-│                                                                          │
-│   ┌───────────────────────────────────────────────────────────────────┐ │
-│   │                                                                    │ │
-│   │   Layer 2: TRANSPORT                                               │ │
-│   │   ├── mTLS (mutual TLS)                                           │ │
-│   │   ├── TLS 1.2+ with strong ciphers                               │ │
-│   │   └── Certificate validation                                       │ │
-│   │                                                                    │ │
-│   │   ┌───────────────────────────────────────────────────────────┐   │ │
-│   │   │                                                            │   │ │
-│   │   │   Layer 3: APPLICATION                                     │   │ │
-│   │   │   ├── JWT RS256 authentication                             │   │ │
-│   │   │   ├── RBAC (5 roles, 7 permissions)                       │   │ │
-│   │   │   ├── CN ↔ JWT cross-validation                           │   │ │
-│   │   │   ├── Rate limiting (60 req/min)                          │   │ │
-│   │   │   ├── Input validation (Pydantic)                         │   │ │
-│   │   │   ├── Security headers (OWASP)                            │   │ │
-│   │   │   └── Payload limit (64KB)                                │   │ │
-│   │   │                                                            │   │ │
-│   │   │   ┌───────────────────────────────────────────────────┐   │   │ │
-│   │   │   │                                                    │   │   │ │
-│   │   │   │   Layer 4: DATA                                    │   │   │ │
-│   │   │   │   ├── AES-256-GCM encryption                      │   │   │ │
-│   │   │   │   ├── GPS rounding (PII minimization)             │   │   │ │
-│   │   │   │   ├── No PII in logs                              │   │   │ │
-│   │   │   │   └── Idempotency controls                        │   │   │ │
-│   │   │   │                                                    │   │   │ │
-│   │   │   └───────────────────────────────────────────────────┘   │   │ │
-│   │   │                                                            │   │ │
-│   │   └───────────────────────────────────────────────────────────┘   │ │
-│   │                                                                    │ │
-│   └───────────────────────────────────────────────────────────────────┘ │
-│                                                                          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+
+:::{image} ../images/example_defense_in_depth.png
+:alt: Defense in Depth
+:align: center
+:::
+
 
 ---
 
@@ -584,36 +284,14 @@ This architecture covers:
 
 ### Data Handling Rules
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        DATA HANDLING RULES                               │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│  INTERNAL DATA (Aircraft UUID, trace_id)                                │
-│  ✓ Can be logged                                                        │
-│  ✓ Can be stored plaintext                                             │
-│  ✓ Can be transmitted                                                   │
-│                                                                          │
-│  CONFIDENTIAL DATA (Telemetry)                                          │
-│  ✓ Can be stored                                                        │
-│  ✗ Cannot be logged (only trace_id)                                    │
-│  ✓ Must be encrypted in transit (TLS)                                  │
-│                                                                          │
-│  PII DATA (GPS, Contacts)                                               │
-│  ⚠ GPS must be rounded (4 decimals = ~11m accuracy)                    │
-│  ⚠ Contacts are read-only, not persisted                               │
-│  ✗ Never logged                                                         │
-│  ✓ Must be encrypted in transit (TLS)                                  │
-│                                                                          │
-│  RESTRICTED DATA (Tokens, Keys, Certs)                                  │
-│  ✓ Must be encrypted at rest (AES-256-GCM)                             │
-│  ✓ Must be encrypted in transit (TLS)                                  │
-│  ✗ Never logged                                                         │
-│  ✗ Never in source code                                                │
-│  ✓ Environment variables or secrets manager                            │
-│                                                                          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+
+| Data Classification | Examples | Logging | Storage | Transmission | Other Rules |
+|---|---|---|---|---|---|
+| **INTERNAL DATA** | Aircraft UUID, trace_id | ✓ Can be logged | ✓ Can be stored plaintext | ✓ Can be transmitted | — |
+| **CONFIDENTIAL DATA** | Telemetry | ✗ Cannot be logged (only trace_id) | ✓ Can be stored | ✓ Must be encrypted in transit (TLS) | — |
+| **PII DATA** | GPS, Contacts | ✗ Never logged | ⚠ GPS must be rounded (4 decimals = ~11m accuracy)<br>⚠ Contacts are read-only, not persisted | ✓ Must be encrypted in transit (TLS) | — |
+| **RESTRICTED DATA** | Tokens, Keys, Certs | ✗ Never logged | ✓ Must be encrypted at rest (AES-256-GCM) | ✓ Must be encrypted in transit (TLS) | ✗ Never in source code<br>✓ Environment variables or secrets manager |
+
 
 ---
 
@@ -641,7 +319,6 @@ This architecture covers:
 | `GET /weather/current` | JWT | Yes | Query params | MEDIUM |
 | `GET /contacts/` | JWT | Yes | Query params | MEDIUM |
 
----
 
 ## Cryptographic Inventory
 
@@ -657,78 +334,32 @@ This architecture covers:
 | mTLS Client | RSA/X.509 | 2048-bit | 1 year | File (certs/clients/) |
 | Image Signing | ECDSA (Sigstore) | P-256 | Keyless (per-build) | GitHub OIDC |
 
+
++++{"no-pdf": true}
+
 ### Key Management
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        KEY MANAGEMENT                                    │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│  DEVELOPMENT ENVIRONMENT                                                │
-│  ├── .env file (git-ignored)                                           │
-│  ├── Generated keys in /tmp                                            │
-│  └── Test certificates in certs/                                        │
-│                                                                          │
-│  CI/CD ENVIRONMENT                                                       │
-│  ├── GitHub Secrets / GitLab CI Variables                              │
-│  ├── Protected variables (protected branches only)                      │
-│  └── Masked in logs                                                     │
-│                                                                          │
-│  PRODUCTION (RECOMMENDED)                                                │
-│  ├── HashiCorp Vault                                                    │
-│  ├── AWS KMS / GCP KMS                                                  │
-│  └── HSM for aircraft keys                                              │
-│                                                                          │
-│  ROTATION SCRIPTS                                                        │
-│  ├── scripts/rotate_jwt_keys.sh (planned)                              │
-│  ├── scripts/rotate_encryption_key.sh (planned)                        │
-│  └── scripts/renew_certificates.sh (planned)                           │
-│                                                                          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
 
----
+:::{image} ../images/example_keymanagement.png
+:alt: Key Management
+:align: center
+:::
+
++++ 
+% End of part that will not be shown in PDF - figure will not fit correctly! 
+
+
 
 ## Network Security
 
 ### Network Topology
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           INTERNET                                       │
-│                              │                                           │
-│                              │ TCP:8000 (mTLS)                          │
-│                              ▼                                           │
-│  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │                      DOCKER HOST                                   │  │
-│  │                                                                    │  │
-│  │  ┌─────────────────────────────────────────────────────────────┐  │  │
-│  │  │                  skylink-net (bridge)                        │  │  │
-│  │  │                                                              │  │  │
-│  │  │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐        │  │  │
-│  │  │  │ gateway │  │telemetry│  │ weather │  │contacts │        │  │  │
-│  │  │  │  :8000  │  │  :8001  │  │  :8002  │  │  :8003  │        │  │  │
-│  │  │  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘        │  │  │
-│  │  │       │            │            │            │              │  │  │
-│  │  │       └────────────┴────────────┴────────────┘              │  │  │
-│  │  │                         │                                    │  │  │
-│  │  │                    ┌────▼────┐                              │  │  │
-│  │  │                    │   db    │                              │  │  │
-│  │  │                    │  :5432  │                              │  │  │
-│  │  │                    └─────────┘                              │  │  │
-│  │  │                                                              │  │  │
-│  │  └─────────────────────────────────────────────────────────────┘  │  │
-│  │                                                                    │  │
-│  │  EXPOSED PORTS:                                                   │  │
-│  │  • 8000 (gateway) → mapped to host                               │  │
-│  │                                                                    │  │
-│  │  INTERNAL ONLY:                                                   │  │
-│  │  • 8001, 8002, 8003, 5432 → not exposed                         │  │
-│  │                                                                    │  │
-│  └───────────────────────────────────────────────────────────────────┘  │
-│                                                                          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+
+:::{image} ../images/example_networktopology.png
+:alt: Network Topology
+:align: center
+:::
+
 
 ### Network Policies
 
@@ -767,9 +398,7 @@ spec:
 | `internal-egress` | internal services | external APIs | 443 | API calls |
 | `prometheus-scrape` | monitoring namespace | all pods | 8000-8003 | Metrics collection |
 
-See [KUBERNETES.md](KUBERNETES.md) for full network policy configuration.
 
----
 
 ### Security Headers
 
