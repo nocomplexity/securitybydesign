@@ -3,8 +3,7 @@ title: Example Threat Model with STRIDE
 short_title:  STRIDE Example
 ---
 
-
-> **STRIDE-based threat analysis for the SkyLink Connected Aircraft Platform**
+An example of a **STRIDE-based threat analysis** for the SkyLink Connected Aircraft Platform.
 
 ---
 
@@ -30,7 +29,7 @@ short_title:  STRIDE Example
 :::
 
 +++
-%PDF convertion issue towards PDF, so leave ToC for this page out of the PDF version.
+%PDF conversion issue towards PDF, so leave ToC for this page out of the PDF version.
 
 ## Service Description
 
@@ -48,30 +47,12 @@ The service provides the following capabilities:
 
 ### Technical Architecture
 
-```
-                              Internet
-                                 │
-┌────────────────────────────────┴────────────────────────────────┐
-│                      API GATEWAY (:8000)                        │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐   │
-│  │ Security     │  │ Rate         │  │ JWT RS256 + RBAC     │   │
-│  │ Headers      │  │ Limiting     │  │ Authentication &     │   │
-│  │ (OWASP)      │  │ (slowapi)    │  │ Authorization        │   │
-│  └──────────────┘  └──────────────┘  └──────────────────────┘   │
-└─────────────┬──────────────┬──────────────┬─────────────────────┘
-              │              │              │
-              ▼              ▼              ▼
-    ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
-    │ TELEMETRY   │  │ WEATHER     │  │ CONTACTS    │
-    │ :8001       │  │ :8002       │  │ :8003       │
-    └─────────────┘  └─────────────┘  └──────┬──────┘
-                                             │
-                                             ▼
-                                     ┌─────────────┐
-                                     │ PostgreSQL  │
-                                     │ :5432       │
-                                     └─────────────┘
-```
+
+:::{image} ../images/ti_example.png
+:alt: TI Example
+:align: center
+:::
+
 
 ### Component Responsibilities
 
@@ -145,68 +126,102 @@ List of data stored or in transit within the service.
 
 ### Spoofing (Identity)
 
+
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| S1 | Aircraft identity spoofing | MAXIMUM | Medium | mTLS with X.509 certificates, CN validation | :white_check_mark: Implemented |
-| S2 | User identity spoofing | HIGH | Medium | JWT RS256 + mTLS cross-validation (CN == sub) | :white_check_mark: Implemented |
-| S3 | Compromised Certificate Authority | MAXIMUM | Low | CA isolation, HSM storage (recommended) | :warning: Partial |
-| S4 | Stolen aircraft private key | HIGH | Low | HSM storage on aircraft, certificate rotation | :memo: Documented |
-| S5 | JWT token theft | HIGH | Medium | Short expiry (15 min), HTTPS only | :white_check_mark: Implemented |
+| S1 | Aircraft identity spoofing | MAXIMUM | Medium | mTLS with X.509 certificates, CN validation | ✅ |
+| S2 | User identity spoofing | HIGH | Medium | JWT RS256 + mTLS cross-validation (CN == sub) | ✅ |
+| S3 | Compromised Certificate Authority | MAXIMUM | Low | CA isolation, HSM storage (recommended) | ⚠️ |
+| S4 | Stolen aircraft private key | HIGH | Low | HSM storage on aircraft, certificate rotation | 📝 |
+| S5 | JWT token theft | HIGH | Medium | Short expiry (15 min), HTTPS only | ✅ |
+
+**Symbol legend:**
+- ✅ Implemented
+- ⚠️ Partial
+- 📝 Documented
+
 
 ### Tampering (Integrity)
 
+
+
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| T1 | Telemetry data modification in transit | MAXIMUM | Medium | mTLS integrity, TLS 1.2+ | :white_check_mark: Implemented |
-| T2 | JWT token modification | HIGH | Low | RS256 signature verification | :white_check_mark: Implemented |
-| T3 | Database tampering | HIGH | Low | Access controls, network isolation | :white_check_mark: Implemented |
-| T4 | Supply chain attack (malicious dependency) | MAXIMUM | Medium | SBOM, SCA, image signing, Gitleaks | :white_check_mark: Implemented |
-| T5 | Log tampering | MEDIUM | Low | Centralized logging (recommended) | :warning: Partial |
-| T6 | Configuration tampering | HIGH | Low | Environment variables, protected branches | :white_check_mark: Implemented |
+| T1 | Telemetry data modification in transit | MAXIMUM | Medium | mTLS integrity, TLS 1.2+ | ✅ |
+| T2 | JWT token modification | HIGH | Low | RS256 signature verification | ✅ |
+| T3 | Database tampering | HIGH | Low | Access controls, network isolation | ✅ |
+| T4 | Supply chain attack (malicious dependency) | MAXIMUM | Medium | SBOM, SCA, image signing, Gitleaks | ✅ |
+| T5 | Log tampering | MEDIUM | Low | Centralized logging (recommended) | ⚠️ |
+| T6 | Configuration tampering | HIGH | Low | Environment variables, protected branches | ✅ |
+
+**Symbol legend:**
+- ✅ Implemented
+- ⚠️ Partial
+
 
 ### Repudiation (Non-Repudiation)
 
+
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| R1 | Denied authentication attempts | MEDIUM | Medium | Audit logging | :x: Not Implemented |
-| R2 | Denied data access | MEDIUM | Medium | Audit logging | :x: Not Implemented |
-| R3 | Deleted or modified logs | HIGH | Low | Immutable log storage | :x: Not Implemented |
-| R4 | Timestamp manipulation | MEDIUM | Low | Server-side timestamps | :white_check_mark: Implemented |
+| R1 | Denied authentication attempts | MEDIUM | Medium | Audit logging | ❌ |
+| R2 | Denied data access | MEDIUM | Medium | Audit logging | ❌ |
+| R3 | Deleted or modified logs | HIGH | Low | Immutable log storage | ❌ |
+| R4 | Timestamp manipulation | MEDIUM | Low | Server-side timestamps | ✅ |
+
+**Symbol legend:**
+- ✅ Implemented
+- ❌ Not Implemented
+
 
 ### Information Disclosure (Confidentiality)
 
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| I1 | OAuth token leak (logs, CI, exposed variables) | MAXIMUM | Medium | AES-256-GCM encryption, no logging | :white_check_mark: Implemented |
-| I2 | PII in logs | HIGH | Medium | Structured logging, PII filtering | :white_check_mark: Implemented |
-| I3 | GPS precision leak (tracking) | HIGH | Medium | 4-decimal rounding (~11m accuracy) | :white_check_mark: Implemented |
-| I4 | Verbose error messages | MEDIUM | Medium | Generic error responses | :white_check_mark: Implemented |
-| I5 | Secrets in repository | MAXIMUM | Low | Gitleaks scanning, .gitignore | :white_check_mark: Implemented |
-| I6 | Excessive OAuth scope | HIGH | Low | Minimal scope (contacts.readonly) | :white_check_mark: Implemented |
-| I7 | External API data leak (WeatherAPI) | MEDIUM | Low | Geohash/rounding for location | :white_check_mark: Implemented |
+| I1 | OAuth token leak (logs, CI, exposed variables) | MAXIMUM | Medium | AES-256-GCM encryption, no logging | ✅ |
+| I2 | PII in logs | HIGH | Medium | Structured logging, PII filtering | ✅ |
+| I3 | GPS precision leak (tracking) | HIGH | Medium | 4-decimal rounding (~11m accuracy) | ✅ |
+| I4 | Verbose error messages | MEDIUM | Medium | Generic error responses | ✅ |
+| I5 | Secrets in repository | MAXIMUM | Low | Gitleaks scanning, .gitignore | ✅ |
+| I6 | Excessive OAuth scope | HIGH | Low | Minimal scope (contacts.readonly) | ✅ |
+| I7 | External API data leak (WeatherAPI) | MEDIUM | Low | Geohash/rounding for location | ✅ |
+
+**Symbol legend:**
+- ✅ Implemented
+
 
 ### Denial of Service (Availability)
 
+
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| D1 | API flood / DDoS | HIGH | High | Rate limiting (60/min per identity) | :white_check_mark: Implemented |
-| D2 | Large payload attack | MEDIUM | Medium | 64KB payload limit | :white_check_mark: Implemented |
-| D3 | Telemetry storm (fleet event flood) | MEDIUM | Medium | Idempotency, rate limiting | :white_check_mark: Implemented |
-| D4 | External service outage (Weather/Google) | MEDIUM | Medium | Demo mode fallback | :white_check_mark: Implemented |
-| D5 | Database exhaustion | MEDIUM | Low | Connection pooling, limits | :warning: Partial |
-| D6 | CI/CD pipeline failure | HIGH | Medium | Rollback capability | :warning: Partial |
+| D1 | API flood / DDoS | HIGH | High | Rate limiting (60/min per identity) | ✅ |
+| D2 | Large payload attack | MEDIUM | Medium | 64KB payload limit | ✅ |
+| D3 | Telemetry storm (fleet event flood) | MEDIUM | Medium | Idempotency, rate limiting | ✅ |
+| D4 | External service outage (Weather/Google) | MEDIUM | Medium | Demo mode fallback | ✅ |
+| D5 | Database exhaustion | MEDIUM | Low | Connection pooling, limits | ⚠️ |
+| D6 | CI/CD pipeline failure | HIGH | Medium | Rollback capability | ⚠️ |
+
+**Symbol legend:**
+- ✅ Implemented
+- ⚠️ Partial
+
 
 ### Elevation of Privilege (Authorization)
 
+
 | ID | Threat | Impact | Likelihood | Mitigation | Status |
 |----|--------|--------|------------|------------|--------|
-| E1 | JWT claim manipulation | HIGH | Low | RS256 signature verification | :white_check_mark: Implemented |
-| E2 | Cross-aircraft data access | HIGH | Medium | JWT subject validation, aircraft_id binding | :white_check_mark: Implemented |
-| E3 | Container escape | MAXIMUM | Low | Non-root containers (UID 1000) | :white_check_mark: Implemented |
-| E4 | RBAC bypass | HIGH | Medium | N/A - RBAC not implemented | :x: Not Implemented |
-| E5 | Service-to-service impersonation | MEDIUM | Low | Internal network isolation | :white_check_mark: Implemented |
+| E1 | JWT claim manipulation | HIGH | Low | RS256 signature verification | ✅ |
+| E2 | Cross-aircraft data access | HIGH | Medium | JWT subject validation, aircraft_id binding | ✅ |
+| E3 | Container escape | MAXIMUM | Low | Non-root containers (UID 1000) | ✅ |
+| E4 | RBAC bypass | HIGH | Medium | N/A - RBAC not implemented | ❌ |
+| E5 | Service-to-service impersonation | MEDIUM | Low | Internal network isolation | ✅ |
 
----
+**Symbol legend:**
+- ✅ Implemented
+- ❌ Not Implemented
+
 
 ## Risk Matrix
 
@@ -214,14 +229,13 @@ List of data stored or in transit within the service.
 
 **Risk = Impact × Likelihood**
 
-```
-                │ Low Impact   Medium      High        Maximum
-────────────────┼─────────────────────────────────────────────────
-Likely          │ MEDIUM       HIGH        CRITICAL    CRITICAL
-Possible        │ LOW          MEDIUM      HIGH        CRITICAL
-Unlikely        │ LOW          LOW         MEDIUM      HIGH
-Rare            │ ACCEPT       LOW         LOW         MEDIUM
-```
+|                  | Low Impact | Medium  | High     | Maximum  |
+|------------------|------------|---------|----------|----------|
+| **Likely**       | MEDIUM     | HIGH    | CRITICAL | CRITICAL |
+| **Possible**     | LOW        | MEDIUM  | HIGH     | CRITICAL |
+| **Unlikely**     | LOW        | LOW     | MEDIUM   | HIGH     |
+| **Rare**         | ACCEPT     | LOW     | LOW      | MEDIUM   |
+
 
 ### Current Risk Profile
 
@@ -320,26 +334,37 @@ Detailed threat scenarios with business impact analysis.
 
 ### Implemented Controls
 
+
 | Priority | Recommendation | Status |
 |----------|---------------|--------|
-| **MAXIMUM** | mTLS for aircraft authentication | :white_check_mark: Implemented |
-| **MAXIMUM** | OAuth with least privilege (contacts.readonly) | :white_check_mark: Implemented |
-| **HIGH** | Data minimization (GPS rounding, no contact persistence) | :white_check_mark: Implemented |
-| **HIGH** | JWT RS256 + rate limiting | :white_check_mark: Implemented |
-| **HIGH** | Logs without PII, tracing, metrics | :white_check_mark: Implemented |
-| **HIGH** | Supply chain security (SBOM, SCA, image signing) | :white_check_mark: Implemented |
+| **MAXIMUM** | mTLS for aircraft authentication | ✅ |
+| **MAXIMUM** | OAuth with least privilege (contacts.readonly) | ✅ |
+| **HIGH** | Data minimization (GPS rounding, no contact persistence) | ✅ |
+| **HIGH** | JWT RS256 + rate limiting | ✅ |
+| **HIGH** | Logs without PII, tracing, metrics | ✅ |
+| **HIGH** | Supply chain security (SBOM, SCA, image signing) | ✅ |
+
+**Symbol legend:**
+- ✅ Implemented
+
+
 
 ### Pending Controls
 
+
 | Priority | Recommendation | Status | Planned |
 |----------|---------------|--------|---------|
-| **MAXIMUM** | Secrets in KMS/Vault | :warning: Partial (env vars) | Phase 4 |
-| **HIGH** | Audit logging | :x: Not Implemented | Phase 3 |
-| **HIGH** | Security monitoring & alerting | :x: Not Implemented | Phase 3 |
-| **MEDIUM** | RBAC authorization | :x: Not Implemented | Phase 4 |
-| **MEDIUM** | Key rotation automation | :x: Not Implemented | Phase 3 |
+| **MAXIMUM** | Secrets in KMS/Vault | ⚠️ | Phase 4 |
+| **HIGH** | Audit logging | ❌ | Phase 3 |
+| **HIGH** | Security monitoring & alerting | ❌ | Phase 3 |
+| **MEDIUM** | RBAC authorization | ❌ | Phase 4 |
+| **MEDIUM** | Key rotation automation | ❌ | Phase 3 |
 
----
+**Symbol legend:**
+- ⚠️ Partial
+- ❌ Not Implemented
+
+
 
 ## Gap Analysis
 
@@ -378,16 +403,16 @@ Detailed threat scenarios with business impact analysis.
 
 | Control | STRIDE Coverage | Implementation |
 |---------|-----------------|----------------|
-| mTLS | S, T, I | `skylink/mtls.py` |
-| JWT RS256 | S, T, E | `skylink/auth.py` |
-| Rate Limiting | D | `skylink/rate_limit.py` |
-| Input Validation | T, E | Pydantic models |
-| Security Headers | I | `skylink/middlewares.py` |
-| Token Encryption | I | `contacts/encryption.py` |
-| GPS Rounding | I | `skylink/models/` |
+| mTLS | S, T, I | See config file (give a link as evidence) |
+| JWT RS256 | S, T, E | See config file (give a link as evidence) |
+| Rate Limiting | D | See config file or code (give a link as evidence)` |
+| Input Validation | T, E | See code file and design (give link as evidence) |
+| Security Headers | I | See code file and design (give link as evidence) |
+| Token Encryption | I | See code file and design (give link as evidence)|
+| GPS Rounding | I | See code file and design (give link as evidence) |
 | Idempotency | T, R | Telemetry service |
 | Container Security | E | Dockerfile (non-root) |
-| Supply Chain | T | CI/CD pipeline |
+| Supply Chain | T | CI/CD pipeline - see config in repo |
 
 ---
 

@@ -52,9 +52,11 @@ However, actual risk measurement work can be creative and flexible depending on 
 ### Expected Value
 Let's say our scenario states how much risk a museum's assets ($500M) a museum has to a fire (1% odds) next year.
 
-`risk = $500M * 1%`
+> risk = $500M * 1%
 
-The expected value (`r`) of losses would be $1M. If this scenario were simulated hundreds of thousands of times... the _average loss_ would also be about $1M... the same value we would expect. So, the name "expected value" is quite helpfully chosen! 
+
+The expected value (`r`) of losses would be `$1M`.
+If this scenario were simulated hundreds of thousands of times the _average loss_ would also be about $1M the same value we would expect. So, the name "expected value" is quite helpfully chosen! 
 
 The expected value is useful in comparison with the expected value of other risks. You can compare the expected value of risks and prioritize them. 
 
@@ -68,7 +70,7 @@ The probability (`p`) of an event could come from a variety of places. Let's use
 
 Where would we gather a probability of this happening for use in analysis? The answer takes some creativity and some resourcefulness. There may be statistical data on fires at museums you could manually collect. Maybe the insurance company provides their estimate based on claims data. Perhaps risk managing employees at the museum performed a study and were elicited for a probability.
 
-You'll notice from these examples that probability is _subjective_! Even if we were to statistically calculate a likelihood from a useful dataset, it would still be up to us (the subject) to choose this indirect measurement as representative of a future probability. Accepting this data allows this data to suggest furture performance, when we already know that past results do not guarantee future performance. 
+You'll notice from these examples that probability is _subjective_! Even if we were to statistically calculate likelihood from a useful dataset, it would still be up to us (the subject) to choose this indirect measurement as representative a future probability. Accepting this data allows this data to suggest future performance, when we already know that past results do not guarantee future performance. 
 
 Probability used this way is considered a _measure of evidence or belief_, rather than a certification of future outcomes.
 

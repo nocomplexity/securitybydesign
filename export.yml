@@ -1,0 +1,50 @@
+version: 1
+project:
+
+
+  downloads:
+    - id: output-pdf1
+
+  exports:
+    - id: output-pdf1
+      format: typst
+      #format: pdf
+      #template: https://github.com/myst-templates/plain_latex_book.git 
+      #template: https://github.com/myst-templates/plain_typst_book.git
+      template: /home/maikel/projects/docs/plain_typst_book
+      output: ./_build/PDF/SecurityByDesign_2026Q3.pdf
+      #output: ./_build/PDF/SbD_book_tex.pdf
+      
+      # ToC
+      ToC_depth: 2
+      show_ToC: true
+
+      # additional options 
+      #cover: images/SbD_pdf_cover2026.png
+      cover: images/sbd_bookcover.png
+      coverposition: 1  #in cm from title
+      cover_width: 14 #in cm
+      
+
+      #### Logo at top of position
+      logo: images/nocxbanner.png
+      logo_width: 20
+      show_pagenumber: true
+
+      # font      
+      fontsize: 12
+      fontstyle: Libertinus Serif
+      linespacing: .5
+      justification: false
+      
+      #### Theme
+      colortheme: blue.darken(30%)
+      colorheadings: red
+      
+      # Preface
+      preface: Reducing cyber security risks is complex. But the truth is that often the most simple solutions are the best. A simple solution is often far more effective than a complex solution that fails. So Simplify Cyber Security. We need simpler solutions. We need to use solutions that are transparent and we can trust. We need to stop reinventing the wheel. We should make use of proven open solutions.
+      
+    
+
+
+

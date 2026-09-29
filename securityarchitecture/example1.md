@@ -3,9 +3,9 @@ title: Security Architecture Example
 short_title: Security Architecture Example
 ---
 
-Example: SkyLink Security Architecture
+## Example: SkyLink Security Architecture
 
-> **Data Flow Diagrams and Security Controls for the SkyLink Connected Aircraft Platform**
+This section presents a hypothetical security architecture for the SkyLink Connected Aircraft Platform, comprising a set of data flow diagrams and associated security controls.
 
 
 
@@ -135,7 +135,6 @@ NOTE:
 #### TB3: Services → External APIs (HIGH)
 
 :::{table}
-:widths: auto
 :align: center
 
 | Section | Connection / Item | Details / Configuration |
@@ -149,7 +148,6 @@ NOTE:
 #### TB4: Services → Database (HIGH)
 
 :::{table}
-:widths: auto
 :align: center
 
 | Section | Item | Details / Configuration |
@@ -319,7 +317,7 @@ NOTE:
 | `GET /weather/current` | JWT | Yes | Query params | MEDIUM |
 | `GET /contacts/` | JWT | Yes | Query params | MEDIUM |
 
-
++++{"no-pdf": true}
 ## Cryptographic Inventory
 
 ### Algorithms and Key Sizes
@@ -334,8 +332,6 @@ NOTE:
 | mTLS Client | RSA/X.509 | 2048-bit | 1 year | File (certs/clients/) |
 | Image Signing | ECDSA (Sigstore) | P-256 | Keyless (per-build) | GitHub OIDC |
 
-
-+++{"no-pdf": true}
 
 ### Key Management
 
