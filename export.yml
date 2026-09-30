@@ -31,6 +31,15 @@ project:
       logo_width: 20
       show_pagenumber: true
 
+      ##for KDP
+      papersize: a4
+      # papersize: a5
+      # margin_top: 2 #cm
+      # margin_bottom: 2 #cm
+      # margin_left: 15 #%
+      # margin_right: 15 #%
+      
+
       # font      
       fontsize: 12
       fontstyle: Libertinus Serif

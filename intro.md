@@ -27,9 +27,7 @@ The aim of this course is to teach you the principles of **Security by Design**.
 
 
 
-
 ## Target Audience
-
 
 This book is designed for managers, directors, architects, developers, and security enthusiasts. It focuses on designing reliable and secure systems.
 
