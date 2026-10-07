@@ -12,7 +12,11 @@
 This book will give you a deep understanding of what Security by Design is and how to apply this in practice.
 :::
 
-:::{attention}
+:::{tip} Order your [paperback on Amazon](https://amzn.eu/d/0c8FA36t) today!
+*Choose your local Amazon store at checkout for faster delivery and lower postage costs. ISBN: 979-8178070888*
+:::
+
+:::{important}
 **Security by Design is a proven method** to develop products and services that are less vulnerable for cyber security threats.
 :::
 
