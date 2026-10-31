@@ -34,7 +34,7 @@ No single person or process should have excessive authority; split critical func
 
 :::{note} Defence in depth 
 :class: dropdown
-Layer multiple, independent security controls so that failure of one does not lead to system compromise.
+The practice of layering independent security controls so that the failure of any single measure does not result in a system compromise.
 :::
 
 :::{note} Fail securely
