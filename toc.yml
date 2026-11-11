@@ -12,6 +12,10 @@ project:
       children:
         - file: principles/whyprinciples.md
         - file: principles/securityprinciples.md
+          children:
+          - file: principles/leastprivilige.md
+          - file: principles/defence_in_depth.md
+          - file: principles/opendesign.md
         - file: principles/exampleSASTtools.md
 
     - file: threatmodeling/threatmodeling_intro.md #dropdown menu        
@@ -27,6 +31,7 @@ project:
         - file: securityarchitecture/create.md
         - file: securityarchitecture/zerotrust.md
         - file: securityarchitecture/logging.md
+        - file: securityarchitecture/usercentric_design.md
         - file: securityarchitecture/example1.md
         - file: securityarchitecture/exampleRBAC.md
 
@@ -52,12 +57,14 @@ project:
         - file: prevention/mvsp.md
         - file: prevention/pbom.md
         - file: prevention/examples.md
+        - file: prevention/secureprogramming.md
    
     
     - file: monitoring/monitoring_intro.md #dropdown menu        
       children:
         - file: monitoring/whatis_secmonitoring.md
         - file: monitoring/securitymonitoring.md
+        - file: monitoring/logging.md
     
     - file: policies/policies_intro.md #dropdown menu        
       children:
@@ -65,6 +72,7 @@ project:
         - file: policies/securitypolicies.md
         - file: policies/protection.md
         - file: policies/softwareupdate.md
+        - file: policies/lifecyclemanagement.md
 
     - file: riskassesment/ra_intro.md #dropdown menu      
       children:
@@ -78,6 +86,10 @@ project:
         - file: securitymanagement/securityframework.md
         - file: securitymanagement/riskmitigation.md
         - file: securitymanagement/keymanagement.md
+        - file: securitymanagement/changemanagement.md
+        - file: securitymanagement/incidentmanagement.md
+        - file: securitymanagement/patchmanagement.md
+        - file: securitymanagement/suplychaincontrol.md
 
 
     - file: culture/culture_intro.md #dropdown menu      

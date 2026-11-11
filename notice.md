@@ -40,3 +40,13 @@ Portions of this course are derived from high-quality open publications. Only so
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
         ```
+
+    
+
+	- Sections: [logging](/monitoring/logging.md), [life cycle management](/policies/lifecyclemanagement.md) , [secure programming](/prevention/secureprogramming.md) , [defence in depth checklist](/principles/defence_in_depth.md) ,
+	[least privilige checklist](/principles/leastprivilige.md),	[Open Design explanation](/principles/opendesign.md) ,	[User Centric design](/securityarchitecture/usercentric_design.md) , 	[Checklist change management](/securitymanagement/changemanagement.md) 
+    [Checklist incident management](/securitymanagement/incidentmanagement.md), 	[Checklist Patch management](/securitymanagement/patchmanagement.md), 	[Suply Chain control checklist](/securitymanagement/suplychaincontrol.md)
+        > Parts of these sections are adapted from the [ENISA Secure by Design and Default Playbook](https://github.com/enisaeu/enisa-sbd-playbook)             
+        > © European Union Agency for Cybersecurity (ENISA)        
+        > Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+

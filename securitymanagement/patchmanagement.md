@@ -1,0 +1,63 @@
+---
+title: Checklist for Vulnerability and patch management
+short_title: Checklist:Vulnerability and patch management
+---
+
+
+Manufacturers should establish practical, repeatable vulnerability and patch management processes and prioritise remediation according to risk. Manufacturers need a simple way for customers and researchers to report issues and an internal process to triage findings quickly and decide what needs urgent action.
+
+## Objective
+
+Identify, prioritise and remediate vulnerabilities fast enough to reduce real-world exposure, across your code, dependencies, infrastructure and (if applicable) devices/firmware. The focus is a simple intake-to-fix workflow, clear SLAs and an update mechanism that makes patching reliable.
+
+## Checklist
+
+### Establish intake channels (do not miss issues)
+
+- Sources: dependency scanning, SAST/DAST results, advisories, customer reports, security emails, etc.
+- Assign a single owner for triage and tracking.
+
+### Triage and prioritise consistently
+
+- Use a lightweight severity approach (e.g. critical, high, medium or low) plus ‘internet-exposed’ and ‘known exploited’ flags.
+- Ensure awareness of applicable incident and vulnerability reporting timelines.
+- Decide quickly: fix now, mitigate, accept (time bound) or defer (with rationale).
+
+### Patch dependencies and third parties proactively
+
+- Maintain a regular cadence (e.g. weekly or monthly) for dependency updates.
+- Pin versions, remove unused dependencies and track transitive dependencies.
+
+### Fix, test and release with a secure process
+
+- Ensure that fixes are reviewed and tested; verify no regressions in authn/authz, input validation or critical workflows.
+- For devices/IoT: ensure secure OTA/update path and safe rollback where feasible.
+
+### Communicate and close the loop
+
+- Track affected versions, customers/environments and mitigation guidance.
+- Publish security release notes or advisories as appropriate.
+- Verify rollout completion and update the risk register.
+- Establish an escalation process to assess applicable regulatory reporting obligations.
+- Where proportionate, publish machine-readable advisories (e.g. CSAF), including structured information on whether specific products or versions are affected, such as through VEX.
+- Analyse significant or recurring vulnerabilities, field reports, incidents and exploitation patterns to identify root causes. Feed the findings back into the risk assessment, security requirements and development practices.
+
+## Minimum evidence
+
+- Vulnerability tracking board / register: issue, severity, affected components/versions, owner, status, target date
+- Defined SLAs: for example, critical triage ≤ XX hours; remediation/release target ≤ X days (specify numbers that are realistic for you)
+- Scanning evidence: CI outputs for dependency scanning and SAST (and DAST if applicable)
+- Proactive dependency patches: SBOM or dependency inventory for each release (at minimum for shipped artefacts)
+- Patch release record: link from vulnerability ticket → PR(s) → tests → release version → rollout confirmation
+- Exception log: accepted risks, with owner and expiry/review date, and compensating controls (if any)
+- Field feedback and improvement record: recurring security issues or attack patterns, root causes identified where applicable, and the resulting risk, design or backlog actions.
+
+## Release gate
+
+- [ ] Dependency and SAST scans executed for the release; critical and high findings addressed or documented exception (with owner and expiry date)
+- [ ] SBOM (or dependency inventory) generated/updated and stored for the release
+- [ ] Known vulnerabilities affecting shipped components are triaged with severity information, owner and target date
+- [ ] Patch process validated: fix reviewed, tests passed, and release notes updated as needed
+- [ ] For internet-exposed components: mitigations or patches for critical- and high-severity issues are in place before release
+- [ ] OTA/update (if applicable) validated for secure delivery; rollback/recovery documented
+- [ ] Accepted residual risk is time bound and tracked to closure or review date

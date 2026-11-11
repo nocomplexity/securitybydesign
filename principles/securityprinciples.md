@@ -24,6 +24,8 @@ Default configurations should be secure out of the box (e.g., deny by default).
 :::{note} Least privilege 
 :class: dropdown
 Every component and user should have only the minimum privileges necessary to function. (Keep once, not twice.)
+
+[Learn More](/principles/leastprivilige.md)
 :::
 
 :::{note} Separation of duties (and privilege)
@@ -35,6 +37,8 @@ No single person or process should have excessive authority; split critical func
 :::{note} Defence in depth 
 :class: dropdown
 The practice of layering independent security controls so that the failure of any single measure does not result in a system compromise.
+
+[Learn More](/principles/defence_in_depth.md)
 :::
 
 :::{note} Fail securely
@@ -79,6 +83,8 @@ A complicated solution often fails because:
 Security must not depend on secrecy of the design or implementation (security by obscurity is explicitly avoided).
 
 This means the architecture, design and software used should be fully transparent. Assume that bad actors have access to the software and crucial documentation. 
+
+[Learn More](/principles/opendesign.md)
 :::
 
 
